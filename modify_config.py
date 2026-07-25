@@ -324,10 +324,27 @@ def object_level_wash_and_compile():
     bucket_map["综合"] = []
     bucket_map["福利"] = []
 
+    # 🎯 读取搜索屏蔽规则配置
+    no_search_kw = getattr(config, "NO_SEARCH_KEYWORDS", [])
+    no_search_keys = getattr(config, "NO_SEARCH_KEYS", [])
+    no_quick_keys = getattr(config, "NO_QUICK_SEARCH_KEYS", [])
+
     for site in compiled_sites:
         s_key = site.get("key", "")
         s_name = site.get("name", "")
-        
+
+        # =========================================================
+        # 🎯 【新增】自动化搜索控制打标
+        # =========================================================
+        # 判断名称关键词或 key 是否命中全局搜索屏蔽规则
+        if any(kw in s_name for kw in no_search_kw) or (s_key in no_search_keys):
+            site["searchable"] = 0
+            
+        # 判断 key 是否命中快速搜索屏蔽规则
+        if s_key in no_quick_keys:
+            site["quickSearch"] = 0
+        # =========================================================
+
         if s_key == config.HOT_VIDEO_KEY:
             site["name"] = config.HOT_VIDEO_SITE_NAME
             site["category"] = "综合"
