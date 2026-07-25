@@ -34,8 +34,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/优酷视频.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "YK",
@@ -43,8 +43,8 @@
             "type": 3,
             "api": "https://file.icve.com.cn/file_doc/249/899/3E7E0C8A023B624CEC6BDCC200F06F02.js",
             "ext": "https://cdn.waimaimingtang.com/file/images/bwc/20251023002200-507c3e8aae.js",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "AQY",
@@ -61,8 +61,8 @@
             "type": 3,
             "api": "https://file.icve.com.cn/file_doc/249/899/3E7E0C8A023B624CEC6BDCC200F06F02.js",
             "ext": "https://cdn.waimaimingtang.com/file/images/bwc/20251023002144-0e40887294.js",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "hajim-腾讯备",
@@ -81,8 +81,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/腾讯视频.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "MG",
@@ -90,8 +90,8 @@
             "type": 3,
             "api": "https://file.icve.com.cn/file_doc/249/899/3E7E0C8A023B624CEC6BDCC200F06F02.js",
             "ext": "https://cdn.waimaimingtang.com/file/images/bwc/20251023002108-a4795930ec.js",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "芒芒",
@@ -99,8 +99,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/drpy2.min.js",
             "ext": "https://ghfast.top/https://raw.githubusercontent.com/IY-CPU/IY/main/lib/茫茫.png",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "MGtv",
@@ -108,8 +108,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/芒果TV.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "youtube",
@@ -117,8 +117,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/油管.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "ddyy",
@@ -126,8 +126,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/低端影视.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "cbh",
@@ -144,8 +144,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/皮皮虾.py",
             "ext": "http://43.248.117.123:4680",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "ddvm",
@@ -162,8 +162,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/可可影视.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "拾光影视",
@@ -182,8 +182,8 @@
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/jar_js/片库.js",
             "changeable": 0,
             "ext": "",
-            "searchable": 0,
-            "category": "综合"
+            "category": "综合",
+            "searchable": 1
         },
         {
             "key": "808yr",
@@ -209,8 +209,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麒麟影视.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "qdvm",
@@ -218,8 +218,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/奇点影视.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "zzvm",
@@ -272,8 +272,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/布布追剧.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "fY",
@@ -299,8 +299,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/美剧天堂.py",
             "ext": "",
-            "searchable": 0,
-            "category": "综合"
+            "category": "综合",
+            "searchable": 1
         },
         {
             "key": "ww",
@@ -317,8 +317,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/热播APP.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "JP",
@@ -326,8 +326,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/金牌APP.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "GZ",
@@ -335,8 +335,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/瓜子APP.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "nnyy",
@@ -344,8 +344,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/努努影院.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "dnyy",
@@ -353,8 +353,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/多瑙影院.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "nvm",
@@ -362,8 +362,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/泥视频.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "QU",
@@ -371,8 +371,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/奇优影院.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "yl",
@@ -380,8 +380,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/永乐视频.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "mtyy",
@@ -389,8 +389,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麦田影院.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "58vy",
@@ -416,8 +416,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/追光影视.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "ikbot",
@@ -425,8 +425,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/爱看机器人.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "jok",
@@ -434,8 +434,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/剧OK.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "xhvm",
@@ -443,8 +443,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/骚火影视.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "ayf",
@@ -452,8 +452,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/爱壹帆.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "MH",
@@ -461,8 +461,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麻花影视.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "XH",
@@ -470,8 +470,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/星河影视.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "guanfeng",
@@ -497,8 +497,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/七猫影视.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "nmvm",
@@ -506,8 +506,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/农民影视.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "xc",
@@ -533,8 +533,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/蛋挞TV.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "wstv",
@@ -542,8 +542,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/威视TV.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "dsys",
@@ -560,8 +560,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/456电影网.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "qw",
@@ -578,8 +578,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/八天电影.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "cjjh",
@@ -587,15 +587,15 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/采集聚合.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "ikun",
             "name": "🦋 爱坤┃影视(有三级片)",
             "type": 1,
             "api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/at/json",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 1,
             "filterable": 1,
             "ext": "",
@@ -606,7 +606,7 @@
             "name": "🦋 U酷資源(有三级片)",
             "type": 1,
             "api": "https://api.ukuapi.com/api.php/provide/vod/",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 1,
             "filterable": 1,
             "ext": "",
@@ -617,7 +617,7 @@
             "name": "🦋 虎牙资源(有三级片)",
             "type": 1,
             "api": "https://www.huyaapi.com/api.php/provide/vod/",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 1,
             "filterable": 1,
             "ext": "",
@@ -628,7 +628,7 @@
             "name": "🦋 非凡影视",
             "type": 1,
             "api": "http://cj.ffzyapi.com/api.php/provide/vod/",
-            "searchable": 1,
+            "searchable": 0,
             "changeable": 1,
             "categories": [
                 "国产动漫",
@@ -669,7 +669,7 @@
             "name": "🦋 天涯资源(有三级片)",
             "type": 0,
             "api": "https://tyyszyapi.com/api.php/provide/vod/at/xml/?ac=list",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 1,
             "ext": "",
             "category": "综合"
@@ -679,7 +679,7 @@
             "name": "🦋 iKun资源(有三级片)",
             "type": 0,
             "api": "https://ikunzyapi.com/api.php/provide/vod/at/xml",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 1,
             "ext": "",
             "category": "综合"
@@ -689,7 +689,7 @@
             "name": "🦋 闪电影视｜追剧",
             "type": 1,
             "api": "http://sdzyapi.com/api.php/provide/vod/",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 1,
             "categories": [
                 "国产剧",
@@ -730,7 +730,7 @@
             "name": "🦋 牛牛影视｜追剧",
             "type": 0,
             "api": "https://api.niuniuzy.me/api.php/provide/vod/at/xml",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 1,
             "categories": [
                 "动作片",
@@ -783,7 +783,7 @@
             "name": "🦋 雲飛影视｜追剧",
             "type": 1,
             "api": "http://cj.lziapi.com/api.php/provide/vod/",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 1,
             "filterable": 0,
             "playurl": "json:https://lziplayer.com/?url=",
@@ -811,7 +811,7 @@
             "name": "🦋 火狐影视🦊｜追剧",
             "type": 1,
             "api": "https://hhzyapi.com/api.php/provide/vod/",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 0,
             "filterable": 1,
             "categories": [
@@ -847,7 +847,7 @@
             "name": "🦋 量子影视｜追剧",
             "type": 1,
             "api": "http://cj.lziapi.com/api.php/provide/vod/",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 1,
             "filterable": 0,
             "playurl": "json:https://lziplayer.com/?url=",
@@ -876,7 +876,7 @@
             "type": 1,
             "api": "https://cj.rycjapi.com/api.php/provide/vod",
             "ext": "",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 1,
             "filterable": 1,
             "categories": [
@@ -923,8 +923,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/悦听吧.py",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "Nostr",
@@ -933,8 +933,8 @@
             "api": "csp_Nostr",
             "homePage": "https://cnb.cool/fish2035/lib/-/git/raw/main/nostr.min.html",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "豆瓣",
@@ -969,8 +969,8 @@
             "api": "csp_Nostr",
             "homePage": "https://cnb.cool/fish2035/lib/-/git/raw/main/test.min.html",
             "ext": "",
-            "category": "综合",
-            "searchable": 1
+            "searchable": 0,
+            "category": "综合"
         },
         {
             "key": "本地",
@@ -1797,7 +1797,7 @@
             "name": "🦋 哔哩 • 合集",
             "type": 3,
             "api": "csp_Bili",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 0,
             "filterable": 0,
             "changeable": 0,
@@ -2055,8 +2055,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/映像星球.py",
             "ext": "",
-            "searchable": 0,
-            "category": "体育/直播"
+            "category": "体育/直播",
+            "searchable": 1
         },
         {
             "key": "kf",
@@ -2135,8 +2135,8 @@
                 "type": "list"
             },
             "ext": "",
-            "category": "体育/直播",
-            "searchable": 1
+            "searchable": 0,
+            "category": "体育/直播"
         },
         {
             "key": "瓜子体育",
@@ -2147,8 +2147,8 @@
                 "type": "list"
             },
             "ext": "",
-            "category": "体育/直播",
-            "searchable": 1
+            "searchable": 0,
+            "category": "体育/直播"
         },
         {
             "key": "咖啡体育",
@@ -2159,8 +2159,8 @@
                 "type": "list"
             },
             "ext": "",
-            "category": "体育/直播",
-            "searchable": 1
+            "searchable": 0,
+            "category": "体育/直播"
         },
         {
             "key": "919体育",
@@ -2171,8 +2171,8 @@
                 "type": "list"
             },
             "ext": "",
-            "category": "体育/直播",
-            "searchable": 1
+            "searchable": 0,
+            "category": "体育/直播"
         },
         {
             "key": "网络直播",
@@ -2295,8 +2295,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/酷我音乐.py",
             "ext": "",
-            "category": "音乐",
-            "searchable": 0
+            "searchable": 0,
+            "category": "音乐"
         },
         {
             "key": "捡的音乐",
@@ -2316,8 +2316,8 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/DJ呦呦.py",
             "ext": "",
-            "category": "音乐",
-            "searchable": 0
+            "searchable": 0,
+            "category": "音乐"
         },
         {
             "key": "呦呦DJ",
@@ -2328,8 +2328,8 @@
                 "type": "list"
             },
             "ext": "",
-            "category": "音乐",
-            "searchable": 0
+            "searchable": 0,
+            "category": "音乐"
         },
         {
             "key": "轮回DJ",
@@ -2340,8 +2340,8 @@
                 "type": "list"
             },
             "ext": "",
-            "category": "音乐",
-            "searchable": 0
+            "searchable": 0,
+            "category": "音乐"
         },
         {
             "key": "蜻蜓FM",
@@ -2352,8 +2352,8 @@
                 "type": "list"
             },
             "ext": "",
-            "category": "音乐",
-            "searchable": 0
+            "searchable": 0,
+            "category": "音乐"
         },
         {
             "key": "世界听书",
@@ -2376,8 +2376,8 @@
                 "type": "list"
             },
             "ext": "",
-            "category": "音乐",
-            "searchable": 0
+            "searchable": 0,
+            "category": "音乐"
         },
         {
             "key": "爱听音乐",
@@ -2385,8 +2385,8 @@
             "type": 3,
             "api": "https://cnb.cool/fish2035/xs/-/git/raw/main/py/爱听音乐.py",
             "ext": "",
-            "category": "音乐",
-            "searchable": 0
+            "searchable": 0,
+            "category": "音乐"
         },
         {
             "key": "哔哩哔哩演唱会",
@@ -2607,7 +2607,7 @@
             "name": "🦋 聚合• 搜索",
             "type": 3,
             "api": "csp_JuheSo",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 0,
             "filterable": 0,
             "timeout": 60,
@@ -2619,7 +2619,7 @@
             "name": "🦋 盘搜 • 搜索",
             "type": 3,
             "api": "csp_PanSou",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 0,
             "filterable": 0,
             "timeout": 60,
@@ -2631,7 +2631,7 @@
             "name": "🦋 百酷 • 搜索",
             "type": 3,
             "api": "csp_Baiku",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 0,
             "filterable": 0,
             "timeout": 60,
@@ -2643,7 +2643,7 @@
             "name": "🦋 酷乐 • 搜索",
             "type": 3,
             "api": "csp_KuLe",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 0,
             "filterable": 0,
             "timeout": 60,
@@ -2655,7 +2655,7 @@
             "name": "🦋 米搜 • 搜索",
             "type": 3,
             "api": "csp_MiSou",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 0,
             "filterable": 0,
             "ext": {
@@ -2672,7 +2672,7 @@
             "name": "🦋 鬼鬼 • 搜索",
             "type": 3,
             "api": "csp_GuiGui",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 0,
             "filterable": 0,
             "timeout": 60,
@@ -2684,7 +2684,7 @@
             "name": "🦋 天翼 • 搜索",
             "type": 3,
             "api": "csp_TianYiSo",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 0,
             "filterable": 0,
             "timeout": 60,
@@ -2696,7 +2696,7 @@
             "name": "🦋 趣盘 • 搜索",
             "type": 3,
             "api": "csp_QuPanSo",
-            "searchable": 1,
+            "searchable": 0,
             "quickSearch": 0,
             "filterable": 0,
             "timeout": 60,
@@ -2958,7 +2958,6 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/香蕉视频.py",
             "ext": "",
-            "searchable": 0,
             "category": "福利"
         },
         {
@@ -2967,7 +2966,6 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/妲己.py",
             "ext": "",
-            "searchable": 0,
             "category": "福利"
         },
         {
@@ -3032,7 +3030,6 @@
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/18AV.py",
             "ext": "",
-            "searchable": 0,
             "category": "福利"
         },
         {
