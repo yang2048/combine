@@ -193,6 +193,42 @@
             "searchable": 1
         },
         {
+            "key": "qdvm",
+            "name": "🦋 奇点影视.py",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/奇点影视.py",
+            "ext": "",
+            "category": "综合",
+            "searchable": 1
+        },
+        {
+            "key": "zzvm",
+            "name": "🦋 枝枝影视.py(关梯)",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/枝枝影视.py",
+            "ext": "",
+            "category": "综合",
+            "searchable": 1
+        },
+        {
+            "key": "knvm",
+            "name": "🦋 柯南影视.py(关梯)",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/柯南影视.py",
+            "ext": "",
+            "category": "综合",
+            "searchable": 1
+        },
+        {
+            "key": "teys",
+            "name": "🦋 太乙影视.py(关梯)",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/太乙影视.py",
+            "ext": "",
+            "category": "综合",
+            "searchable": 1
+        },
+        {
             "key": "wkvm",
             "name": "🦋 悟空影视.py(关梯)",
             "type": 3,
@@ -278,6 +314,15 @@
             "name": "🦋 努努影院.py",
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/努努影院.py",
+            "ext": "",
+            "category": "综合",
+            "searchable": 1
+        },
+        {
+            "key": "dnyy",
+            "name": "🦋 多瑙影院.py",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/多瑙影院.py",
             "ext": "",
             "category": "综合",
             "searchable": 1
