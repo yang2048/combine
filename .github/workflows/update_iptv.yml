@@ -1,0 +1,51 @@
+name: Auto Update & Check IPTV Streams
+
+on:
+  schedule:
+    # UTC 时间每天 20:00 运行（对应北京时间每天凌晨 04:00）
+    - cron: '0 20 * * *'
+  # 支持在 GitHub 页面手动点击按钮随时触发运行
+  workflow_dispatch:
+
+jobs:
+  update-iptv:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. 拉取当前仓库代码
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    # 2. 配置 Python 环境
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    # 3. 安装依赖库
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    # 4. 执行 Python 测速筛选脚本
+    # 假设你的 Python 脚本保存在仓库根目录下的 main.py
+    - name: Run IPTV update script
+      run: |
+        python main.py
+
+    # 5. 检查并提交更新后的 M3U 文件到仓库
+    - name: Commit and push updated playlist
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        
+        git add playlist_valid.m3u
+        
+        # 只有在文件发生变更时才提交，防止无意义的 commit 记录
+        if git diff --staged --quiet; then
+          echo "播放列表无变更，无需提交。"
+        else
+          git commit -m "auto: 自动更新并筛选有效 IPTV 播放列表 [$(date -u +'%Y-%m-%d %H:%M:%S UTC')]"
+          git push
+        fi
