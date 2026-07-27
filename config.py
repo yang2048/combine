@@ -280,7 +280,7 @@ MY_CUSTOM_LIVES = [
         "name": "海外频道（开梯）🔞",
         "type": 0,
         "ua": "okhttp/5.3.2",
-        "url": "https://ghfast.top/http://raw.githubusercontent.com/yihad168/tv/refs/heads/main/live.m3u"
+        "url": "https://ghfast.top/https://raw.githubusercontent.com/yihad168/tv/refs/heads/main/live.m3u"
     },
     {
         "name": "国产直播🔞",
