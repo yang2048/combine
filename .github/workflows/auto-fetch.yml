@@ -1,11 +1,10 @@
-name: 自动双源无损强行合并-备用线
+name: 自动双源无损强行合并-第二个仓库
 
 on:
   schedule:
     - cron: '43 0,12 * * *'
   workflow_dispatch: 
 
-# 🌟 显式强制赋予工作流最高写权限，彻底杜绝 128 推送报错
 permissions: write-all
 
 jobs:
@@ -17,12 +16,14 @@ jobs:
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0 # 拉取完整提交历史，防止 pull 冲突
 
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.10'
 
+    # 1. 抓取上游底包文件 (根据第二个仓库的需求调整 curl 地址)
     - name: Fetch target files
       run: |
         mkdir -p datas
@@ -30,27 +31,38 @@ jobs:
         curl -L "https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/ok%E6%B5%B7%E8%B1%9A.json" -o datas/haitun.json
         curl -L "https://gh-proxy.com/https://raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/py.json" -o datas/lz.json
 
-    # 🛠️ 严格前置运行合并脚本，由 Python 直连驱动双通道分流、高精度比对与 TG 发射
+    # 2. 运行 Python 编译脚本并下发 TG 通知
     - name: Text Merge JSON and Send TG Notice
       env:
-        # 把密钥安全传给 Python 核心去直发
         TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TG_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       run: |
-        pip install requests
+        pip install requests urllib3
         python modify_config.py
 
-    - name: Commit and Push changes
+    # 3. 部署到 Cloudflare Pages (项目名设定为 hdys)
+    - name: Publish to Cloudflare Pages
+      env:
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      run: |
+        npx -y wrangler pages project create hdys --production-branch=main || true
+        npx -y wrangler pages deploy datas --project-name=hdys --branch=main
+
+    # 4. 全量提交 Git 记录（保存记忆文件，确保变动通知与比对正常）
+    - name: Commit and Push full changes
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global core.quotepath false
         
-        # 确保把生成的全量版、纯净版动态 JSON 实体以及容灾备份文件一并安全推送到仓库
+        # 暂存 datas 目录
         git add datas/
+        
+        # 检查是否有内容变动
         if ! git diff --cached --exit-code --quiet; then
-          git commit -m "双源自适应硬核合并 (蝴蝶影视全量/纯净双矩阵系列 & 容灾备份系统): $(date +'%Y-%m-%d %H:%M:%S')"
-          git pull --rebase origin ${{ github.ref_name }}
+          git commit -m "Auto sync release (hdys): $(date +'%Y-%m-%d %H:%M:%S')"
+          git pull origin ${{ github.ref_name }} --no-rebase --no-edit || true
           git push origin HEAD:${{ github.ref_name }}
         else
           echo "文件内容没有发生实际变化，无需更新，优雅退出。"
