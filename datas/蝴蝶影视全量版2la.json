@@ -3157,13 +3157,6 @@
             "url": "https://develop202.github.io/migu_video/interface.txt"
         },
         {
-            "name": "🦋 综合直播｜Tg：@huliys9",
-            "type": 0,
-            "playerType": 2,
-            "url": "https://ghfast.top/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
-            "ua": "bingcha/1.1 (mianfeifenxiang) "
-        },
-        {
             "name": "🦋 Kimentanm｜Tg：@huliys9",
             "type": 0,
             "url": "https://ghfast.top/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
@@ -3180,14 +3173,6 @@
             "type": 3,
             "url": "https://iptv.1989.click/playlist.m3u",
             "epg": "https://material.1989.click/epg.xml.gz",
-            "ua": "okhttp/3.8.1",
-            "timeout": 10,
-            "playerType": 2
-        },
-        {
-            "name": "🦋 Live「直播」｜Tg：@huliys9",
-            "type": 3,
-            "url": "https://live.yang-1989.eu.org/Live.m3u",
             "ua": "okhttp/3.8.1",
             "timeout": 10,
             "playerType": 2
@@ -3453,24 +3438,6 @@
             "type": 0,
             "ua": "okhttp",
             "url": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/FC2-PPV1.m3u"
-        },
-        {
-            "name": "🦋 海外频道（开梯）🔞｜Tg：@huliys9",
-            "type": 0,
-            "ua": "okhttp/5.3.2",
-            "url": "https://ghfast.top/https://raw.githubusercontent.com/yihad168/tv/refs/heads/main/live.m3u"
-        },
-        {
-            "name": "🦋 国产直播🔞｜Tg：@huliys9",
-            "type": 0,
-            "ua": "okhttp/5.3.2",
-            "url": "https://ghfast.top/https://raw.githubusercontent.com/Ameria22/TV/refs/heads/main/data/01%E5%9B%BD%E4%BA%A7%E7%9B%B4%E6%92%AD_20260417_024507.m3u"
-        },
-        {
-            "name": "🦋 国产精品🔞｜Tg：@huliys9",
-            "type": 0,
-            "ua": "okhttp/5.3.2",
-            "url": "https://ghfast.top/https://raw.githubusercontent.com/Ameria22/TV/refs/heads/main/data/01%E5%9B%BD%E4%BA%A7%E7%B2%BE%E5%93%81_20260417_024507.m3u"
         },
         {
             "name": "🦋 探花🔞｜Tg：@huliys9",
