@@ -2687,10 +2687,26 @@
             "category": "福利"
         },
         {
-            "key": "采集聚合成人",
-            "name": "🦋 采集聚合成人.py｜🔞",
+            "key": "hanime1",
+            "name": "🦋 hanime1动漫.py🔞",
             "type": 3,
-            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/采集聚合成人.py",
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/hanime1.py",
+            "ext": "",
+            "category": "福利"
+        },
+        {
+            "key": "MoTV",
+            "name": "🦋 MoTV.py｜🔞",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/MoTV.py",
+            "ext": "",
+            "category": "福利"
+        },
+        {
+            "key": "真实人妻",
+            "name": "🦋 真实人妻.py｜🔞",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/真实人妻.py",
             "ext": "",
             "category": "福利"
         },
@@ -2863,6 +2879,22 @@
             "category": "福利"
         },
         {
+            "key": "Jable",
+            "name": "🦋 Jable.py｜🔞",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/Jable.py",
+            "ext": "",
+            "category": "福利"
+        },
+        {
+            "key": "AdultpornaAV",
+            "name": "🦋 AdultpornaAV.py｜🔞",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/AdultpornaAV.py",
+            "ext": "",
+            "category": "福利"
+        },
+        {
             "key": "Xvideos",
             "name": "🦋 Xvideos.py｜🔞",
             "type": 3,
@@ -2947,6 +2979,14 @@
             "name": "🦋 麻豆免费在线播放.py｜🔞",
             "type": 3,
             "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/麻豆免费在线播放.py",
+            "ext": "",
+            "category": "福利"
+        },
+        {
+            "key": "采集聚合成人",
+            "name": "🦋 采集聚合成人｜🔞",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/采集聚合成人.py",
             "ext": "",
             "category": "福利"
         },
