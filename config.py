@@ -275,7 +275,13 @@ MY_CUSTOM_LIVES = [
         "type": 0,
         "ua": "okhttp/5.3.2",
         "url": "https://ghfast.top/https://raw.githubusercontent.com/GodLike631/Ly_18/refs/heads/main/datas/%E6%9C%80%E6%96%B0%E7%94%B5%E5%BD%B1.m3u"
-    },        
+    }, 
+	{
+        "name": "海外频道（开梯）🔞",
+        "type": 0,
+        "ua": "okhttp/5.3.2",
+        "url": "https://ghfast.top/http://raw.githubusercontent.com/yihad168/tv/refs/heads/main/live.m3u"
+    },
     {
         "name": "国产直播🔞",
         "type": 0,
