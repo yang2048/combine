@@ -603,8 +603,11 @@ def build_and_dispatch_matrix(ordered_obj, current_token, full_out_name, clean_o
                     msg_lines.append("📊 *━━━━━━━━━━━━━━*")
 
                 full_msg = config.TG_UPDATE_MSG_TEMPLATE.format(
-                    current_time=current_time, detail_msg="\n".join(msg_lines),
-                    full_sub_url=full_sub_url, clean_sub_url=clean_sub_url
+                    current_time=current_time, 
+                    current_token=current_token,  # 🎯 补上这个缺失的变量！
+                    detail_msg="\n".join(msg_lines),
+                    full_sub_url=full_sub_url, 
+                    clean_sub_url=clean_sub_url
                 )
                 send_telegram_request(tg_token, tg_chat_id, full_msg)
             else:
