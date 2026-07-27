@@ -160,8 +160,10 @@ TG_PWD_MSG_TEMPLATE = (
     "📅 *生效时间*：`{current_time}` (北京时间)\n"
     "🔑 *全新专线密锁*：`{current_token}`\n\n"
     "🚀 *重要提示*：\n密码锁已成功交替！旧接口已全线开启【金蝉脱壳】大轰炸，老链接彻底作废，请及时复制下方对应通道的最新链接！\n\n"
-    "🔞 *最新【蝴蝶影视全量版】矩阵订阅*：\n`{full_sub_url}`\n\n"
-    "🏡 *最新【蝴蝶影视纯净版】客厅订阅*：\n`{clean_sub_url}`\n\n"
+    "🔞 *最新【蝴蝶影视全量版】矩阵订阅*：\n"
+    "`https://hd.lytvs.top/蝴蝶影视全量版{current_token}.json`\n\n"
+    "🏡 *最新【蝴蝶影视纯净版】客厅订阅*：\n"
+    "`https://hd.lytvs.top/蝴蝶影视纯净版{current_token}.json`\n\n"
     f"👑 矩阵连接已在后台全自动换锁，请及时前往电视端更新。若电视端遇到断流请尝试重启软件或前往TG频道（{MY_PROMO_CHANNEL}）获取支持！"
 )
 
@@ -171,8 +173,10 @@ TG_UPDATE_MSG_TEMPLATE = (
     "🚀 *变动说明*：检测到上游数据源更新或手工区调整，双版本配置已全自动编译上链！\n\n"
     "{detail_msg}\n\n"
     "📡 *【 最新多版本订阅矩阵 (点击可自动复制)】*：\n\n"
-    "🔞 *1. 蝴蝶影视全量版* (包含全部线路):\n`{full_sub_url}`\n\n"
-    "🏡 *2. 蝴蝶影视纯净版* (已自动全面过滤敏感内容):\n`{clean_sub_url}`\n\n"
+    "🔞 *最新【蝴蝶影视全量版】矩阵订阅*：\n"
+    "`https://hd.lytvs.top/蝴蝶影视全量版{current_token}.json`\n\n"
+    "🏡 *最新【蝴蝶影视纯净版】客厅订阅*：\n"
+    "`https://hd.lytvs.top/蝴蝶影视纯净版{current_token}.json`\n\n"
     f"👑 全量版与纯净版已在后台无缝更新。更新配置即可，若遇到断流请尝试重启软件或及时前往TG频道（{MY_PROMO_CHANNEL}）获取当前最新密码锁！"
 )
 
@@ -225,14 +229,7 @@ MY_CUSTOM_LIVES = [
         "type": 0,
         "ua": "okhttp/5.3.2",
         "url": "https://develop202.github.io/migu_video/interface.txt"
-    },
-	{
-        "name": "综合直播",
-        "type": 0,
-        "playerType": 2,
-        "url": "https://ghfast.top/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
-        "ua": "bingcha/1.1 (mianfeifenxiang) "
-    },    
+    },   
 	{
         "name": "Kimentanm",
         "type": 0,
@@ -255,14 +252,6 @@ MY_CUSTOM_LIVES = [
       "playerType": 2
     },
     {
-      "name": "Live「直播」",
-      "type": 3,
-      "url": "https://live.yang-1989.eu.org/Live.m3u",
-      "ua": "okhttp/3.8.1",
-      "timeout": 10,
-      "playerType": 2
-    },
-    {
         "name": "锋云直播",
         "type": 3,
         "url": "https://gh-proxy.org/https://raw.githubusercontent.com/807080747/zv/refs/heads/main/suale.txt",
@@ -275,25 +264,7 @@ MY_CUSTOM_LIVES = [
         "type": 0,
         "ua": "okhttp/5.3.2",
         "url": "https://ghfast.top/https://raw.githubusercontent.com/GodLike631/Ly_18/refs/heads/main/datas/%E6%9C%80%E6%96%B0%E7%94%B5%E5%BD%B1.m3u"
-    }, 
-	{
-        "name": "海外频道（开梯）🔞",
-        "type": 0,
-        "ua": "okhttp/5.3.2",
-        "url": "https://ghfast.top/https://raw.githubusercontent.com/yihad168/tv/refs/heads/main/live.m3u"
-    },
-    {
-        "name": "国产直播🔞",
-        "type": 0,
-        "ua": "okhttp/5.3.2",
-        "url": "https://ghfast.top/https://raw.githubusercontent.com/Ameria22/TV/refs/heads/main/data/01%E5%9B%BD%E4%BA%A7%E7%9B%B4%E6%92%AD_20260417_024507.m3u"
-    },
-    {
-        "name": "国产精品🔞",
-        "type": 0,
-        "ua": "okhttp/5.3.2",
-        "url": "https://ghfast.top/https://raw.githubusercontent.com/Ameria22/TV/refs/heads/main/data/01%E5%9B%BD%E4%BA%A7%E7%B2%BE%E5%93%81_20260417_024507.m3u"
-    },
+    },        
     {
         "name": "探花🔞",
         "type": 0,
