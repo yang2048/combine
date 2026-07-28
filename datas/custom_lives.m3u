@@ -1,10 +1,552 @@
 #EXTM3U x-tvg-url="https://material.yang-1989.xyz/epg.xml.gz,http://epg.51zmt.top:8000/e.xml.gz"
-#EXTINF:-1 tvg-name="东方卫视4K [1080P] [1080P]" group-title="4K超清频道",东方卫视4K [1080P] [1080P] [1080P]
+#EXTINF:-1 tvg-name="东方卫视4K [1080P] [1080P]" group-title="️4K超清频道 ",东方卫视4K [1080P] [1080P] [1080P]
 http://bp-resource-dfl.bestv.cn/148/3/video.m3u8
-#EXTINF:-1 tvg-name="南国都市4K超高清 [1080P] [1080P]" group-title="4K超清频道",南国都市4K超高清 [1080P] [1080P] [1080P]
+#EXTINF:-1 tvg-name="南国都市4K超高清 [1080P] [1080P]" group-title="️4K超清频道 ",南国都市4K超高清 [1080P] [1080P] [1080P]
 http://tencentplay.gztv.com/live/nanguodushi.m3u8?txSecret=140110ae3d6c936a77f94c4f4d85b0d3&txTime=18d57929bd4
-#EXTINF:-1 tvg-name="湖南卫视4K [2160P/HEVC] [2160P/HEVC]" group-title="4K超清频道",湖南卫视4K [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
+#EXTINF:-1 tvg-name="湖南卫视4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",湖南卫视4K [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
 http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
+#EXTINF:-1 tvg-name="4K少儿 [HEVC] [HEVC]" group-title="️4K超清频道 ",4K少儿 [HEVC] [HEVC] [HEVC]
+http://182.135.66.163:1888/rtp/239.94.1.70:5140
+#EXTINF:-1 tvg-name="4K纪实 [HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",4K纪实 [HEVC] [2160P/HEVC] [HEVC]
+http://182.135.66.163:18888/rtp/239.94.1.69:5140
+#EXTINF:-1 tvg-name="4K视界 [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",4K视界 [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
+http://182.135.66.163:18888/rtp/239.94.1.60:5140
+#EXTINF:-1 tvg-name="4K视界 [HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",4K视界 [HEVC] [2160P/HEVC] [2160P/HEVC]
+http://182.135.66.163:1888/rtp/239.94.1.60:5140
+#EXTINF:-1 tvg-name="CCTV-4" group-title="️4K超清频道 ",CCTV-4 [2160P/HEVC]
+http://218.81.49.34:10010/rtp/233.18.204.204:5140
+#EXTINF:-1 tvg-name="东方4K [1080P] [1080P]" group-title="️4K超清频道 ",东方4K [1080P] [1080P] [1080P]
+https://bp-resource-dfl.bestv.cn/148/3/video.m3u8
+#EXTINF:-1 tvg-name="亲子趣学4k [2160P/HEVC] [HEVC]" group-title="️4K超清频道 ",亲子趣学4k [2160P/HEVC] [HEVC] [2160P/HEVC]
+http://182.135.66.163:1888/rtp/239.94.1.156:5140
+#EXTINF:-1 tvg-name="北京4K [1080P] [1080P]" group-title="️4K超清频道 ",北京4K [1080P] [1080P] [1080P]
+http://rihou.cc:555/tv/北京卫视4K
+#EXTINF:-1 tvg-name="四川4K [1080P] [1080P]" group-title="️4K超清频道 ",四川4K [1080P] [1080P] [1080P]
+http://rihou.cc:555/tv/四川卫视4K
+#EXTINF:-1 tvg-name="四川卫视4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",四川卫视4K [2160P/HEVC] [2160P/HEVC] [HEVC]
+http://182.135.66.163:18888/rtp/239.94.0.115:5140
+#EXTINF:-1 tvg-name="天翼高清4K [HEVC] [HEVC]" group-title="️4K超清频道 ",天翼高清4K [HEVC] [HEVC] [2160P/HEVC]
+http://182.135.66.163:18888/rtp/239.94.2.41:5140
+#EXTINF:-1 tvg-name="天翼高清4K [HEVC] [HEVC]" group-title="️4K超清频道 ",天翼高清4K [HEVC] [HEVC] [HEVC]
+http://182.135.66.163:1888/rtp/239.94.2.41:5140
+#EXTINF:-1 tvg-name="广东4K [1080P] [1080P]" group-title="️4K超清频道 ",广东4K [1080P] [1080P] [1080P]
+http://rihou.cc:555/tv/广东卫视4K
+#EXTINF:-1 tvg-name="广东4K超高清 [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",广东4K超高清 [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
+http://183.47.2.156:16883/udp/239.77.0.245:5146
+#EXTINF:-1 tvg-name="江苏4K [1080P] [1080P]" group-title="️4K超清频道 ",江苏4K [1080P] [1080P] [1080P]
+http://rihou.cc:555/tv/江苏卫视4K
+#EXTINF:-1 tvg-name="江苏卫视4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",江苏卫视4K [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
+http://218.81.49.34:10010/rtp/233.18.204.226:5140
+#EXTINF:-1 tvg-name="浙江4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",浙江4K [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
+http://rihou.cc:555/tv/浙江卫视4K
+#EXTINF:-1 tvg-name="浙江卫视4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",浙江卫视4K [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
+http://ali-xwl.cztv.com/live/channel4k2160p.m3u8
+#EXTINF:-1 tvg-name="浙江卫视4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",浙江卫视4K [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
+https://bd-xwl.cztv.com/live/channel4k2160p.m3u8
+#EXTINF:-1 tvg-name="深圳4K [1080P] [1080P]" group-title="️4K超清频道 ",深圳4K [1080P] [1080P] [1080P]
+http://rihou.cc:555/tv/szws
+#EXTINF:-1 tvg-name="湖南4K [1080P] [1080P]" group-title="️4K超清频道 ",湖南4K [1080P] [1080P] [1080P]
+http://rihou.cc:555/tv/湖南卫视4K
+#EXTINF:-1 tvg-name="湖南卫视4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",湖南卫视4K [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
+http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
+#EXTINF:-1 tvg-name="苏州4K [720P] [720P]" group-title="️4K超清频道 ",苏州4K [720P] [720P] [720P]
+https://live-auth.51kandianshi.com/szgd/csztv4k_hd.m3u8
+#EXTINF:-1 tvg-name="浙江卫视4K [2160P/HEVC]" group-title="️4K超清频道 ",浙江卫视4K [2160P/HEVC] [2160P/HEVC]
+https://bd-xwl.cztv.com/live/channel4k2160p.m3u8#http://ali-xwl.cztv.com/live/channel4k2160p.m3u8
+#EXTINF:-1 tvg-name="湖南卫视4K [2160P/HEVC]" group-title="️4K超清频道 ",湖南卫视4K [2160P/HEVC] [2160P/HEVC]
+http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8#http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
+#EXTINF:-1 tvg-name="CCTV-1" group-title="央视频道",CCTV-1 [1080P]
+http://123.118.53.84:45237/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-1" group-title="央视频道",CCTV-1 [1080P]
+http://111.8.177.188:9909/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-1" group-title="央视频道",CCTV-1 [1080P]
+http://221.7.175.154:8445/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-2" group-title="央视频道",CCTV-2 [1080P]
+http://111.8.177.188:9909/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-2" group-title="央视频道",CCTV-2 [1080P]
+http://123.118.53.84:45237/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-3" group-title="央视频道",CCTV-3 [1080P]
+http://123.118.53.84:45237/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-3" group-title="央视频道",CCTV-3 [1080P]
+http://221.7.175.154:8445/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-4" group-title="央视频道",CCTV-4 [2160P/HEVC]
+http://home.amucn.net:8800/udp/239.49.0.82:8000
+#EXTINF:-1 tvg-name="CCTV-5" group-title="央视频道",CCTV-5 [1080P]
+http://111.8.177.188:9909/tsfile/live/1052_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-5" group-title="央视频道",CCTV-5 [1080P]
+http://123.118.53.84:45237/tsfile/live/0016_2.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-5" group-title="央视频道",CCTV-5 [1080P]
+http://123.118.53.84:45237/tsfile/live/0005_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-6" group-title="央视频道",CCTV-6 [1080P]
+http://221.232.199.210:7777/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-6" group-title="央视频道",CCTV-6 [1080P]
+http://221.232.198.78:7777/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-6" group-title="央视频道",CCTV-6 [1080P]
+http://221.232.196.114:7777/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-7" group-title="央视频道",CCTV-7 [1080P]
+http://123.118.53.84:45237/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-7" group-title="央视频道",CCTV-7 [1080P]
+http://111.8.177.188:9909/tsfile/live/1077_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-7" group-title="央视频道",CCTV-7 [1080P]
+http://221.7.175.154:8445/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-8" group-title="央视频道",CCTV-8 [1080P]
+http://221.232.198.78:7777/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-8" group-title="央视频道",CCTV-8 [1080P]
+http://221.7.175.154:8445/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-9" group-title="央视频道",CCTV-9 [1080P]
+http://183.129.255.66:8480/hls/10/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-10" group-title="央视频道",CCTV-10 [1080P]
+http://111.8.177.188:9909/tsfile/live/1039_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-10" group-title="央视频道",CCTV-10 [1080P]
+http://221.7.175.154:8445/tsfile/live/1008_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-10" group-title="央视频道",CCTV-10 [1080P]
+http://183.129.255.66:8480/hls/11/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-11" group-title="央视频道",CCTV-11 [1080P]
+http://111.8.177.188:9909/tsfile/live/1041_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-12" group-title="央视频道",CCTV-12 [1080P]
+http://123.118.53.84:45237/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-12" group-title="央视频道",CCTV-12 [1080P]
+http://111.8.177.188:9909/tsfile/live/1043_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-12" group-title="央视频道",CCTV-12 [1080P]
+http://221.7.175.154:8445/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-13" group-title="央视频道",CCTV-13 [1080P]
+http://111.8.177.188:9909/tsfile/live/1045_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-13" group-title="央视频道",CCTV-13 [1080P]
+http://123.118.53.84:45237/tsfile/live/0013_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-13" group-title="央视频道",CCTV-13 [1080P]
+http://221.7.175.154:8445/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-14" group-title="央视频道",CCTV-14 [1080P]
+http://123.118.53.84:45237/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-14" group-title="央视频道",CCTV-14 [1080P]
+http://221.7.175.154:8445/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-14" group-title="央视频道",CCTV-14 [1080P]
+https://event.pull.hebtv.com/jishi/cp2.m3u8#rtsp://103.251.96.71/PLTV/88888888/224/3221225783/10000100000000060000000000726027_0.smil?icpid=SSPID&accounttype=1&limitflux=-1&limitdur=-1&accountinfo=:20240213104135#https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8#http://39.165.39.49:19901/tsfile/live/1085_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="CCTV-15" group-title="央视频道",CCTV-15 [1080P]
+http://123.118.53.84:45237/tsfile/live/0015_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-15" group-title="央视频道",CCTV-15 [1080P]
+http://111.8.177.188:9909/tsfile/live/1049_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-15" group-title="央视频道",CCTV-15 [1080P]
+http://183.129.255.66:8480/hls/16/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-16" group-title="央视频道",CCTV-16 [HEVC]
+http://youngx.top:4022/rtp/233.18.204.215:5140
+#EXTINF:-1 tvg-name="CCTV-16" group-title="央视频道",CCTV-16 [1080P]
+http://183.129.255.66:8480/hls/17/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-17" group-title="央视频道",CCTV-17 [1080P]
+http://111.8.177.188:9909/tsfile/live/1025_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CCTV-17" group-title="央视频道",CCTV-17 [1080P]
+http://183.129.255.66:8480/hls/18/index.m3u8
+#EXTINF:-1 tvg-name="CCTV-17" group-title="央视频道",CCTV-17 [1080P]
+http://221.7.175.154:8445/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="CEC汉语文化 [576P] [576P]" group-title="央视频道",CEC汉语文化 [576P] [576P] [576P]
+http://play.cec-tv.com.cn/channel/cec-tv1.m3u8
+#EXTINF:-1 tvg-name="CEC国际旅游 [576P] [576P]" group-title="央视频道",CEC国际旅游 [576P] [576P] [576P]
+http://play.cec-tv.com.cn/channel/cec-tv2.m3u8
+#EXTINF:-1 tvg-name="CEC国际教育 [576P] [576P]" group-title="央视频道",CEC国际教育 [576P] [576P] [576P]
+http://play.cec-tv.com.cn/channel/cec-tv3.m3u8
+#EXTINF:-1 tvg-name="CEC国际健康 [576P] [576P]" group-title="央视频道",CEC国际健康 [576P] [576P] [576P]
+http://play.cec-tv.com.cn/channel/cec-tv4.m3u8
+#EXTINF:-1 tvg-name="CETV1综合教育 [1080P]" group-title="央视频道",CETV1综合教育 [1080P] [1080P]
+https://hlscdn.liangtv.cn/live/ddb2ee1aa1134ac591230352a121aa22/bc359bd2e13b4cb9a3096effa77d1bc0.m3u8#https://hlscdn.liangtv.cn/live/ddb2ee1aa1134ac591230352a121aa22/bc359bd2e13b4cb9a3096effa77d1bc0-1.m3u8
+#EXTINF:-1 tvg-name="CETV2空中课堂 [1080P]" group-title="央视频道",CETV2空中课堂 [1080P] [1080P]
+https://hlscdn.liangtv.cn/live/3f29b81206fe4d229e1522d59aae8e75/15a4a13dbf624ab9ac7cca5df100e985.m3u8#https://hlscdn.liangtv.cn/live/3f29b81206fe4d229e1522d59aae8e75/15a4a13dbf624ab9ac7cca5df100e985-1.m3u8
+#EXTINF:-1 tvg-name="CETV4职业教育 [1080P]" group-title="央视频道",CETV4职业教育 [1080P] [1080P]
+https://hlscdn.liangtv.cn/live/63f3fd7d8cf44a3e9719eec310c86fa5/b96f8fd6d5424ad4862d054172f616e4.m3u8#https://hlscdn.liangtv.cn/live/63f3fd7d8cf44a3e9719eec310c86fa5/b96f8fd6d5424ad4862d054172f616e4-1.m3u8
+#EXTINF:-1 tvg-name="CGTN [720P] [720P]" group-title="央视频道",CGTN [720P] [720P] [720P]
+https://0472.org/hls/cgtn.m3u8
+#EXTINF:-1 tvg-name="CGTN纪录 [720P] [720P]" group-title="央视频道",CGTN纪录 [720P] [720P] [720P]
+https://english-livetx.cgtn.com/hls/yypdjlctzb_hd.m3u8
+#EXTINF:-1 tvg-name="CGTN记录 [720P] [720P]" group-title="央视频道",CGTN记录 [720P] [720P] [720P]
+https://0472.org/hls/cgtnd.m3u8?3.24.120:5140
+#EXTINF:-1 tvg-name="CGTN法语 [1080P] [1080P]" group-title="央视频道",CGTN法语 [1080P] [1080P] [1080P]
+https://0472.org/hls/cgtnf.m3u8
+#EXTINF:-1 tvg-name="CGTN俄语 [1080P] [1080P]" group-title="央视频道",CGTN俄语 [1080P] [1080P] [1080P]
+https://0472.org/hls/cgtne.m3u8
+#EXTINF:-1 tvg-name="CGTN西语 [1080P] [1080P]" group-title="央视频道",CGTN西语 [1080P] [1080P] [1080P]
+https://espanol-liveali.cgtn.com/hls/LSveOGBaBw41Ea7ukkVAUdKQ220802LSTexu6xAuFH8VZNBLE1ZNEa220802cd/playlist.m3u8
+#EXTINF:-1 tvg-name="CGTN西语 [1080P] [1080P]" group-title="央视频道",CGTN西语 [1080P] [1080P] [1080P]
+https://0472.org/hls/cgtnx.m3u8
+#EXTINF:-1 tvg-name="CGTN阿语 [1080P] [1080P]" group-title="央视频道",CGTN阿语 [1080P] [1080P] [1080P]
+https://0472.org/hls/cgtna.m3u8?3.24.160:5140
+#EXTINF:-1 tvg-name="CGTN阿语 [1080P] [1080P]" group-title="央视频道",CGTN阿语 [1080P] [1080P] [1080P]
+https://arabic-liveali.cgtn.com/hls/LSveq57bErWLinBnxosqjisZ220802LSTefTAS9zc9mpU08y3np9TH220802cd/playlist.m3u8
+#EXTINF:-1 tvg-name="CCTV气象" group-title="央视频道",CCTV气象 [1080P]
+http://111.8.177.188:9909/tsfile/live/1088_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="(国)大湾区卫视 [720P]" group-title="卫视高清频道",(国)大湾区卫视 [720P] [720P]
+http://38.75.136.137:98/gslb/dsdqpub/nfws.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="BTV北京卫视" group-title="卫视高清频道",BTV北京卫视 [576P]
+http://123.118.53.84:45237/tsfile/live/0016_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="东南卫视" group-title="卫视高清频道",东南卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1022_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="东南卫视 [1080P]" group-title="卫视高清频道",东南卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/38/index.m3u8#http://39.165.39.49:19901/tsfile/live/1149_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="东南卫视 [1080P]" group-title="卫视高清频道",东南卫视 [1080P] [1080P]
+http://live.zohi.tv/video/s10001-fztv-3/index.m3u8#http://satellitepull.cnr.cn/live/wx32fjws/playlist.m3u8
+#EXTINF:-1 tvg-name="东南卫视 [1080P]" group-title="卫视高清频道",东南卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/38/index.m3u8
+#EXTINF:-1 tvg-name="东南卫视 [1080P] [1080P]" group-title="卫视高清频道",东南卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0137_1.m3u8
+#EXTINF:-1 tvg-name="东方卫视" group-title="卫视高清频道",东方卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1066_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="东方卫视" group-title="卫视高清频道",东方卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0107_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="东方卫视 [1080P]" group-title="卫视高清频道",东方卫视 [1080P] [1080P]
+http://120.40.39.246:352/newlive/live/hls/20/live.m3u8
+#EXTINF:-1 tvg-name="东方卫视 [1080P] [1080P]" group-title="卫视高清频道",东方卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0018_1.m3u8
+#EXTINF:-1 tvg-name="东方卫视 [720P]" group-title="卫视高清频道",东方卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0107_1.m3u8?key=txiptv&playlive=0&authid=0#http://39.165.39.49:19901/tsfile/live/1128_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="东方卫视HD [1080P]" group-title="卫视高清频道",东方卫视HD [1080P] [1080P]
+http://38.75.136.137:98/gslb/dsdqpub/dfwshd.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="云南卫视" group-title="卫视高清频道",云南卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1097_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="云南卫视 [1080P]" group-title="卫视高清频道",云南卫视 [1080P] [1080P]
+http://yjj888.f3322.net:9901/tsfile/live/0119_2.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="云南卫视 [1080P]" group-title="卫视高清频道",云南卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/40/index.m3u8
+#EXTINF:-1 tvg-name="云南卫视 [1080P] [1080P]" group-title="卫视高清频道",云南卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0107_1.m3u8
+#EXTINF:-1 tvg-name="云南卫视" group-title="卫视高清频道",云南卫视 [576P]
+http://123.118.53.84:45237/tsfile/live/0119_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="兵团卫视" group-title="卫视高清频道",兵团卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1020_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="兵团卫视 [1080P] [1080P]" group-title="卫视高清频道",兵团卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0115_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="兵团卫视 [576P]" group-title="卫视高清频道",兵团卫视 [576P] [1080P]
+http://38.75.136.137:98/gslb/dsdqpub/btws.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="内蒙古卫视" group-title="卫视高清频道",内蒙古卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="内蒙古卫视" group-title="卫视高清频道",内蒙古卫视 [576P]
+http://123.118.53.84:45237/tsfile/live/0109_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="内蒙古卫视 [576P]" group-title="卫视高清频道",内蒙古卫视 [576P] [576P]
+http://yjj888.f3322.net:9901/tsfile/live/0109_2.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="内蒙古卫视 [576P]" group-title="卫视高清频道",内蒙古卫视 [576P] [576P]
+http://112.27.235.94:8000/hls/49/index.m3u8
+#EXTINF:-1 tvg-name="内蒙古卫视 [720P]" group-title="卫视高清频道",内蒙古卫视 [720P] [1080P]
+http://38.75.136.137:98/gslb/dsdqpub/nmgws.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="农林卫视 [404P]" group-title="卫视高清频道",农林卫视 [404P] [404P]
+http://gxlive.snrtv.com/nlws-SD.m3u8
+#EXTINF:-1 tvg-name="北京卫视" group-title="卫视高清频道",北京卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1065_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="北京卫视 [1080P]" group-title="卫视高清频道",北京卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/27/index.m3u8
+#EXTINF:-1 tvg-name="北京卫视 [1080P] [1080P]" group-title="卫视高清频道",北京卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0122_1.m3u8
+#EXTINF:-1 tvg-name="北京卫视 [720P]" group-title="卫视高清频道",北京卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0122_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/27/index.m3u8#http://39.165.39.49:19901/tsfile/live/1130_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="北京卫视 [720P]" group-title="卫视高清频道",北京卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0122_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="卡酷卡通 [1080P] [1080P]" group-title="卫视高清频道",卡酷卡通 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="合肥生活 [576P]" group-title="卫视高清频道",合肥生活 [576P] [576P]
+http://112.27.235.94:8000/hls/19/index.m3u8
+#EXTINF:-1 tvg-name="合肥科创 [576P]" group-title="卫视高清频道",合肥科创 [576P] [576P]
+http://112.27.235.94:8000/hls/20/index.m3u8
+#EXTINF:-1 tvg-name="吉林卫视" group-title="卫视高清频道",吉林卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1032_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="吉林卫视 [1080P] [1080P]" group-title="卫视高清频道",吉林卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="四川卫视" group-title="卫视高清频道",四川卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1056_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="四川卫视 [1080P] [1080P]" group-title="卫视高清频道",四川卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0123_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="四川卫视 [1080P] [1080P]" group-title="卫视高清频道",四川卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0017_1.m3u8
+#EXTINF:-1 tvg-name="四川卫视" group-title="卫视高清频道",四川卫视 [576P]
+http://123.118.53.84:45237/tsfile/live/0123_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="天津卫视" group-title="卫视高清频道",天津卫视 [1080P]
+http://221.232.197.235:7777/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="天津卫视" group-title="卫视高清频道",天津卫视 [1080P]
+http://221.232.198.78:7777/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="天津卫视" group-title="卫视高清频道",天津卫视 [1080P]
+http://221.232.198.182:7777/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="天津卫视 [1080P]" group-title="卫视高清频道",天津卫视 [1080P] [1080P]
+http://yjj888.f3322.net:9901/tsfile/live/0135_2.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="天津卫视 [1080P]" group-title="卫视高清频道",天津卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/42/index.m3u8
+#EXTINF:-1 tvg-name="天津卫视 [1080P] [1080P]" group-title="卫视高清频道",天津卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="天津卫视 [1080P] [1080P]" group-title="卫视高清频道",天津卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0135_1.m3u8
+#EXTINF:-1 tvg-name="天津卫视 [720P]" group-title="卫视高清频道",天津卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0135_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="天津卫视HD [1080P]" group-title="卫视高清频道",天津卫视HD [1080P] [1080P]
+http://38.75.136.137:98/gslb/dsdqpub/tjwshd.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="宁夏卫视" group-title="卫视高清频道",宁夏卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0112_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="宁夏卫视 [1080P]" group-title="卫视高清频道",宁夏卫视 [1080P] [1080P]
+http://yjj888.f3322.net:9901/tsfile/live/0112_2.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="宁夏卫视 [576P]" group-title="卫视高清频道",宁夏卫视 [576P] [1080P]
+http://38.75.136.137:98/gslb/dsdqpub/nxws.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="安徽卫视" group-title="卫视高清频道",安徽卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1057_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="安徽卫视" group-title="卫视高清频道",安徽卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0130_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="安徽卫视 [1080P] [1080P]" group-title="卫视高清频道",安徽卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0130_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="安徽卫视 [1080P] [1080P]" group-title="卫视高清频道",安徽卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0130_1.m3u8
+#EXTINF:-1 tvg-name="安徽卫视 [720P]" group-title="卫视高清频道",安徽卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0130_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/26/index.m3u8#http://39.165.39.49:19901/tsfile/live/1134_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="安徽卫视 [720P]" group-title="卫视高清频道",安徽卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0130_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="安徽卫视HD [720P]" group-title="卫视高清频道",安徽卫视HD [720P] [1080P]
+http://38.75.136.137:98/gslb/dsdqpub/ahwshd.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="安徽影视 [1080P]" group-title="卫视高清频道",安徽影视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/24/index.m3u8
+#EXTINF:-1 tvg-name="山东卫视" group-title="卫视高清频道",山东卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1067_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="山东卫视" group-title="卫视高清频道",山东卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="山东卫视 [1080P]" group-title="卫视高清频道",山东卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/34/index.m3u8
+#EXTINF:-1 tvg-name="山东卫视 [1080P] [1080P]" group-title="卫视高清频道",山东卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0131_1.m3u8
+#EXTINF:-1 tvg-name="山东卫视 [720P]" group-title="卫视高清频道",山东卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0131_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/34/index.m3u8#http://39.165.39.49:19901/tsfile/live/1133_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="山东卫视 [720P]" group-title="卫视高清频道",山东卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0131_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="山东教育 [720P]" group-title="卫视高清频道",山东教育 [720P] [720P]
+https://test1.live.sdetv.com.cn/live/dianshizhibo/playlist.m3u8
+#EXTINF:-1 tvg-name="山西卫视 [1080P]" group-title="卫视高清频道",山西卫视 [1080P] [1080P]
+http://yjj888.f3322.net:9901/tsfile/live/0118_2.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="山西卫视 [1080P] [1080P]" group-title="卫视高清频道",山西卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0118_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="山西卫视" group-title="卫视高清频道",山西卫视 [576P]
+http://123.118.53.84:45237/tsfile/live/0118_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="山西卫视 [576P]" group-title="卫视高清频道",山西卫视 [576P] [576P]
+http://112.27.235.94:8000/hls/45/index.m3u8
+#EXTINF:-1 tvg-name="广东卫视" group-title="卫视高清频道",广东卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1062_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="广东卫视 [1080P]" group-title="卫视高清频道",广东卫视 [1080P] [1080P]
+http://120.40.39.246:352/newlive/live/hls/25/live.m3u8
+#EXTINF:-1 tvg-name="广东卫视 [1080P] [1080P]" group-title="卫视高清频道",广东卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0125_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="广东卫视 [1080P] [1080P]" group-title="卫视高清频道",广东卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0125_1.m3u8
+#EXTINF:-1 tvg-name="广东卫视 [720P]" group-title="卫视高清频道",广东卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0125_2.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/30/index.m3u8#http://39.165.39.49:19901/tsfile/live/1131_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="广州新闻 [720P]" group-title="卫视高清频道",广州新闻 [720P] [720P]
+https://tencentplay.gztv.com/live/xinwen.m3u8?txSecret=6f73647cae387d01a3c2132074132a83&txTime=18d00acf487
+#EXTINF:-1 tvg-name="广西卫视 [1080P]" group-title="卫视高清频道",广西卫视 [1080P] [1080P]
+http://yjj888.f3322.net:9901/tsfile/live/0113_2.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="广西卫视 [1080P]" group-title="卫视高清频道",广西卫视 [1080P] [1080P]
+https://hlscdn.liangtv.cn/live/de0f97348eb84f62aa6b7d8cf0430770/dd505d87880c478f901f38560ca4d4e6.m3u8#https://hlscdn.liangtv.cn/live/0c4ef3a44b934cacb8b47121dfada66c/d7e04258157b480dae53883cc6f8123b.m3u8
+#EXTINF:-1 tvg-name="广西卫视 [1080P] [1080P]" group-title="卫视高清频道",广西卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0113_2.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="广西卫视 [1080P] [1080P]" group-title="卫视高清频道",广西卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0113_1.m3u8
+#EXTINF:-1 tvg-name="广西卫视" group-title="卫视高清频道",广西卫视 [576P]
+http://123.118.53.84:45237/tsfile/live/0113_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="延边卫视 [1080P]" group-title="卫视高清频道",延边卫视 [1080P] [1080P]
+http://l.cztvcloud.com/channels/lantian/SXxinchang2/720p.m3u8##https://srs.iyb983.cn/video/CYS/index.m3u8
+#EXTINF:-1 tvg-name="延边卫视 [720P] [720P]" group-title="卫视高清频道",延边卫视 [720P] [720P] [720P]
+https://srs.iyb983.cn:443/video/CYS/index.m3u8
+#EXTINF:-1 tvg-name="新疆卫视" group-title="卫视高清频道",新疆卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0110_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="新疆卫视 [1080P]" group-title="卫视高清频道",新疆卫视 [1080P] [1080P]
+http://yjj888.f3322.net:9901/tsfile/live/0110_2.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="新疆卫视 [1080P]" group-title="卫视高清频道",新疆卫视 [1080P] [1080P]
+http://218.84.12.186:8001/hls/main/playlist.m3u8#http://satellitepull.cnr.cn/live/wxxjws/playlist.m3u8
+#EXTINF:-1 tvg-name="新疆卫视 [1080P]" group-title="卫视高清频道",新疆卫视 [1080P] [1080P]
+http://38.75.136.137:98/gslb/dsdqpub/xjws.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="旅游卫视" group-title="卫视高清频道",旅游卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1028_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="江苏卫视" group-title="卫视高清频道",江苏卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0127_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="江苏卫视" group-title="卫视高清频道",江苏卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1070_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="江苏卫视 [1080P]" group-title="卫视高清频道",江苏卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/32/index.m3u8
+#EXTINF:-1 tvg-name="江苏卫视 [1080P]" group-title="卫视高清频道",江苏卫视 [1080P] [1080P]
+http://120.40.39.246:352/newlive/live/hls/22/live.m3u8
+#EXTINF:-1 tvg-name="江苏卫视 [1080P] [1080P]" group-title="卫视高清频道",江苏卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0127_1.m3u8
+#EXTINF:-1 tvg-name="江苏卫视 [720P]" group-title="卫视高清频道",江苏卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0127_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/32/index.m3u8#http://39.165.39.49:19901/tsfile/live/1129_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="江苏卫视 [720P] [720P]" group-title="卫视高清频道",江苏卫视 [720P] [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0127_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="江西卫视" group-title="卫视高清频道",江西卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0138_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="江西卫视" group-title="卫视高清频道",江西卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1019_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="江西卫视 [1080P]" group-title="卫视高清频道",江西卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/44/index.m3u8
+#EXTINF:-1 tvg-name="江西卫视 [1080P] [1080P]" group-title="卫视高清频道",江西卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0010_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="江西卫视 [1080P] [1080P]" group-title="卫视高清频道",江西卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0138_1.m3u8
+#EXTINF:-1 tvg-name="江西卫视 [720P]" group-title="卫视高清频道",江西卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0138_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/44/index.m3u8
+#EXTINF:-1 tvg-name="江西卫视 [720P]" group-title="卫视高清频道",江西卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0138_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="河北4K [2160P] [2160P]" group-title="卫视高清频道",河北4K [2160P] [2160P] [2160P]
+https://event.pull.hebtv.com:443/live/live101.m3u8
+#EXTINF:-1 tvg-name="河北卫视" group-title="卫视高清频道",河北卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1059_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="河北卫视 [1080P]" group-title="卫视高清频道",河北卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/39/index.m3u8
+#EXTINF:-1 tvg-name="河北卫视 [1080P] [1080P]" group-title="卫视高清频道",河北卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0117_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="河北卫视 [1080P] [1080P]" group-title="卫视高清频道",河北卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/1001_1.m3u8
+#EXTINF:-1 tvg-name="河北卫视 [720P]" group-title="卫视高清频道",河北卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0117_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="河北卫视HD [1080P]" group-title="卫视高清频道",河北卫视HD [1080P] [1080P]
+http://38.75.136.137:98/gslb/dsdqpub/hewshd.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="河南卫视" group-title="卫视高清频道",河南卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0139_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="河南卫视 [1080P]" group-title="卫视高清频道",河南卫视 [1080P] [1080P]
+http://116.76.254.170:44330/tsfile/live/0139_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/37/index.m3u8#http://39.165.39.49:19901/tsfile/live/1105_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="河南卫视 [1080P]" group-title="卫视高清频道",河南卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/37/index.m3u8
+#EXTINF:-1 tvg-name="河南卫视 [1080P] [1080P]" group-title="卫视高清频道",河南卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0139_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="河南卫视 [1080P] [1080P]" group-title="卫视高清频道",河南卫视 [1080P] [1080P] [1080P]
+http://116.76.254.170:44330/tsfile/live/0139_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="河南卫视HD [1080P]" group-title="卫视高清频道",河南卫视HD [1080P] [720P]
+http://38.75.136.137:98/gslb/dsdqpub/hawshd.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="浙江卫视" group-title="卫视高清频道",浙江卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1064_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="浙江卫视" group-title="卫视高清频道",浙江卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0124_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="浙江卫视 [1080P]" group-title="卫视高清频道",浙江卫视 [1080P] [1080P]
+https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8#http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
+#EXTINF:-1 tvg-name="浙江卫视 [1080P]" group-title="卫视高清频道",浙江卫视 [1080P] [1080P]
+https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
+#EXTINF:-1 tvg-name="浙江卫视 [1080P] [1080P]" group-title="卫视高清频道",浙江卫视 [1080P] [1080P] [1080P]
+http://ali-m-l.cztv.com:80/channels/lantian/channel001/1080p.m3u8
+#EXTINF:-1 tvg-name="浙江卫视 [1080P] [1080P]" group-title="卫视高清频道",浙江卫视 [1080P] [1080P] [1080P]
+http://ali-m-l.cztv.com:80/channels/lantian/channel001/1080p.m3u8#http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8#https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8#https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8?#http://ali-m-l.cztv.com:80/channels/lantian/channel001/1080p.m3u8
+#EXTINF:-1 tvg-name="浙江卫视 [1080P] [1080P]" group-title="卫视高清频道",浙江卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0124_1.m3u8
+#EXTINF:-1 tvg-name="海南卫视 [1080P]" group-title="卫视高清频道",海南卫视 [1080P] [1080P]
+http://yjj888.f3322.net:9901/tsfile/live/1023_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="深圳卫视" group-title="卫视高清频道",深圳卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0126_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="深圳卫视" group-title="卫视高清频道",深圳卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1021_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="深圳卫视 [1080P]" group-title="卫视高清频道",深圳卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/33/index.m3u8
+#EXTINF:-1 tvg-name="深圳卫视 [1080P] [1080P]" group-title="卫视高清频道",深圳卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0126_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="深圳卫视 [1080P] [1080P]" group-title="卫视高清频道",深圳卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0126_1.m3u8
+#EXTINF:-1 tvg-name="深圳卫视 [720P]" group-title="卫视高清频道",深圳卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/1013_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/33/index.m3u8#http://39.165.39.49:19901/tsfile/live/1141_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="深圳卫视 [720P]" group-title="卫视高清频道",深圳卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/1013_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视高清频道",湖北卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1058_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视高清频道",湖北卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0132_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="湖北卫视 [1080P]" group-title="卫视高清频道",湖北卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/41/index.m3u8
+#EXTINF:-1 tvg-name="湖北卫视 [1080P] [1080P]" group-title="卫视高清频道",湖北卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0132_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="湖北卫视 [1080P] [1080P]" group-title="卫视高清频道",湖北卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0132_1.m3u8
+#EXTINF:-1 tvg-name="湖北卫视 [720P]" group-title="卫视高清频道",湖北卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0132_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/41/index.m3u8#http://39.165.39.49:19901/tsfile/live/1143_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="湖北卫视 [720P]" group-title="卫视高清频道",湖北卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0132_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="湖北卫视HD [1080P]" group-title="卫视高清频道",湖北卫视HD [1080P] [1080P]
+http://38.75.136.137:98/gslb/dsdqpub/hbwshd.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="湖南卫视" group-title="卫视高清频道",湖南卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="湖南卫视" group-title="卫视高清频道",湖南卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="湖南卫视 [1080P] [1080P]" group-title="卫视高清频道",湖南卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0128_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="湖南卫视 [1080P] [1080P]" group-title="卫视高清频道",湖南卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0128_1.m3u8
+#EXTINF:-1 tvg-name="湖南卫视 [720P]" group-title="卫视高清频道",湖南卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0128_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/31/index.m3u8#http://39.165.39.49:19901/tsfile/live/1140_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="湖南卫视 [720P]" group-title="卫视高清频道",湖南卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0128_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="湖南卫视HD [1080P]" group-title="卫视高清频道",湖南卫视HD [1080P] [1080P]
+http://38.75.136.137:98/gslb/dsdqpub/hnwshd.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="甘肃卫视" group-title="卫视高清频道",甘肃卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1098_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="甘肃卫视 [1080P]" group-title="卫视高清频道",甘肃卫视 [1080P] [1080P]
+http://yjj888.f3322.net:9901/tsfile/live/0141_2.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="甘肃卫视HD [576P]" group-title="卫视高清频道",甘肃卫视HD [576P] [576P]
+http://38.75.136.137:98/gslb/dsdqpub/gswshd.m3u8?auth=testpub
+#EXTINF:-1 tvg-name="福建综合 [1080P]" group-title="卫视高清频道",福建综合 [1080P] [1080P]
+http://120.40.39.246:352/newlive/live/hls/18/live.m3u8
+#EXTINF:-1 tvg-name="西藏卫视" group-title="卫视高清频道",西藏卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0111_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="西藏卫视 [1080P]" group-title="卫视高清频道",西藏卫视 [1080P] [1080P]
+http://yjj888.f3322.net:9901/tsfile/live/0111_2.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="西藏卫视 [1080P] [1080P]" group-title="卫视高清频道",西藏卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="贵州卫视" group-title="卫视高清频道",贵州卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0120_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="贵州卫视 [1080P]" group-title="卫视高清频道",贵州卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/46/index.m3u8
+#EXTINF:-1 tvg-name="贵州卫视 [1080P]" group-title="卫视高清频道",贵州卫视 [1080P] [1080P]
+http://120.40.39.246:352/newlive/live/hls/30/live.m3u8
+#EXTINF:-1 tvg-name="贵州卫视 [1080P] [1080P]" group-title="卫视高清频道",贵州卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0120_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="贵州卫视 [1080P] [1080P]" group-title="卫视高清频道",贵州卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0120_1.m3u8
+#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视高清频道",辽宁卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视高清频道",辽宁卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1060_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="辽宁卫视 [1080P]" group-title="卫视高清频道",辽宁卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/47/index.m3u8
+#EXTINF:-1 tvg-name="辽宁卫视 [1080P] [1080P]" group-title="卫视高清频道",辽宁卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="辽宁都市" group-title="卫视高清频道",辽宁都市
+https://ls.qingting.fm/live/1099/64k.m3u8
+#EXTINF:-1 tvg-name="重庆卫视" group-title="卫视高清频道",重庆卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1071_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="重庆卫视 [1080P]" group-title="卫视高清频道",重庆卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/36/index.m3u8
+#EXTINF:-1 tvg-name="重庆卫视 [1080P] [1080P]" group-title="卫视高清频道",重庆卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0142_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="重庆卫视 [1080P] [1080P]" group-title="卫视高清频道",重庆卫视 [1080P] [1080P] [1080P]
+http://222.214.208.34:59901/tsfile/live/0142_1.m3u8
+#EXTINF:-1 tvg-name="重庆卫视 [720P]" group-title="卫视高清频道",重庆卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0142_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/36/index.m3u8
+#EXTINF:-1 tvg-name="重庆卫视 [720P]" group-title="卫视高清频道",重庆卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0142_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="重温经典 [1080P]" group-title="卫视高清频道",重温经典 [1080P] [1080P]
+http://112.27.235.94:8000/hls/50/index.m3u8
+#EXTINF:-1 tvg-name="重温经典 [1080P] [1080P]" group-title="卫视高清频道",重温经典 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0136_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="金鹰卡通 [1080P] [1080P]" group-title="卫视高清频道",金鹰卡通 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="陕西卫视" group-title="卫视高清频道",陕西卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1023_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="陕西卫视 [1080P]" group-title="卫视高清频道",陕西卫视 [1080P] [1080P]
+http://116.76.254.170:44330/tsfile/live/0136_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/43/index.m3u8
+#EXTINF:-1 tvg-name="陕西卫视 [1080P]" group-title="卫视高清频道",陕西卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/43/index.m3u8
+#EXTINF:-1 tvg-name="陕西卫视" group-title="卫视高清频道",陕西卫视 [576P]
+http://123.118.53.84:45237/tsfile/live/0136_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="青海卫视" group-title="卫视高清频道",青海卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1030_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="青海卫视 [1080P]" group-title="卫视高清频道",青海卫视 [1080P] [1080P]
+http://yjj888.f3322.net:9901/tsfile/live/0140_2.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 tvg-name="青海卫视" group-title="卫视高清频道",青海卫视 [576P]
+http://123.118.53.84:45237/tsfile/live/0140_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="青海卫视 [576P] [576P]" group-title="卫视高清频道",青海卫视 [576P] [576P] [576P]
+http://222.214.208.34:59901/tsfile/live/1007_1.m3u8
+#EXTINF:-1 tvg-name="黑龙江卫视" group-title="卫视高清频道",黑龙江卫视 [1080P]
+http://123.118.53.84:45237/tsfile/live/0143_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="黑龙江卫视" group-title="卫视高清频道",黑龙江卫视 [1080P]
+http://111.8.177.188:9909/tsfile/live/1068_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="黑龙江卫视 [1080P]" group-title="卫视高清频道",黑龙江卫视 [1080P] [1080P]
+http://112.27.235.94:8000/hls/48/index.m3u8
+#EXTINF:-1 tvg-name="黑龙江卫视 [1080P] [1080P]" group-title="卫视高清频道",黑龙江卫视 [1080P] [1080P] [1080P]
+http://221.7.175.154:8445/tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 tvg-name="黑龙江卫视 [576P]" group-title="卫视高清频道",黑龙江卫视 [576P] [576P]
+http://l.cztvcloud.com/channels/lantian/SXyuyao3/720p.m3u8#http://satellitepull.cnr.cn/live/wx32hljws/playlist.m3u8
+#EXTINF:-1 tvg-name="黑龙江卫视 [720P]" group-title="卫视高清频道",黑龙江卫视 [720P] [720P]
+http://116.76.254.170:44330/tsfile/live/0143_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/48/index.m3u8
+#EXTINF:-1 tvg-name="黑龙江卫视HD [1080P]" group-title="卫视高清频道",黑龙江卫视HD [1080P] [1080P]
+http://38.75.136.137:98/gslb/dsdqpub/hljwshd.m3u8?auth=testpub
 #EXTINF:-1 tvg-name="一代枭雄频道 [720P] [720P]" group-title="影视频道 ",一代枭雄频道 [720P] [720P] [720P]
 http://cfss.cc/cdn/huya/11342398.flv
 #EXTINF:-1 tvg-name="三国演义频道 [720P] [720P]" group-title="影视频道 ",三国演义频道 [720P] [720P] [720P]
@@ -817,238 +1359,8 @@ https://vip.dytt-hot.com/20250810/98026_91949fce/index.m3u8
 https://vip.dytt-hot.com/20250810/98027_12dc78e6/index.m3u8
 #EXTINF:-1 tvg-name="五绝争锋30集 [1080P]" group-title="华山论剑",五绝争锋30集 [1080P] [1080P]
 https://vip.dytt-hot.com/20250810/98029_68e3d1b4/index.m3u8
-#EXTINF:-1 tvg-name="东南卫视 [1080P]" group-title="卫视",东南卫视 [1080P] [1080P]
-http://live.zohi.tv/video/s10001-fztv-3/index.m3u8#http://satellitepull.cnr.cn/live/wx32fjws/playlist.m3u8
-#EXTINF:-1 tvg-name="山东教育 [720P]" group-title="卫视",山东教育 [720P] [720P]
-https://test1.live.sdetv.com.cn/live/dianshizhibo/playlist.m3u8
-#EXTINF:-1 tvg-name="广西卫视 [1080P]" group-title="卫视",广西卫视 [1080P] [1080P]
-https://hlscdn.liangtv.cn/live/de0f97348eb84f62aa6b7d8cf0430770/dd505d87880c478f901f38560ca4d4e6.m3u8#https://hlscdn.liangtv.cn/live/0c4ef3a44b934cacb8b47121dfada66c/d7e04258157b480dae53883cc6f8123b.m3u8
-#EXTINF:-1 tvg-name="延边卫视 [1080P]" group-title="卫视",延边卫视 [1080P] [1080P]
-http://l.cztvcloud.com/channels/lantian/SXxinchang2/720p.m3u8##https://srs.iyb983.cn/video/CYS/index.m3u8
-#EXTINF:-1 tvg-name="新疆卫视 [1080P]" group-title="卫视",新疆卫视 [1080P] [1080P]
-http://218.84.12.186:8001/hls/main/playlist.m3u8#http://satellitepull.cnr.cn/live/wxxjws/playlist.m3u8
-#EXTINF:-1 tvg-name="浙江卫视 [1080P]" group-title="卫视",浙江卫视 [1080P] [1080P]
-https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8#http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
-#EXTINF:-1 tvg-name="辽宁都市" group-title="卫视",辽宁都市
-https://ls.qingting.fm/live/1099/64k.m3u8
-#EXTINF:-1 tvg-name="黑龙江卫视 [576P]" group-title="卫视",黑龙江卫视 [576P] [576P]
-http://l.cztvcloud.com/channels/lantian/SXyuyao3/720p.m3u8#http://satellitepull.cnr.cn/live/wx32hljws/playlist.m3u8
-#EXTINF:-1 tvg-name="农林卫视 [404P]" group-title="卫视系列",农林卫视 [404P] [404P]
-http://gxlive.snrtv.com/nlws-SD.m3u8
-#EXTINF:-1 tvg-name="广州新闻 [720P]" group-title="卫视系列",广州新闻 [720P] [720P]
-https://tencentplay.gztv.com/live/xinwen.m3u8?txSecret=6f73647cae387d01a3c2132074132a83&txTime=18d00acf487
-#EXTINF:-1 tvg-name="云南卫视 [1080P]" group-title="卫视频道",云南卫视 [1080P] [1080P]
-http://yjj888.f3322.net:9901/tsfile/live/0119_2.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="兵团卫视 [1080P] [1080P]" group-title="卫视频道",兵团卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0115_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="内蒙古卫视 [576P]" group-title="卫视频道",内蒙古卫视 [576P] [576P]
-http://yjj888.f3322.net:9901/tsfile/live/0109_2.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="卡酷卡通 [1080P] [1080P]" group-title="卫视频道",卡酷卡通 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="吉林卫视 [1080P] [1080P]" group-title="卫视频道",吉林卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="四川卫视 [1080P] [1080P]" group-title="卫视频道",四川卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0123_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="天津卫视 [1080P]" group-title="卫视频道",天津卫视 [1080P] [1080P]
-http://yjj888.f3322.net:9901/tsfile/live/0135_2.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="天津卫视 [1080P] [1080P]" group-title="卫视频道",天津卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="宁夏卫视 [1080P]" group-title="卫视频道",宁夏卫视 [1080P] [1080P]
-http://yjj888.f3322.net:9901/tsfile/live/0112_2.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="安徽卫视 [1080P] [1080P]" group-title="卫视频道",安徽卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0130_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="山西卫视 [1080P]" group-title="卫视频道",山西卫视 [1080P] [1080P]
-http://yjj888.f3322.net:9901/tsfile/live/0118_2.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="山西卫视 [1080P] [1080P]" group-title="卫视频道",山西卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0118_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="广东卫视 [1080P] [1080P]" group-title="卫视频道",广东卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0125_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="广西卫视 [1080P]" group-title="卫视频道",广西卫视 [1080P] [1080P]
-http://yjj888.f3322.net:9901/tsfile/live/0113_2.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="广西卫视 [1080P] [1080P]" group-title="卫视频道",广西卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0113_2.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="延边卫视 [720P] [720P]" group-title="卫视频道",延边卫视 [720P] [720P] [720P]
-https://srs.iyb983.cn:443/video/CYS/index.m3u8
-#EXTINF:-1 tvg-name="新疆卫视 [1080P]" group-title="卫视频道",新疆卫视 [1080P] [1080P]
-http://yjj888.f3322.net:9901/tsfile/live/0110_2.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="江西卫视 [1080P] [1080P]" group-title="卫视频道",江西卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0010_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="河北4K [2160P] [2160P]" group-title="卫视频道",河北4K [2160P] [2160P] [2160P]
-https://event.pull.hebtv.com:443/live/live101.m3u8
-#EXTINF:-1 tvg-name="河北卫视 [1080P] [1080P]" group-title="卫视频道",河北卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0117_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="河南卫视 [1080P] [1080P]" group-title="卫视频道",河南卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0139_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="浙江卫视 [1080P] [1080P]" group-title="卫视频道",浙江卫视 [1080P] [1080P] [1080P]
-http://ali-m-l.cztv.com:80/channels/lantian/channel001/1080p.m3u8
-#EXTINF:-1 tvg-name="浙江卫视 [1080P] [1080P]" group-title="卫视频道",浙江卫视 [1080P] [1080P] [1080P]
-http://ali-m-l.cztv.com:80/channels/lantian/channel001/1080p.m3u8#http://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8#https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8#https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8?#http://ali-m-l.cztv.com:80/channels/lantian/channel001/1080p.m3u8
-#EXTINF:-1 tvg-name="海南卫视 [1080P]" group-title="卫视频道",海南卫视 [1080P] [1080P]
-http://yjj888.f3322.net:9901/tsfile/live/1023_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="深圳卫视 [1080P] [1080P]" group-title="卫视频道",深圳卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0126_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="湖北卫视 [1080P] [1080P]" group-title="卫视频道",湖北卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0132_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="湖南卫视 [1080P] [1080P]" group-title="卫视频道",湖南卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0128_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="甘肃卫视 [1080P]" group-title="卫视频道",甘肃卫视 [1080P] [1080P]
-http://yjj888.f3322.net:9901/tsfile/live/0141_2.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="西藏卫视 [1080P]" group-title="卫视频道",西藏卫视 [1080P] [1080P]
-http://yjj888.f3322.net:9901/tsfile/live/0111_2.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="西藏卫视 [1080P] [1080P]" group-title="卫视频道",西藏卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="贵州卫视 [1080P] [1080P]" group-title="卫视频道",贵州卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0120_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="辽宁卫视 [1080P] [1080P]" group-title="卫视频道",辽宁卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="重庆卫视 [1080P] [1080P]" group-title="卫视频道",重庆卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0142_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="重温经典 [1080P] [1080P]" group-title="卫视频道",重温经典 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0136_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="金鹰卡通 [1080P] [1080P]" group-title="卫视频道",金鹰卡通 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/1016_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="青海卫视 [1080P]" group-title="卫视频道",青海卫视 [1080P] [1080P]
-http://yjj888.f3322.net:9901/tsfile/live/0140_2.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="黑龙江卫视 [1080P] [1080P]" group-title="卫视频道",黑龙江卫视 [1080P] [1080P] [1080P]
-http://221.7.175.154:8445/tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="东南卫视 [1080P]" group-title="卫视高清2",东南卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/38/index.m3u8#http://39.165.39.49:19901/tsfile/live/1149_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="东方卫视 [720P]" group-title="卫视高清2",东方卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0107_1.m3u8?key=txiptv&playlive=0&authid=0#http://39.165.39.49:19901/tsfile/live/1128_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="内蒙古卫视 [576P]" group-title="卫视高清2",内蒙古卫视 [576P] [576P]
-http://112.27.235.94:8000/hls/49/index.m3u8
-#EXTINF:-1 tvg-name="北京卫视 [720P]" group-title="卫视高清2",北京卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0122_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/27/index.m3u8#http://39.165.39.49:19901/tsfile/live/1130_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="安徽卫视 [720P]" group-title="卫视高清2",安徽卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0130_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/26/index.m3u8#http://39.165.39.49:19901/tsfile/live/1134_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="山东卫视 [720P]" group-title="卫视高清2",山东卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0131_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/34/index.m3u8#http://39.165.39.49:19901/tsfile/live/1133_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="山西卫视 [576P]" group-title="卫视高清2",山西卫视 [576P] [576P]
-http://112.27.235.94:8000/hls/45/index.m3u8
-#EXTINF:-1 tvg-name="广东卫视 [720P]" group-title="卫视高清2",广东卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0125_2.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/30/index.m3u8#http://39.165.39.49:19901/tsfile/live/1131_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="江苏卫视 [720P]" group-title="卫视高清2",江苏卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0127_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/32/index.m3u8#http://39.165.39.49:19901/tsfile/live/1129_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="江西卫视 [720P]" group-title="卫视高清2",江西卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0138_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/44/index.m3u8
-#EXTINF:-1 tvg-name="河南卫视 [1080P]" group-title="卫视高清2",河南卫视 [1080P] [1080P]
-http://116.76.254.170:44330/tsfile/live/0139_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/37/index.m3u8#http://39.165.39.49:19901/tsfile/live/1105_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="深圳卫视 [720P]" group-title="卫视高清2",深圳卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/1013_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/33/index.m3u8#http://39.165.39.49:19901/tsfile/live/1141_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="湖北卫视 [720P]" group-title="卫视高清2",湖北卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0132_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/41/index.m3u8#http://39.165.39.49:19901/tsfile/live/1143_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="湖南卫视 [720P]" group-title="卫视高清2",湖南卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0128_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/31/index.m3u8#http://39.165.39.49:19901/tsfile/live/1140_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="重庆卫视 [720P]" group-title="卫视高清2",重庆卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0142_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/36/index.m3u8
-#EXTINF:-1 tvg-name="陕西卫视 [1080P]" group-title="卫视高清2",陕西卫视 [1080P] [1080P]
-http://116.76.254.170:44330/tsfile/live/0136_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/43/index.m3u8
-#EXTINF:-1 tvg-name="黑龙江卫视 [720P]" group-title="卫视高清2",黑龙江卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0143_1.m3u8?key=txiptv&playlive=0&authid=0#http://112.27.235.94:8000/hls/48/index.m3u8
-#EXTINF:-1 tvg-name="BTV北京卫视" group-title="卫视高清频道",BTV北京卫视 [576P]
-http://123.118.53.84:45237/tsfile/live/0016_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="东南卫视" group-title="卫视高清频道",东南卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1022_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="东方卫视" group-title="卫视高清频道",东方卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1066_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="东方卫视" group-title="卫视高清频道",东方卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0107_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="云南卫视" group-title="卫视高清频道",云南卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1097_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="云南卫视" group-title="卫视高清频道",云南卫视 [576P]
-http://123.118.53.84:45237/tsfile/live/0119_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="兵团卫视" group-title="卫视高清频道",兵团卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1020_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="内蒙古卫视" group-title="卫视高清频道",内蒙古卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="内蒙古卫视" group-title="卫视高清频道",内蒙古卫视 [576P]
-http://123.118.53.84:45237/tsfile/live/0109_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="北京卫视" group-title="卫视高清频道",北京卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1065_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="吉林卫视" group-title="卫视高清频道",吉林卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1032_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="四川卫视" group-title="卫视高清频道",四川卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1056_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="四川卫视" group-title="卫视高清频道",四川卫视 [576P]
-http://123.118.53.84:45237/tsfile/live/0123_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="天津卫视" group-title="卫视高清频道",天津卫视 [1080P]
-http://221.232.197.235:7777/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="天津卫视" group-title="卫视高清频道",天津卫视 [1080P]
-http://221.232.198.78:7777/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="天津卫视" group-title="卫视高清频道",天津卫视 [1080P]
-http://221.232.198.182:7777/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="宁夏卫视" group-title="卫视高清频道",宁夏卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0112_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="安徽卫视" group-title="卫视高清频道",安徽卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1057_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="安徽卫视" group-title="卫视高清频道",安徽卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0130_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="山东卫视" group-title="卫视高清频道",山东卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1067_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="山东卫视" group-title="卫视高清频道",山东卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="山西卫视" group-title="卫视高清频道",山西卫视 [576P]
-http://123.118.53.84:45237/tsfile/live/0118_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="广东卫视" group-title="卫视高清频道",广东卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1062_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="广西卫视" group-title="卫视高清频道",广西卫视 [576P]
-http://123.118.53.84:45237/tsfile/live/0113_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="新疆卫视" group-title="卫视高清频道",新疆卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0110_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="旅游卫视" group-title="卫视高清频道",旅游卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1028_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="江苏卫视" group-title="卫视高清频道",江苏卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0127_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="江苏卫视" group-title="卫视高清频道",江苏卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1070_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="江西卫视" group-title="卫视高清频道",江西卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0138_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="江西卫视" group-title="卫视高清频道",江西卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1019_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="河北卫视" group-title="卫视高清频道",河北卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1059_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="河南卫视" group-title="卫视高清频道",河南卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0139_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="浙江卫视" group-title="卫视高清频道",浙江卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1064_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="浙江卫视" group-title="卫视高清频道",浙江卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0124_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="深圳卫视" group-title="卫视高清频道",深圳卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0126_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="深圳卫视" group-title="卫视高清频道",深圳卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1021_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视高清频道",湖北卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1058_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="湖北卫视" group-title="卫视高清频道",湖北卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0132_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="湖南卫视" group-title="卫视高清频道",湖南卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="湖南卫视" group-title="卫视高清频道",湖南卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="甘肃卫视" group-title="卫视高清频道",甘肃卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1098_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="西藏卫视" group-title="卫视高清频道",西藏卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0111_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="贵州卫视" group-title="卫视高清频道",贵州卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0120_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视高清频道",辽宁卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="辽宁卫视" group-title="卫视高清频道",辽宁卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1060_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="重庆卫视" group-title="卫视高清频道",重庆卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1071_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="陕西卫视" group-title="卫视高清频道",陕西卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1023_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="陕西卫视" group-title="卫视高清频道",陕西卫视 [576P]
-http://123.118.53.84:45237/tsfile/live/0136_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="青海卫视" group-title="卫视高清频道",青海卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1030_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="青海卫视" group-title="卫视高清频道",青海卫视 [576P]
-http://123.118.53.84:45237/tsfile/live/0140_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="黑龙江卫视" group-title="卫视高清频道",黑龙江卫视 [1080P]
-http://123.118.53.84:45237/tsfile/live/0143_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="黑龙江卫视" group-title="卫视高清频道",黑龙江卫视 [1080P]
-http://111.8.177.188:9909/tsfile/live/1068_1.m3u8?key=txiptv&playlive=1&authid=0
+
+
 #EXTINF:-1 tvg-name="春晚1983 [576P] [576P]" group-title="历年春晚",春晚1983 [576P] [576P] [576P]
 https://alimov2.a.kwimgs.com/upic/2022/01/31/15/BMjAyMjAxMzExNTU5MTRfNDAzMDAxOTlfNjYyNzMxNjcwMjBfMF8z_b_Beb3bda599f76c60c463c433ca7460153.mp4
 #EXTINF:-1 tvg-name="春晚1984 [576P] [576P]" group-title="历年春晚",春晚1984 [576P] [576P] [576P]
@@ -1837,120 +2149,7 @@ http://112.27.235.94:8000/hls/12/index.m3u8
 https://live.chinacert.cftest5.cn/cnmg/live/631780532
 #EXTINF:-1 tvg-name="CCTV-4" group-title="央卫频道",CCTV-4 [1080P]
 http://183.129.255.66:8480/hls/4/index.m3u8
-#EXTINF:-1 tvg-name="东南卫视 [1080P]" group-title="央卫频道",东南卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/38/index.m3u8
-#EXTINF:-1 tvg-name="东方卫视 [1080P]" group-title="央卫频道",东方卫视 [1080P] [1080P]
-http://120.40.39.246:352/newlive/live/hls/20/live.m3u8
-#EXTINF:-1 tvg-name="云南卫视 [1080P]" group-title="央卫频道",云南卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/40/index.m3u8
-#EXTINF:-1 tvg-name="北京卫视 [1080P]" group-title="央卫频道",北京卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/27/index.m3u8
-#EXTINF:-1 tvg-name="合肥生活 [576P]" group-title="央卫频道",合肥生活 [576P] [576P]
-http://112.27.235.94:8000/hls/19/index.m3u8
-#EXTINF:-1 tvg-name="合肥科创 [576P]" group-title="央卫频道",合肥科创 [576P] [576P]
-http://112.27.235.94:8000/hls/20/index.m3u8
-#EXTINF:-1 tvg-name="天津卫视 [1080P]" group-title="央卫频道",天津卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/42/index.m3u8
-#EXTINF:-1 tvg-name="安徽影视 [1080P]" group-title="央卫频道",安徽影视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/24/index.m3u8
-#EXTINF:-1 tvg-name="山东卫视 [1080P]" group-title="央卫频道",山东卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/34/index.m3u8
-#EXTINF:-1 tvg-name="广东卫视 [1080P]" group-title="央卫频道",广东卫视 [1080P] [1080P]
-http://120.40.39.246:352/newlive/live/hls/25/live.m3u8
-#EXTINF:-1 tvg-name="江苏卫视 [1080P]" group-title="央卫频道",江苏卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/32/index.m3u8
-#EXTINF:-1 tvg-name="江苏卫视 [1080P]" group-title="央卫频道",江苏卫视 [1080P] [1080P]
-http://120.40.39.246:352/newlive/live/hls/22/live.m3u8
-#EXTINF:-1 tvg-name="江西卫视 [1080P]" group-title="央卫频道",江西卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/44/index.m3u8
-#EXTINF:-1 tvg-name="河北卫视 [1080P]" group-title="央卫频道",河北卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/39/index.m3u8
-#EXTINF:-1 tvg-name="河南卫视 [1080P]" group-title="央卫频道",河南卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/37/index.m3u8
-#EXTINF:-1 tvg-name="深圳卫视 [1080P]" group-title="央卫频道",深圳卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/33/index.m3u8
-#EXTINF:-1 tvg-name="湖北卫视 [1080P]" group-title="央卫频道",湖北卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/41/index.m3u8
-#EXTINF:-1 tvg-name="福建综合 [1080P]" group-title="央卫频道",福建综合 [1080P] [1080P]
-http://120.40.39.246:352/newlive/live/hls/18/live.m3u8
-#EXTINF:-1 tvg-name="贵州卫视 [1080P]" group-title="央卫频道",贵州卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/46/index.m3u8
-#EXTINF:-1 tvg-name="贵州卫视 [1080P]" group-title="央卫频道",贵州卫视 [1080P] [1080P]
-http://120.40.39.246:352/newlive/live/hls/30/live.m3u8
-#EXTINF:-1 tvg-name="辽宁卫视 [1080P]" group-title="央卫频道",辽宁卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/47/index.m3u8
-#EXTINF:-1 tvg-name="重庆卫视 [1080P]" group-title="央卫频道",重庆卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/36/index.m3u8
-#EXTINF:-1 tvg-name="重温经典 [1080P]" group-title="央卫频道",重温经典 [1080P] [1080P]
-http://112.27.235.94:8000/hls/50/index.m3u8
-#EXTINF:-1 tvg-name="陕西卫视 [1080P]" group-title="央卫频道",陕西卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/43/index.m3u8
-#EXTINF:-1 tvg-name="黑龙江卫视 [1080P]" group-title="央卫频道",黑龙江卫视 [1080P] [1080P]
-http://112.27.235.94:8000/hls/48/index.m3u8
-#EXTINF:-1 tvg-name="东南卫视 [1080P] [1080P]" group-title="央卫高清2",东南卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0137_1.m3u8
-#EXTINF:-1 tvg-name="东方卫视 [1080P] [1080P]" group-title="央卫高清2",东方卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0018_1.m3u8
-#EXTINF:-1 tvg-name="云南卫视 [1080P] [1080P]" group-title="央卫高清2",云南卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0107_1.m3u8
-#EXTINF:-1 tvg-name="北京卫视 [1080P] [1080P]" group-title="央卫高清2",北京卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0122_1.m3u8
-#EXTINF:-1 tvg-name="北京卫视 [720P]" group-title="央卫高清2",北京卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0122_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="四川卫视 [1080P] [1080P]" group-title="央卫高清2",四川卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0017_1.m3u8
-#EXTINF:-1 tvg-name="天津卫视 [1080P] [1080P]" group-title="央卫高清2",天津卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0135_1.m3u8
-#EXTINF:-1 tvg-name="天津卫视 [720P]" group-title="央卫高清2",天津卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0135_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="安徽卫视 [1080P] [1080P]" group-title="央卫高清2",安徽卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0130_1.m3u8
-#EXTINF:-1 tvg-name="安徽卫视 [720P]" group-title="央卫高清2",安徽卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0130_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="山东卫视 [1080P] [1080P]" group-title="央卫高清2",山东卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0131_1.m3u8
-#EXTINF:-1 tvg-name="山东卫视 [720P]" group-title="央卫高清2",山东卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0131_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="广东卫视 [1080P] [1080P]" group-title="央卫高清2",广东卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0125_1.m3u8
-#EXTINF:-1 tvg-name="广西卫视 [1080P] [1080P]" group-title="央卫高清2",广西卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0113_1.m3u8
-#EXTINF:-1 tvg-name="江苏卫视 [1080P] [1080P]" group-title="央卫高清2",江苏卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0127_1.m3u8
-#EXTINF:-1 tvg-name="江苏卫视 [720P] [720P]" group-title="央卫高清2",江苏卫视 [720P] [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0127_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="江西卫视 [1080P] [1080P]" group-title="央卫高清2",江西卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0138_1.m3u8
-#EXTINF:-1 tvg-name="江西卫视 [720P]" group-title="央卫高清2",江西卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0138_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="河北卫视 [1080P] [1080P]" group-title="央卫高清2",河北卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/1001_1.m3u8
-#EXTINF:-1 tvg-name="河北卫视 [720P]" group-title="央卫高清2",河北卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0117_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="河南卫视 [1080P] [1080P]" group-title="央卫高清2",河南卫视 [1080P] [1080P] [1080P]
-http://116.76.254.170:44330/tsfile/live/0139_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="浙江卫视 [1080P] [1080P]" group-title="央卫高清2",浙江卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0124_1.m3u8
-#EXTINF:-1 tvg-name="深圳卫视 [1080P] [1080P]" group-title="央卫高清2",深圳卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0126_1.m3u8
-#EXTINF:-1 tvg-name="深圳卫视 [720P]" group-title="央卫高清2",深圳卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/1013_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="湖北卫视 [1080P] [1080P]" group-title="央卫高清2",湖北卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0132_1.m3u8
-#EXTINF:-1 tvg-name="湖北卫视 [720P]" group-title="央卫高清2",湖北卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0132_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="湖南卫视 [1080P] [1080P]" group-title="央卫高清2",湖南卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0128_1.m3u8
-#EXTINF:-1 tvg-name="湖南卫视 [720P]" group-title="央卫高清2",湖南卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0128_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="贵州卫视 [1080P] [1080P]" group-title="央卫高清2",贵州卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0120_1.m3u8
-#EXTINF:-1 tvg-name="重庆卫视 [1080P] [1080P]" group-title="央卫高清2",重庆卫视 [1080P] [1080P] [1080P]
-http://222.214.208.34:59901/tsfile/live/0142_1.m3u8
-#EXTINF:-1 tvg-name="重庆卫视 [720P]" group-title="央卫高清2",重庆卫视 [720P] [720P]
-http://116.76.254.170:44330/tsfile/live/0142_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="青海卫视 [576P] [576P]" group-title="央卫高清2",青海卫视 [576P] [576P] [576P]
-http://222.214.208.34:59901/tsfile/live/1007_1.m3u8
+
 #EXTINF:-1 tvg-name="卫生健康 [1080P]" group-title="央视付费#genre#",卫生健康 [1080P] [1080P]
 http://107.150.60.122/live/wsjk.m3u8#http://38.75.136.137:98/gslb/dsdqpub/wsjk.m3u8?auth=testpub
 #EXTINF:-1 tvg-name="发现之旅 [576P]" group-title="央视付费#genre#",发现之旅 [576P] [576P]
@@ -1985,152 +2184,9 @@ https://0472.org/hls/cgtnx.m3u8#https://espanol-liveali.cgtn.com/hls/LSveOGBaBw4
 https://0472.org/hls/cgtna.m3u8?3.24.160:5140#https://0472.org/hls/cgtna.m3u8#https://arabic-liveali.cgtn.com/hls/LSveq57bErWLinBnxosqjisZ220802LSTefTAS9zc9mpU08y3np9TH220802cd/playlist.m3u8
 #EXTINF:-1 tvg-name="重温经典 [1080P]" group-title="央视咪咕",重温经典 [1080P] [1080P]
 http://8.138.7.223/tv/cwjd.php#http://38.75.136.137:98/gslb/dsdqpub/cwjd.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="浙江卫视 [1080P]" group-title="央视直播[移动]",浙江卫视 [1080P] [1080P]
-https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
-#EXTINF:-1 tvg-name="(国)大湾区卫视 [720P]" group-title="央视直播[联通]",(国)大湾区卫视 [720P] [720P]
-http://38.75.136.137:98/gslb/dsdqpub/nfws.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="东方卫视HD [1080P]" group-title="央视直播[联通]",东方卫视HD [1080P] [1080P]
-http://38.75.136.137:98/gslb/dsdqpub/dfwshd.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="兵团卫视 [576P]" group-title="央视直播[联通]",兵团卫视 [576P] [1080P]
-http://38.75.136.137:98/gslb/dsdqpub/btws.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="内蒙古卫视 [720P]" group-title="央视直播[联通]",内蒙古卫视 [720P] [1080P]
-http://38.75.136.137:98/gslb/dsdqpub/nmgws.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="天津卫视HD [1080P]" group-title="央视直播[联通]",天津卫视HD [1080P] [1080P]
-http://38.75.136.137:98/gslb/dsdqpub/tjwshd.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="宁夏卫视 [576P]" group-title="央视直播[联通]",宁夏卫视 [576P] [1080P]
-http://38.75.136.137:98/gslb/dsdqpub/nxws.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="安徽卫视HD [720P]" group-title="央视直播[联通]",安徽卫视HD [720P] [1080P]
-http://38.75.136.137:98/gslb/dsdqpub/ahwshd.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="新疆卫视 [1080P]" group-title="央视直播[联通]",新疆卫视 [1080P] [1080P]
-http://38.75.136.137:98/gslb/dsdqpub/xjws.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="河北卫视HD [1080P]" group-title="央视直播[联通]",河北卫视HD [1080P] [1080P]
-http://38.75.136.137:98/gslb/dsdqpub/hewshd.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="河南卫视HD [1080P]" group-title="央视直播[联通]",河南卫视HD [1080P] [720P]
-http://38.75.136.137:98/gslb/dsdqpub/hawshd.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="湖北卫视HD [1080P]" group-title="央视直播[联通]",湖北卫视HD [1080P] [1080P]
-http://38.75.136.137:98/gslb/dsdqpub/hbwshd.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="湖南卫视HD [1080P]" group-title="央视直播[联通]",湖南卫视HD [1080P] [1080P]
-http://38.75.136.137:98/gslb/dsdqpub/hnwshd.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="甘肃卫视HD [576P]" group-title="央视直播[联通]",甘肃卫视HD [576P] [576P]
-http://38.75.136.137:98/gslb/dsdqpub/gswshd.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="黑龙江卫视HD [1080P]" group-title="央视直播[联通]",黑龙江卫视HD [1080P] [1080P]
-http://38.75.136.137:98/gslb/dsdqpub/hljwshd.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="CCTV-1" group-title="央视频道",CCTV-1 [1080P]
-http://221.7.175.154:8445/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-10" group-title="央视频道",CCTV-10 [1080P]
-http://221.7.175.154:8445/tsfile/live/1008_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-10" group-title="央视频道",CCTV-10 [1080P]
-http://183.129.255.66:8480/hls/11/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-12" group-title="央视频道",CCTV-12 [1080P]
-http://221.7.175.154:8445/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-13" group-title="央视频道",CCTV-13 [1080P]
-http://221.7.175.154:8445/tsfile/live/1011_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-14" group-title="央视频道",CCTV-14 [1080P]
-http://221.7.175.154:8445/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-14" group-title="央视频道",CCTV-14 [1080P]
-https://event.pull.hebtv.com/jishi/cp2.m3u8#rtsp://103.251.96.71/PLTV/88888888/224/3221225783/10000100000000060000000000726027_0.smil?icpid=SSPID&accounttype=1&limitflux=-1&limitdur=-1&accountinfo=:20240213104135#https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8#http://39.165.39.49:19901/tsfile/live/1085_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-name="CCTV-15" group-title="央视频道",CCTV-15 [1080P]
-http://183.129.255.66:8480/hls/16/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-16" group-title="央视频道",CCTV-16 [HEVC]
-http://youngx.top:4022/rtp/233.18.204.215:5140
-#EXTINF:-1 tvg-name="CCTV-16" group-title="央视频道",CCTV-16 [1080P]
-http://183.129.255.66:8480/hls/17/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-17" group-title="央视频道",CCTV-17 [1080P]
-http://183.129.255.66:8480/hls/18/index.m3u8
-#EXTINF:-1 tvg-name="CCTV-17" group-title="央视频道",CCTV-17 [1080P]
-http://221.7.175.154:8445/tsfile/live/1009_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-3" group-title="央视频道",CCTV-3 [1080P]
-http://221.7.175.154:8445/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-4" group-title="央视频道",CCTV-4 [2160P/HEVC]
-http://home.amucn.net:8800/udp/239.49.0.82:8000
-#EXTINF:-1 tvg-name="CCTV-7" group-title="央视频道",CCTV-7 [1080P]
-http://221.7.175.154:8445/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-8" group-title="央视频道",CCTV-8 [1080P]
-http://221.7.175.154:8445/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-9" group-title="央视频道",CCTV-9 [1080P]
-http://183.129.255.66:8480/hls/10/index.m3u8
-#EXTINF:-1 tvg-name="CEC国际健康 [576P] [576P]" group-title="央视频道",CEC国际健康 [576P] [576P] [576P]
-http://play.cec-tv.com.cn/channel/cec-tv4.m3u8
-#EXTINF:-1 tvg-name="CEC国际教育 [576P] [576P]" group-title="央视频道",CEC国际教育 [576P] [576P] [576P]
-http://play.cec-tv.com.cn/channel/cec-tv3.m3u8
-#EXTINF:-1 tvg-name="CEC国际旅游 [576P] [576P]" group-title="央视频道",CEC国际旅游 [576P] [576P] [576P]
-http://play.cec-tv.com.cn/channel/cec-tv2.m3u8
-#EXTINF:-1 tvg-name="CEC汉语文化 [576P] [576P]" group-title="央视频道",CEC汉语文化 [576P] [576P] [576P]
-http://play.cec-tv.com.cn/channel/cec-tv1.m3u8
-#EXTINF:-1 tvg-name="CETV1综合教育 [1080P]" group-title="央视频道",CETV1综合教育 [1080P] [1080P]
-https://hlscdn.liangtv.cn/live/ddb2ee1aa1134ac591230352a121aa22/bc359bd2e13b4cb9a3096effa77d1bc0.m3u8#https://hlscdn.liangtv.cn/live/ddb2ee1aa1134ac591230352a121aa22/bc359bd2e13b4cb9a3096effa77d1bc0-1.m3u8
-#EXTINF:-1 tvg-name="CETV2空中课堂 [1080P]" group-title="央视频道",CETV2空中课堂 [1080P] [1080P]
-https://hlscdn.liangtv.cn/live/3f29b81206fe4d229e1522d59aae8e75/15a4a13dbf624ab9ac7cca5df100e985.m3u8#https://hlscdn.liangtv.cn/live/3f29b81206fe4d229e1522d59aae8e75/15a4a13dbf624ab9ac7cca5df100e985-1.m3u8
-#EXTINF:-1 tvg-name="CETV4职业教育 [1080P]" group-title="央视频道",CETV4职业教育 [1080P] [1080P]
-https://hlscdn.liangtv.cn/live/63f3fd7d8cf44a3e9719eec310c86fa5/b96f8fd6d5424ad4862d054172f616e4.m3u8#https://hlscdn.liangtv.cn/live/63f3fd7d8cf44a3e9719eec310c86fa5/b96f8fd6d5424ad4862d054172f616e4-1.m3u8
-#EXTINF:-1 tvg-name="CGTN [720P] [720P]" group-title="央视频道",CGTN [720P] [720P] [720P]
-https://0472.org/hls/cgtn.m3u8
-#EXTINF:-1 tvg-name="CGTN俄语 [1080P] [1080P]" group-title="央视频道",CGTN俄语 [1080P] [1080P] [1080P]
-https://0472.org/hls/cgtne.m3u8
-#EXTINF:-1 tvg-name="CGTN法语 [1080P] [1080P]" group-title="央视频道",CGTN法语 [1080P] [1080P] [1080P]
-https://0472.org/hls/cgtnf.m3u8
-#EXTINF:-1 tvg-name="CGTN纪录 [720P] [720P]" group-title="央视频道",CGTN纪录 [720P] [720P] [720P]
-https://english-livetx.cgtn.com/hls/yypdjlctzb_hd.m3u8
-#EXTINF:-1 tvg-name="CGTN西语 [1080P] [1080P]" group-title="央视频道",CGTN西语 [1080P] [1080P] [1080P]
-https://espanol-liveali.cgtn.com/hls/LSveOGBaBw41Ea7ukkVAUdKQ220802LSTexu6xAuFH8VZNBLE1ZNEa220802cd/playlist.m3u8
-#EXTINF:-1 tvg-name="CGTN西语 [1080P] [1080P]" group-title="央视频道",CGTN西语 [1080P] [1080P] [1080P]
-https://0472.org/hls/cgtnx.m3u8
-#EXTINF:-1 tvg-name="CGTN记录 [720P] [720P]" group-title="央视频道",CGTN记录 [720P] [720P] [720P]
-https://0472.org/hls/cgtnd.m3u8?3.24.120:5140
-#EXTINF:-1 tvg-name="CGTN阿语 [1080P] [1080P]" group-title="央视频道",CGTN阿语 [1080P] [1080P] [1080P]
-https://0472.org/hls/cgtna.m3u8?3.24.160:5140
-#EXTINF:-1 tvg-name="CGTN阿语 [1080P] [1080P]" group-title="央视频道",CGTN阿语 [1080P] [1080P] [1080P]
-https://arabic-liveali.cgtn.com/hls/LSveq57bErWLinBnxosqjisZ220802LSTefTAS9zc9mpU08y3np9TH220802cd/playlist.m3u8
-#EXTINF:-1 tvg-name="CCTV-1" group-title="央视高清频道",CCTV-1 [1080P]
-http://123.118.53.84:45237/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-1" group-title="央视高清频道",CCTV-1 [1080P]
-http://111.8.177.188:9909/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-10" group-title="央视高清频道",CCTV-10 [1080P]
-http://111.8.177.188:9909/tsfile/live/1039_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-11" group-title="央视高清频道",CCTV-11 [1080P]
-http://111.8.177.188:9909/tsfile/live/1041_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-12" group-title="央视高清频道",CCTV-12 [1080P]
-http://123.118.53.84:45237/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-12" group-title="央视高清频道",CCTV-12 [1080P]
-http://111.8.177.188:9909/tsfile/live/1043_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-13" group-title="央视高清频道",CCTV-13 [1080P]
-http://111.8.177.188:9909/tsfile/live/1045_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-13" group-title="央视高清频道",CCTV-13 [1080P]
-http://123.118.53.84:45237/tsfile/live/0013_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-14" group-title="央视高清频道",CCTV-14 [1080P]
-http://123.118.53.84:45237/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-15" group-title="央视高清频道",CCTV-15 [1080P]
-http://123.118.53.84:45237/tsfile/live/0015_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-15" group-title="央视高清频道",CCTV-15 [1080P]
-http://111.8.177.188:9909/tsfile/live/1049_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-17" group-title="央视高清频道",CCTV-17 [1080P]
-http://111.8.177.188:9909/tsfile/live/1025_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-2" group-title="央视高清频道",CCTV-2 [1080P]
-http://111.8.177.188:9909/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-2" group-title="央视高清频道",CCTV-2 [1080P]
-http://123.118.53.84:45237/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-3" group-title="央视高清频道",CCTV-3 [1080P]
-http://123.118.53.84:45237/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-5" group-title="央视高清频道",CCTV-5 [1080P]
-http://111.8.177.188:9909/tsfile/live/1052_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-5" group-title="央视高清频道",CCTV-5 [1080P]
-http://123.118.53.84:45237/tsfile/live/0016_2.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-5" group-title="央视高清频道",CCTV-5 [1080P]
-http://123.118.53.84:45237/tsfile/live/0005_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-6" group-title="央视高清频道",CCTV-6 [1080P]
-http://221.232.199.210:7777/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-6" group-title="央视高清频道",CCTV-6 [1080P]
-http://221.232.198.78:7777/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-6" group-title="央视高清频道",CCTV-6 [1080P]
-http://221.232.196.114:7777/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-7" group-title="央视高清频道",CCTV-7 [1080P]
-http://123.118.53.84:45237/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-7" group-title="央视高清频道",CCTV-7 [1080P]
-http://111.8.177.188:9909/tsfile/live/1077_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-8" group-title="央视高清频道",CCTV-8 [1080P]
-http://221.232.198.78:7777/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV气象" group-title="央视高清频道",CCTV气象 [1080P]
-http://111.8.177.188:9909/tsfile/live/1088_1.m3u8?key=txiptv&playlive=1&authid=0
+
+
+
 #EXTINF:-1 tvg-name="2024年春节档 [264P] [360P]" group-title="奇艺直播",2024年春节档 [264P] [360P] [264P]
 https://lvbdcdncmn.inter.71edge.com/tslive/l1/c51_lb_1018_300_t10/FVCO_jz_IvuxsWIbLCEvdstzbdQ5JLXxRlDL_J0vn0ZfgVYlA8ZxkNsXDoN4tEEtdVVarW6sgCF_YG8SB_oH0KY1zskp9-1iKJVEaWYyfIcsLVb4uKAdavgO_OSZkELLKJjUkk8t-S2ZKMnCiMEnykukS-GLvkY3RPIYLqhh_sgtY8UdWfdJc3EC9bm2mWz6FtFwc60bdNNWJi8gc-IP6buv-YaAeEN1nX9gHHHlH-fHifCyKKz5ppVfKts6RkTExgx82j5eLn6Mhz1s-bWGltEsWZfVmO_fakc0UlGwpKI9Sib9yjNKUMrfspPL8C80AuU4zeRqbSgkzjAcoovjnw/19eafbac982c8ac667d9bbc7c395db940/c51_lb_1018_300_t10.m3u8?key=0baa5db205ac0d296d2a304d3de433222&dis_t=1752408161&uuid=6f1d53dc-6873a061-45a&qdpv=3&qd_bid=1&qd_sft=0&pv=0.1&cpt=0
 #EXTINF:-1 tvg-name="一年一度喜剧大赛 [360P] [360P]" group-title="奇艺直播",一年一度喜剧大赛 [360P] [360P] [360P]
@@ -5212,56 +5268,6 @@ http://cfss.cc/cdn/huya/23746691.flv
 http://cfss.cc/cdn/huya/11352875.flv
 #EXTINF:-1 tvg-name="青春环游记专场 [1080P] [1080P]" group-title="︎综艺直播",青春环游记专场 [1080P] [1080P] [480P]
 http://cfss.cc/cdn/huya/30080246.flv
-#EXTINF:-1 tvg-name="4K少儿 [HEVC] [HEVC]" group-title="️4K超清频道 ",4K少儿 [HEVC] [HEVC] [HEVC]
-http://182.135.66.163:1888/rtp/239.94.1.70:5140
-#EXTINF:-1 tvg-name="4K纪实 [HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",4K纪实 [HEVC] [2160P/HEVC] [HEVC]
-http://182.135.66.163:18888/rtp/239.94.1.69:5140
-#EXTINF:-1 tvg-name="4K视界 [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",4K视界 [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
-http://182.135.66.163:18888/rtp/239.94.1.60:5140
-#EXTINF:-1 tvg-name="4K视界 [HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",4K视界 [HEVC] [2160P/HEVC] [2160P/HEVC]
-http://182.135.66.163:1888/rtp/239.94.1.60:5140
-#EXTINF:-1 tvg-name="CCTV-4" group-title="️4K超清频道 ",CCTV-4 [2160P/HEVC]
-http://218.81.49.34:10010/rtp/233.18.204.204:5140
-#EXTINF:-1 tvg-name="东方4K [1080P] [1080P]" group-title="️4K超清频道 ",东方4K [1080P] [1080P] [1080P]
-https://bp-resource-dfl.bestv.cn/148/3/video.m3u8
-#EXTINF:-1 tvg-name="亲子趣学4k [2160P/HEVC] [HEVC]" group-title="️4K超清频道 ",亲子趣学4k [2160P/HEVC] [HEVC] [2160P/HEVC]
-http://182.135.66.163:1888/rtp/239.94.1.156:5140
-#EXTINF:-1 tvg-name="北京4K [1080P] [1080P]" group-title="️4K超清频道 ",北京4K [1080P] [1080P] [1080P]
-http://rihou.cc:555/tv/北京卫视4K
-#EXTINF:-1 tvg-name="四川4K [1080P] [1080P]" group-title="️4K超清频道 ",四川4K [1080P] [1080P] [1080P]
-http://rihou.cc:555/tv/四川卫视4K
-#EXTINF:-1 tvg-name="四川卫视4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",四川卫视4K [2160P/HEVC] [2160P/HEVC] [HEVC]
-http://182.135.66.163:18888/rtp/239.94.0.115:5140
-#EXTINF:-1 tvg-name="天翼高清4K [HEVC] [HEVC]" group-title="️4K超清频道 ",天翼高清4K [HEVC] [HEVC] [2160P/HEVC]
-http://182.135.66.163:18888/rtp/239.94.2.41:5140
-#EXTINF:-1 tvg-name="天翼高清4K [HEVC] [HEVC]" group-title="️4K超清频道 ",天翼高清4K [HEVC] [HEVC] [HEVC]
-http://182.135.66.163:1888/rtp/239.94.2.41:5140
-#EXTINF:-1 tvg-name="广东4K [1080P] [1080P]" group-title="️4K超清频道 ",广东4K [1080P] [1080P] [1080P]
-http://rihou.cc:555/tv/广东卫视4K
-#EXTINF:-1 tvg-name="广东4K超高清 [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",广东4K超高清 [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
-http://183.47.2.156:16883/udp/239.77.0.245:5146
-#EXTINF:-1 tvg-name="江苏4K [1080P] [1080P]" group-title="️4K超清频道 ",江苏4K [1080P] [1080P] [1080P]
-http://rihou.cc:555/tv/江苏卫视4K
-#EXTINF:-1 tvg-name="江苏卫视4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",江苏卫视4K [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
-http://218.81.49.34:10010/rtp/233.18.204.226:5140
-#EXTINF:-1 tvg-name="浙江4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",浙江4K [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
-http://rihou.cc:555/tv/浙江卫视4K
-#EXTINF:-1 tvg-name="浙江卫视4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",浙江卫视4K [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
-http://ali-xwl.cztv.com/live/channel4k2160p.m3u8
-#EXTINF:-1 tvg-name="浙江卫视4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",浙江卫视4K [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
-https://bd-xwl.cztv.com/live/channel4k2160p.m3u8
-#EXTINF:-1 tvg-name="深圳4K [1080P] [1080P]" group-title="️4K超清频道 ",深圳4K [1080P] [1080P] [1080P]
-http://rihou.cc:555/tv/szws
-#EXTINF:-1 tvg-name="湖南4K [1080P] [1080P]" group-title="️4K超清频道 ",湖南4K [1080P] [1080P] [1080P]
-http://rihou.cc:555/tv/湖南卫视4K
-#EXTINF:-1 tvg-name="湖南卫视4K [2160P/HEVC] [2160P/HEVC]" group-title="️4K超清频道 ",湖南卫视4K [2160P/HEVC] [2160P/HEVC] [2160P/HEVC]
-http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
-#EXTINF:-1 tvg-name="苏州4K [720P] [720P]" group-title="️4K超清频道 ",苏州4K [720P] [720P] [720P]
-https://live-auth.51kandianshi.com/szgd/csztv4k_hd.m3u8
-#EXTINF:-1 tvg-name="浙江卫视4K [2160P/HEVC]" group-title="️4K超清频道#genre#",浙江卫视4K [2160P/HEVC] [2160P/HEVC]
-https://bd-xwl.cztv.com/live/channel4k2160p.m3u8#http://ali-xwl.cztv.com/live/channel4k2160p.m3u8
-#EXTINF:-1 tvg-name="湖南卫视4K [2160P/HEVC]" group-title="️4K超清频道#genre#",湖南卫视4K [2160P/HEVC] [2160P/HEVC]
-http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8#http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
 #EXTINF:-1 tvg-name="ipanda-青青 [720P]" group-title="️‍️监控直播_l19O",ipanda-青青 [720P] [720P]
 http://gcalic.v.myalicdn.com/gc/xiongmao20_1/index.m3u8
 #EXTINF:-1 tvg-name="临沧 [720P]" group-title="️云南频道",临沧 [720P] [720P]
