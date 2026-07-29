@@ -87,8 +87,9 @@ LOGO_PREFIX = "🦋"
 WALLPAPER_FULL = "https://img.naixiai.cn/2026/wallpapers/full_vip.jpg"
 WALLPAPER_CLEAN = "https://img.naixiai.cn/2026/wallpapers/home_clean.jpg"
 
-HOT_VIDEO_KEY = "js_douban"
-HOT_VIDEO_SITE_NAME = f"豆瓣(js),该接口完全免费，如有收费都是骗子｜{MY_TG_SUFFIX.strip('｜')}"
+HOT_VIDEO_KEY = get_setting("HOT_VIDEO_KEY", "js_douban")
+# 如果 settings.json 里设置了，就用 settings 的；否则兜底使用组装名称
+HOT_VIDEO_SITE_NAME = get_setting("HOT_VIDEO_SITE_NAME", f"豆瓣(js),该接口完全免费，如有收费都是骗子｜{MY_TG_SUFFIX.strip('｜')}")
 
 MY_NAME_REPLACEMENTS = {}
 
@@ -340,6 +341,33 @@ DASHBOARD_HTML_TEMPLATE = """<!DOCTYPE html>
                             <i class="fa-solid fa-floppy-disk"></i>
                             保存全量变更提交 Git
                         </button>
+                    </div>
+                    <!-- ⬇️⬇️⬇️ 【新加区域：6 个核心变量输入框】 ⬇️⬇️⬇️ -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-b border-slate-700/80 pb-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-200 mb-1">GLOBAL_SPIDER_JAR (全局主蜘蛛 Jar 地址)</label>
+                            <input type="text" id="input_global_spider_jar" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white focus:border-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-200 mb-1">DEFAULT_LOGO_URL (默认 Logo 图片地址)</label>
+                            <input type="text" id="input_default_logo_url" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white focus:border-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-200 mb-1">SITE_INSERT_POS (手工点播源插入位置)</label>
+                            <input type="number" id="input_site_insert_pos" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white focus:border-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-200 mb-1">INSERT_POS (手工直播源插入位置)</label>
+                            <input type="number" id="input_insert_pos" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white focus:border-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-200 mb-1">HOT_VIDEO_KEY (首页置顶热门站 Key)</label>
+                            <input type="text" id="input_hot_video_key" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white focus:border-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-200 mb-1">HOT_VIDEO_SITE_NAME (首页置顶热门站显示名称)</label>
+                            <input type="text" id="input_hot_video_site_name" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white focus:border-blue-500 focus:outline-none">
+                        </div>
                     </div>
 
                     <div class="space-y-5">
@@ -700,6 +728,13 @@ DASHBOARD_HTML_TEMPLATE = """<!DOCTYPE html>
                 currentSettingsSha = data.sha;
                 const jsonText = decodeURIComponent(escape(atob(data.content)));
                 const jsonObj = JSON.parse(jsonText);
+                // ⬇️ 填充新增的 6 个单行输入框
+                document.getElementById('input_global_spider_jar').value = jsonObj.GLOBAL_SPIDER_JAR || '';
+                document.getElementById('input_default_logo_url').value = jsonObj.DEFAULT_LOGO_URL || '';
+                document.getElementById('input_site_insert_pos').value = jsonObj.SITE_INSERT_POS ?? 0;
+                document.getElementById('input_insert_pos').value = jsonObj.INSERT_POS ?? 0;
+                document.getElementById('input_hot_video_key').value = jsonObj.HOT_VIDEO_KEY || 'js_douban';
+                document.getElementById('input_hot_video_site_name').value = jsonObj.HOT_VIDEO_SITE_NAME || '';
 
                 document.getElementById('json_block_keywords').value = JSON.stringify(jsonObj.BLOCK_KEYWORDS || [], null, 2);
                 document.getElementById('json_upstream_dirty').value = JSON.stringify(jsonObj.UPSTREAM_DIRTY_WORDS || [], null, 2);
@@ -734,6 +769,14 @@ DASHBOARD_HTML_TEMPLATE = """<!DOCTYPE html>
                 currentSettingsSha = getData.sha;
                 existingSettings = JSON.parse(decodeURIComponent(escape(atob(getData.content))));
             }}
+
+            // ⬇️ 写入 6 个核心变量
+            existingSettings.GLOBAL_SPIDER_JAR = document.getElementById('input_global_spider_jar').value.trim();
+            existingSettings.DEFAULT_LOGO_URL = document.getElementById('input_default_logo_url').value.trim();
+            existingSettings.SITE_INSERT_POS = parseInt(document.getElementById('input_site_insert_pos').value) || 0;
+            existingSettings.INSERT_POS = parseInt(document.getElementById('input_insert_pos').value) || 0;
+            existingSettings.HOT_VIDEO_KEY = document.getElementById('input_hot_video_key').value.trim();
+            existingSettings.HOT_VIDEO_SITE_NAME = document.getElementById('input_hot_video_site_name').value.trim();
 
             existingSettings.BLOCK_KEYWORDS = blockKw;
             existingSettings.UPSTREAM_DIRTY_WORDS = upstreamDirty;
