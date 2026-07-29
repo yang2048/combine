@@ -421,6 +421,48 @@ def object_level_wash_and_compile():
     for site in reversed(hot_sites):
         ordered_sites.insert(0, site)
 
+    # 🎯 【最终名称打标】：根据分类在 name 后面追加分类标签
+    CATEGORY_TAG_MAP = {
+        "综合": "[综合]",
+        "短剧": "[专类]",
+        "动漫": "[专类]",
+        "体育/直播": "[专类]",
+        "少儿": "[专类]",
+        "音乐": "[专类]",
+        "网盘/磁力": "[磁力]",
+        "福利": "[成人]"
+    }
+
+    TOOL_KEYS = {"js_douban", "配置中心", "push_agent", "Nostr", "Nostr2", "本地", "预告", "版本信息", "工具"}
+    TOOL_NAME_KW = ["配置", "推送", "版本", "预告", "搜索"]
+    OFFICIAL_NAME_KW = ["优酷", "爱奇艺", "腾讯视频", "芒果", "哔哩", "1905", "豆瓣"]
+    ADULT_KW = ["🔞", "成人", "伦理", "福利"]
+    APP_NAME_KW = ["APP", "app"]
+
+    for site in ordered_sites:
+        s_name = site.get("name", "")
+        s_category = site.get("category", "综合")
+        s_key = site.get("key", "")
+        s_api = str(site.get("api", ""))
+
+        if s_category == "福利" or any(kw in s_name for kw in ADULT_KW):
+            tag = "[成人]"
+        elif any(kw in s_name for kw in OFFICIAL_NAME_KW) and s_category == "综合":
+            tag = "[官]"
+        elif s_key in TOOL_KEYS or any(kw in s_name for kw in TOOL_NAME_KW):
+            tag = "[工具]"
+        elif any(kw in s_name for kw in APP_NAME_KW) or "csp_App" in s_api:
+            tag = "[APP采集]"
+        elif any(kw in s_name for kw in ["网盘", "云盘", "磁力"]):
+            tag = "[磁力]"
+        elif any(kw in s_name for kw in ["4K", "4k", "高清"]):
+            tag = "[4K]"
+        else:
+            tag = CATEGORY_TAG_MAP.get(s_category, "[综合]")
+
+        if not s_name.endswith(tag):
+            site["name"] = f"{s_name} {tag}"
+
     custom_live_names = {l.get("name") for l in config.MY_CUSTOM_LIVES if l.get("name")}
     clean_base_lives = [
         l for l in (haitun_lives + cnb_lives)

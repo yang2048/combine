@@ -3,7 +3,7 @@ name: 定时巡检与清洗 custom_lives.m3u
 on:
   schedule:
     # ⏱️ 每 3 天的 UTC 19:00 (即北京时间凌晨 03:00) 自动运行一次
-    - cron: '0 19 */3 * *'
+    - cron: '0 05 */3 * *'
   workflow_dispatch: # 支持在 GitHub 网页上手动点击按钮立即运行
 
 jobs:

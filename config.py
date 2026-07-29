@@ -53,8 +53,8 @@ BLOCK_MALICIOUS_KEYWORDS = ("日本女优", "日本女友")
 # ====================================================================
 # 1. 只要站点名称 (name) 包含以下任意关键词，直接关闭【全局搜索】(searchable = 0)
 NO_SEARCH_KEYWORDS = [
-    "豆瓣(js),该接口完全免费，如有收费都是骗子｜Tg：@huliys9", "🦋 优酷视频.py｜Tg：@huliys9", "🦋 优酷视频｜Tg：@huliys9",
-	"🦋 爱奇艺 ｜Tg：@huliys9", "🦋 腾讯视频｜Tg：@huliys9", "🦋 腾讯视频备用｜Tg：@huliys9", "🦋 腾讯视频.py", "🦋 芒果TV", "🦋 芒果4K", "🦋 芒果TV.py", 
+    "豆瓣(js)", "🦋 优酷视频.py", "🦋 优酷视频",
+	"🦋 爱奇艺", "🦋 腾讯视频", "🦋 腾讯视频备用", "🦋 腾讯视频.py", "🦋 芒果TV", "🦋 芒果4K", "🦋 芒果TV.py", 
 	"🦋 油管.py", "🦋 低端影视.py", "🦋 茶杯狐.py(关梯)", "🦋 皮皮虾.py", "🦋 嘀嗒影视.py(关梯)", "🦋 可可影视.py", "🦋 808影院.py(关梯)", "🦋 共青春影院.py(关梯)", 
 	"🦋 麒麟影视.py", "🦋 奇点影视.py", "🦋 枝枝影视.py(关梯)", "🦋 柯南影视.py(关梯)", "🦋 太乙影视.py(关梯)", "🦋 悟空影视.py(关梯)", "🦋 神马影视.py(关梯)", "🦋 布布追剧.py", 
 	"🦋 枫叶影院.py(关梯子使用)", "🦋 韩小圈.py(关梯)", "🦋 哇哇APP.py(关梯)", "🦋 热播APP.py", "🦋 金牌APP.py", "🦋 瓜子APP.py", "🦋 努努影院.py", "🦋 多瑙影院.py", "🦋 泥视频.py", 
@@ -84,16 +84,16 @@ NO_QUICK_SEARCH_KEYS = [
 # ====================================================================
 # 👑 【三、专属品牌与视觉定制区】
 # ====================================================================
-MY_QQ_GROUP = "532637640"
-MY_PROMO_CHANNEL = "@huliys9"
-MY_TG_SUFFIX = "｜Tg：@huliys9"
+MY_QQ_GROUP = ""
+MY_PROMO_CHANNEL = ""
+MY_TG_SUFFIX = "｜"
 LOGO_PREFIX = "🦋"
 
 WALLPAPER_FULL = "https://img.naixiai.cn/2026/wallpapers/full_vip.jpg"
 WALLPAPER_CLEAN = "https://img.naixiai.cn/2026/wallpapers/home_clean.jpg"
 
 HOT_VIDEO_KEY = "js_douban"
-HOT_VIDEO_SITE_NAME = f"豆瓣(js),该接口完全免费，如有收费都是骗子｜{MY_TG_SUFFIX.strip('｜')}"
+HOT_VIDEO_SITE_NAME = f"豆瓣(js)｜{MY_TG_SUFFIX.strip('｜')}"
 
 MY_NAME_REPLACEMENTS = {
     # 示例: "原词": "目标新词",
@@ -105,7 +105,7 @@ MY_NAME_REPLACEMENTS = {
 CATEGORY_RULES = {
     "短剧": ["短剧", "剧场"],
     "动漫": ["动漫", "新番", "anime", "a1"],
-    "网盘/磁力": ["磁力", "索", "盘", "云盘", "4k"],
+    "网盘/磁力": ["磁力", "索", "盘", "云盘", "4k", "4K"],
     "体育/直播": ["体育", "球", "直播"],
     "少儿": ["少儿", "课堂", "教学", "教育"],
     "音乐": ["音乐", "网易云", "听书", "唱会", "fm", "相声", "小品", "戏曲", "dj"]
@@ -138,8 +138,8 @@ TRAP_LIVE_CHANNEL = f"👉 线路已过期 ➡️ 关注Tg频道（{MY_PROMO_CHA
 # ====================================================================
 # 📡 【五、客户端通知弹窗与 DOH/JS 注入高级规则配置区】
 # ====================================================================
-THANKS_WARNING = f"\n\n👑 🚨 重要提示：本接口密码不定期全自动更换！如果遇到失效或断流，请及时回 Telegram 频道（{MY_PROMO_CHANNEL}）获取当前最新密码!"
-WELCOME_NOTICE_FULL = "👑 欢迎使用【蝴蝶影视粉丝专属全量专线】！本接口由蝴蝶影视结合多方大底包无损重排而成，干净流畅.🚨 重要提示：本接口密码不定期全自动更换！"
+THANKS_WARNING = f"\n\n👑 🚨 重要提示：禁止非法倒卖"
+WELCOME_NOTICE_FULL = "👑 欢迎使用【蝴蝶影视粉丝专属全量专线】！本接口由蝴蝶影视结合多方大底包无损重排而成，干净流畅."
 WELCOME_NOTICE_CLEAN = "🏡 欢迎使用【蝴蝶影视专属绿色客厅专线】！本接口已全面过滤敏感、擦边和福利内容，全家老少看电视更安全、更绿色！"
 
 ALI_DOH_CONFIG = {"name": "AliDNS", "url": "https://dns.alidns.com/dns-query", "ips": ["223.5.5.5", "223.6.6.6"]}
