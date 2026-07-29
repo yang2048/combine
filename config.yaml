@@ -1,0 +1,41 @@
+# 路径配置
+paths:
+  input_m3u: "datas/custom_lives.m3u"   # 存量 M3U 文件路径
+  input_txt: "channels.txt"             # 备用 TXT 频道文件
+  output_m3u: "datas/custom_lives.m3u"  # 清洗完覆盖回 datas/custom_lives.m3u
+  db_path: "datas/cache.db"             # SQLite 缓存文件存放在 datas/
+  log_path: "datas/cleaner.log"         # 日志文件存放在 datas/
+
+# 并发与超时控制 (GitHub Actions 建议不要设得太夸张，防止被 Cloudflare 等 CDN 拦截)
+performance:
+  max_concurrent_http: 50         # HTTP 并发数
+  max_concurrent_ffprobe: 5       # FFprobe 进程池
+  http_timeout: 3
+  ffprobe_timeout: 4
+
+# 检测规则与阈值
+rules:
+  enable_head_check: true
+  enable_ffprobe: true
+  min_bitrate: 600000
+  max_routes_per_channel: 3
+  cache_ttl_hours: 24
+
+# EPG 列表
+epg_urls:
+  - "https://material.yang-1989.xyz/epg.xml.gz"
+  - "http://epg.51zmt.top:8000/e.xml.gz"
+
+# 广告黑名单
+ad_keywords:
+  - "guanggao"
+  - "notice"
+  - "redirect"
+  - "error.m3u8"
+  - "ad.m3u8"
+  - "welcome"
+  - "invalid"
+  - "vip_ad"
+  - "gg.m3u8"
+  - "test.m3u8"
+  - "解析失败"
