@@ -1,8 +1,8 @@
 name: 自动双源无损强行合并-第二个仓库
 
 on:
-  schedule:
-    - cron: '43 0,12 * * *'
+  # schedule:
+  #   - cron: '43 0,12 * * *'
   workflow_dispatch: 
 
 permissions: write-all
@@ -15,7 +15,6 @@ jobs:
     - name: Checkout own repo
       uses: actions/checkout@v4
       with:
-        ref: master
         token: ${{ secrets.GITHUB_TOKEN }}
         fetch-depth: 0 # 拉取完整提交历史，防止 pull 冲突
 

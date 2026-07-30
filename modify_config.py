@@ -233,7 +233,6 @@ def object_level_wash_and_compile():
                     item["api"] = api_str.replace("./", "https://gh-proxy.com/https://raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/")
             lz_nsfw_list.append(item)
 
-    # 🎯 【第一层物理强力清洗】：彻底搞定海豚影视底包广告词
     for item in haitun_sites:
         if "name" in item:
             for dirty in config.UPSTREAM_DIRTY_WORDS:
@@ -270,7 +269,6 @@ def object_level_wash_and_compile():
         if any(kw in name for kw in config.BLOCK_KEYWORDS) or any(mkw in name for mkw in config.BLOCK_MALICIOUS_KEYWORDS):
             continue
 
-        # 🎯 【第二层多源清洗】：兜底清洗其他底包
         for dirty in config.UPSTREAM_DIRTY_WORDS:
             name = name.replace(dirty, "")
 
@@ -288,23 +286,18 @@ def object_level_wash_and_compile():
 
         site["name"] = name
 
-        # 🎯 【终极路径双向清洗补丁】：同时强力洗净 api 和 ext 两个核心字段
-        # 1. 优先清洗 api 字段
         api_field = site.get("api", "")
         if isinstance(api_field, str):
             for pattern, target in config.PATH_REPLACEMENTS.items():
                 api_field = re.sub(pattern, target, api_field)
             site["api"] = api_field
 
-        # 2. 深度清洗 ext 字段 (彻底干掉藏在里面的相对路径)
         ext_field = site.get("ext", "")
         if isinstance(ext_field, str):
-            # 如果 ext 是字符串路径，直接用正则替换
             for pattern, target in config.PATH_REPLACEMENTS.items():
                 ext_field = re.sub(pattern, target, ext_field)
             site["ext"] = ext_field
         elif isinstance(ext_field, dict):
-            # 如果 ext 是字典（比如某些魔改壳的特殊配置），转成 JSON 字符串洗完再变回字典
             try:
                 ext_str = json.dumps(ext_field, ensure_ascii=False)
                 for pattern, target in config.PATH_REPLACEMENTS.items():
@@ -324,7 +317,6 @@ def object_level_wash_and_compile():
     bucket_map["综合"] = []
     bucket_map["福利"] = []
 
-    # 🎯 读取搜索屏蔽规则配置
     no_search_kw = getattr(config, "NO_SEARCH_KEYWORDS", [])
     no_search_keys = getattr(config, "NO_SEARCH_KEYS", [])
     no_quick_keys = getattr(config, "NO_QUICK_SEARCH_KEYS", [])
@@ -333,17 +325,11 @@ def object_level_wash_and_compile():
         s_key = site.get("key", "")
         s_name = site.get("name", "")
 
-        # =========================================================
-        # 🎯 【新增】自动化搜索控制打标
-        # =========================================================
-        # 判断名称关键词或 key 是否命中全局搜索屏蔽规则
         if any(kw in s_name for kw in no_search_kw) or (s_key in no_search_keys):
             site["searchable"] = 0
             
-        # 判断 key 是否命中快速搜索屏蔽规则
         if s_key in no_quick_keys:
             site["quickSearch"] = 0
-        # =========================================================
 
         if s_key == config.HOT_VIDEO_KEY:
             site["name"] = config.HOT_VIDEO_SITE_NAME
@@ -390,17 +376,15 @@ def object_level_wash_and_compile():
         if cate in bucket_map:
             ordered_sites.extend(bucket_map[cate])
 
-    # 🎯 【读取配置文件中的位置进行插入（含首位置顶与顺序保障逻辑）】
     target_pos = getattr(config, "SITE_INSERT_POS", 1)
     hot_key = getattr(config, "HOT_VIDEO_KEY", "")
     hot_name = getattr(config, "HOT_VIDEO_SITE_NAME", "")
 
-    # 存放置顶站点和普通站点
     hot_sites = []
     normal_sites = []
 
     for custom_site in config.MY_CUSTOM_SITES:
-        site = custom_site.copy()  # 安全拷贝，避免修改原对象
+        site = custom_site.copy()
         s_key = site.get("key", "")
         
         if s_key and s_key == hot_key:
@@ -412,12 +396,10 @@ def object_level_wash_and_compile():
                 site["searchable"] = 1
             normal_sites.append(site)
 
-    # 1. 先插入普通站点（逆序插入保障配置原顺序）
     for site in reversed(normal_sites):
         idx = min(target_pos, len(ordered_sites))
         ordered_sites.insert(idx, site)
 
-    # 2. 无论普通站点怎么插，置顶站点统一最后插入到最前面（索引 0）
     for site in reversed(hot_sites):
         ordered_sites.insert(0, site)
 
@@ -430,7 +412,7 @@ def object_level_wash_and_compile():
         "少儿": "[专类]",
         "音乐": "[专类]",
         "网盘/磁力": "[磁力]",
-        "福利": "[成人]"
+        "福利": "[密]"
     }
 
     TOOL_KEYS = {"js_douban", "配置中心", "push_agent", "Nostr", "Nostr2", "本地", "预告", "版本信息", "工具"}
@@ -446,7 +428,7 @@ def object_level_wash_and_compile():
         s_api = str(site.get("api", ""))
 
         if s_category == "福利" or any(kw in s_name for kw in ADULT_KW):
-            tag = "[成人]"
+            tag = "[密]"
         elif any(kw in s_name for kw in OFFICIAL_NAME_KW) and s_category == "综合":
             tag = "[官]"
         elif s_key in TOOL_KEYS or any(kw in s_name for kw in TOOL_NAME_KW):
@@ -488,7 +470,6 @@ def object_level_wash_and_compile():
 
     final_obj = copy.deepcopy(json_cnb)
     
-    # 🎯 【新增】强制覆盖根节点 logo 为 config 中配置的图片地址
     if hasattr(config, "DEFAULT_LOGO_URL") and config.DEFAULT_LOGO_URL:
         final_obj["logo"] = config.DEFAULT_LOGO_URL
 
@@ -515,28 +496,19 @@ def object_level_wash_and_compile():
             if isinstance(r, dict) and "hosts" in r:
                 for h in r["hosts"]:
                     if h not in ad_hosts: ad_hosts.append(h)
-        # 🎯 蝴蝶特异性命名注入
         js_rule = {"name": "蝴蝶影视·云端高级去广告JS注入", "hosts": ad_hosts, "script": config.CUSTOM_AD_BLOCK_JS}
         final_obj["rules"] = [js_rule] + [r for r in current_rules if r.get("name") != "蝴蝶影视·云端高级去广告JS注入"]
 
-    # ====================================================================
-    # 🎯 【终极三源合流：Jar 高可用性与直播源空对象闭环补丁】
-    # ====================================================================
-
-    # 1. 最外层总包定位：直接读取 config.py 里配置好的全局主 Jar 地址
     final_obj["spider"] = config.GLOBAL_SPIDER_JAR
 
-    # 2. 站点层级微操：放行海豚底包特定的本地相对线路
     for site in final_obj.get("sites", []):
         s_key = site.get("key", "")
         if s_key in ["hajim-腾讯备", "茫茫"]:
             site["spider"] = "./tvbox.jar"
 
-    # 3. 直播源终极复核防御：彻底干掉合并中残留下来的空大括号 {} 对象
     if "lives" in final_obj and isinstance(final_obj["lives"], list):
         clean_lives = []
         for live in final_obj["lives"]:
-        # 🚨 如果 live 是空的 {} 或者根本不是字典，直接跳过踢出队列，防止盒子卡死闪退
             if not live or not isinstance(live, dict) or len(live) == 0:
                 continue
             clean_lives.append(live)
@@ -547,6 +519,77 @@ def object_level_wash_and_compile():
 # ====================================================================
 # 🔀 【双版本矩阵构建与差异下发调度中枢】
 # ====================================================================
+def generate_dashboard_html(current_token, site_cnt, live_cnt, parse_cnt):
+    """自动读取 datas 目录并根据 config 里的模板编译 Dashboard html 页面"""
+    try:
+        current_time = (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
+        
+        file_cards_html = ""
+        json_files = sorted(list(config.DATA_DIR.glob("*.json")), key=lambda x: x.stat().st_mtime, reverse=True)
+        
+        for json_file in json_files:
+            size_kb = round(json_file.stat().st_size / 1024, 2)
+            fname = json_file.name
+            
+            is_active = current_token in fname
+            badge = '<span class="text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded">最新版本</span>' if is_active else '<span class="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">历史/陷阱</span>'
+            
+            safe_key = fname.replace('.', '_').replace('-', '_')
+
+            file_cards_html += f"""
+            <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-semibold text-slate-800">{fname}</span>
+                        {badge}
+                        <span class="text-xs text-gray-400">{size_kb} KB</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">https://hd.lytvs.top/{fname}</p>
+                </div>
+                
+                <div class="flex items-center gap-3">
+                    <div class="text-right px-2">
+                        <div class="text-[10px] text-gray-400">点击/获取量</div>
+                        <div class="text-xs font-bold text-emerald-600" id="cnt_{safe_key}">-- 次</div>
+                    </div>
+                    <div class="flex gap-2">
+                        <a href="/{fname}" target="_blank" onclick="hitCount('{safe_key}')" class="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg text-xs font-medium hover:bg-blue-100">
+                            预览 JSON
+                        </a>
+                        <button onclick="navigator.clipboard.writeText('https://hd.lytvs.top/{fname}'); hitCount('{safe_key}'); alert('已复制该接口链接！')" class="px-3 py-1.5 bg-slate-800 text-white rounded-lg text-xs font-medium hover:bg-slate-700">
+                            复制链接
+                        </button>
+                    </div>
+                </div>
+            </div>
+            """
+
+        html_out = config.DASHBOARD_HTML_TEMPLATE.format(
+            build_time=current_time,
+            site_cnt=site_cnt,
+            live_cnt=live_cnt,
+            parse_cnt=parse_cnt,
+            current_token=current_token,
+            file_num=len(json_files),
+            file_cards=file_cards_html,
+            version=config.VERSION,
+            qq_group=config.MY_QQ_GROUP
+        )
+
+        secret_filename = "admin_888.html"
+        
+        admin_path = config.DATA_DIR / secret_filename
+        admin_path.write_text(html_out, encoding="utf-8")
+        
+        public_index_path = config.DATA_DIR / "index.html"
+        public_index_path.write_text("<html><head><title>404 Not Found</title></head><body><h1>404 Not Found</h1></body></html>", encoding="utf-8")
+
+        log_success(f"可视化 Dashboard 页面已成功加密注入！专属后台路径: datas/{secret_filename}")
+        
+    except Exception as e:
+        log_error(f"生成 Dashboard 页面崩溃: {e}")
+
+
 def build_and_dispatch_matrix(ordered_obj, current_token, full_out_name, clean_out_name, is_new_token_gen):
     """构建多通道分流，精准比对 Diff 并下发变更明细快报"""
     full_version_obj = copy.deepcopy(ordered_obj)
@@ -577,7 +620,7 @@ def build_and_dispatch_matrix(ordered_obj, current_token, full_out_name, clean_o
 
     tg_token = os.getenv("TG_TOKEN")
     tg_chat_id = os.getenv("TG_CHAT_ID")
-    repo_info = os.getenv("GITHUB_REPOSITORY", "GodLike631/Ly")  # 🎯 蝴蝶影视库特异路径
+    repo_info = os.getenv("GITHUB_REPOSITORY", "Godlike/Ly")
     branch_info = os.getenv("GITHUB_REF_NAME", "main")
     
     full_raw_url = f"https://raw.githubusercontent.com/{repo_info}/refs/heads/{branch_info}/datas/{full_out_name}"
@@ -646,7 +689,7 @@ def build_and_dispatch_matrix(ordered_obj, current_token, full_out_name, clean_o
 
                 full_msg = config.TG_UPDATE_MSG_TEMPLATE.format(
                     current_time=current_time, 
-                    current_token=current_token,  # 🎯 补上这个缺失的变量！
+                    current_token=current_token,
                     detail_msg="\n".join(msg_lines),
                     full_sub_url=full_sub_url, 
                     clean_sub_url=clean_sub_url
@@ -661,7 +704,12 @@ def build_and_dispatch_matrix(ordered_obj, current_token, full_out_name, clean_o
     clean_output_path.write_text(json.dumps(clean_final_out, ensure_ascii=False, indent=4), encoding='utf-8')
     config.TRACKER_PATH.write_text(full_out_name, encoding='utf-8')
     
-    return len(full_final_out.get("sites", [])), len(full_final_out.get("lives", [])), len(full_final_out.get("parses", [])), full_output_path.stat().st_size
+    site_cnt = len(full_final_out.get("sites", []))
+    live_cnt = len(full_final_out.get("lives", []))
+    parse_cnt = len(full_final_out.get("parses", []))
+    generate_dashboard_html(current_token, site_cnt, live_cnt, parse_cnt)
+
+    return site_cnt, live_cnt, parse_cnt, full_output_path.stat().st_size
 
 # ====================================================================
 # 🚀 【程序统一总调度入口】

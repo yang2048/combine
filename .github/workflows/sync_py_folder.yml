@@ -1,9 +1,9 @@
 name: Sync Remote Py Folder
 
 on:
-  schedule:
-    # 每天 UTC 0:00 (北京时间 08:00) 自动定时运行
-    - cron: '0 0 * * *'
+  # schedule:
+  #   # 每天 UTC 0:00 (北京时间 08:00) 自动定时运行
+  #   - cron: '0 0 * * *'
   # 允许在 GitHub 网页界面手动点击按钮立即触发同步
   workflow_dispatch:
 
