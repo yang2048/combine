@@ -160,6 +160,7 @@ def manage_monthly_token():
         else:
             current_token = saved_code
 
+    current_token = ""
     if current_token in ["全量版", "纯净版"]:
         full_output_filename = f"{config.BASE_OUTPUT_FULL}.json"
         clean_output_filename = f"{config.BASE_OUTPUT_CLEAN}.json"
