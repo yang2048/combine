@@ -1,8 +1,8 @@
 name: 自动双源无损强行合并-第二个仓库
 
 on:
-  schedule:
-    - cron: '43 0,12 * * *'
+  # schedule:
+    # - cron: '43 0,12 * * *'
   workflow_dispatch: 
 
 permissions: write-all
