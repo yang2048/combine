@@ -2736,12 +2736,6 @@
             "url": "http://4gtv.cnlive.club/4gtv.m3u"
         },
         {
-            "name": "4GTV(梯子任何节点)1080p｜",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://ha.msbot.dpdns.org/4gtv_api.php"
-        },
-        {
             "name": "jackTV(梯子)｜",
             "type": 0,
             "ua": "okhttp",

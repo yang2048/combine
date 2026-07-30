@@ -2696,6 +2696,30 @@
             "category": "福利"
         },
         {
+            "key": "大屌视频",
+            "name": "🦋 大屌视频.py🔞 [密]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/大屌视频.py",
+            "ext": "",
+            "category": "福利"
+        },
+        {
+            "key": "高端视频",
+            "name": "🦋 高端视频.py🔞 [密]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/高端视频.py",
+            "ext": "",
+            "category": "福利"
+        },
+        {
+            "key": "猫咪AV",
+            "name": "🦋 猫咪AV.py🔞 [密]",
+            "type": 3,
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/猫咪AV.py",
+            "ext": "",
+            "category": "福利"
+        },
+        {
             "key": "妈妈自拍",
             "name": "🦋 妈妈自拍.py🔞 [密]",
             "type": 3,
@@ -2707,7 +2731,7 @@
             "key": "catemby",
             "name": "🦋 catemby.py 磁力观看🔞 [密]",
             "type": 3,
-            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/教授.py",
+            "api": "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/HKL/refs/heads/main/py/catemby.py",
             "ext": "",
             "category": "福利"
         },
@@ -3478,12 +3502,6 @@
             "type": 0,
             "ua": "okhttp",
             "url": "http://4gtv.cnlive.club/4gtv.m3u"
-        },
-        {
-            "name": "4GTV(梯子任何节点)1080p｜",
-            "type": 0,
-            "ua": "okhttp",
-            "url": "https://ha.msbot.dpdns.org/4gtv_api.php"
         },
         {
             "name": "安博(梯子)卡顿 有🔞｜",
