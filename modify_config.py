@@ -405,13 +405,13 @@ def object_level_wash_and_compile():
 
     # 🎯 【最终名称打标】：根据分类在 name 后面追加分类标签
     CATEGORY_TAG_MAP = {
-        "综合": "[综合]",
-        "短剧": "[专类]",
-        "动漫": "[专类]",
-        "体育/直播": "[专类]",
-        "少儿": "[专类]",
-        "音乐": "[专类]",
-        "网盘/磁力": "[磁力]",
+        "综合": "[合]",
+        "短剧": "[专]",
+        "动漫": "[专]",
+        "体育/直播": "[专]",
+        "少儿": "[专]",
+        "音乐": "[专]",
+        "网盘/磁力": "[磁]",
         "福利": "[密]"
     }
 
@@ -432,13 +432,13 @@ def object_level_wash_and_compile():
         elif any(kw in s_name for kw in OFFICIAL_NAME_KW) and s_category == "综合":
             tag = "[官]"
         elif s_key in TOOL_KEYS or any(kw in s_name for kw in TOOL_NAME_KW):
-            tag = "[工具]"
+            tag = "[辅]"
         elif any(kw in s_name for kw in APP_NAME_KW) or "csp_App" in s_api:
-            tag = "[APP采集]"
+            tag = "[APP]"
         elif any(kw in s_name for kw in ["网盘", "云盘", "磁力"]):
-            tag = "[磁力]"
+            tag = "[磁]"
         elif any(kw in s_name for kw in ["4K", "4k", "高清"]):
-            tag = "[4K]"
+            tag = "[清]"
         else:
             tag = CATEGORY_TAG_MAP.get(s_category, "[综合]")
 
