@@ -545,7 +545,7 @@ def generate_dashboard_html(current_token, site_cnt, live_cnt, parse_cnt):
                         {badge}
                         <span class="text-xs text-gray-400">{size_kb} KB</span>
                     </div>
-                    <p class="text-xs text-gray-400 mt-1">https://hd.lytvs.top/{fname}</p>
+                    <p class="text-xs text-gray-400 mt-1">https://r2.xdev.cc/tvbox/{fname}</p>
                 </div>
                 
                 <div class="flex items-center gap-3">
@@ -557,7 +557,7 @@ def generate_dashboard_html(current_token, site_cnt, live_cnt, parse_cnt):
                         <a href="/{fname}" target="_blank" onclick="hitCount('{safe_key}')" class="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg text-xs font-medium hover:bg-blue-100">
                             预览 JSON
                         </a>
-                        <button onclick="navigator.clipboard.writeText('https://hd.lytvs.top/{fname}'); hitCount('{safe_key}'); alert('已复制该接口链接！')" class="px-3 py-1.5 bg-slate-800 text-white rounded-lg text-xs font-medium hover:bg-slate-700">
+                        <button onclick="navigator.clipboard.writeText('https://r2.xdev.cc/tvbox/{fname}'); hitCount('{safe_key}'); alert('已复制该接口链接！')" class="px-3 py-1.5 bg-slate-800 text-white rounded-lg text-xs font-medium hover:bg-slate-700">
                             复制链接
                         </button>
                     </div>
@@ -582,8 +582,9 @@ def generate_dashboard_html(current_token, site_cnt, live_cnt, parse_cnt):
         admin_path = config.DATA_DIR / secret_filename
         admin_path.write_text(html_out, encoding="utf-8")
         
-        public_index_path = config.DATA_DIR / "index.html"
-        public_index_path.write_text("<html><head><title>404 Not Found</title></head><body><h1>404 Not Found</h1></body></html>", encoding="utf-8")
+        public_index_path = config.BASE_DIR / "index.html"
+        public_index_path.write_text(html_out, encoding="utf-8")
+        # public_index_path.write_text("<html><head><title>404 Not Found</title></head><body><h1>404 Not Found</h1></body></html>", encoding="utf-8")
 
         log_success(f"可视化 Dashboard 页面已成功加密注入！专属后台路径: datas/{secret_filename}")
         
@@ -621,8 +622,8 @@ def build_and_dispatch_matrix(ordered_obj, current_token, full_out_name, clean_o
 
     tg_token = os.getenv("TG_TOKEN")
     tg_chat_id = os.getenv("TG_CHAT_ID")
-    repo_info = os.getenv("GITHUB_REPOSITORY", "Godlike/Ly")
-    branch_info = os.getenv("GITHUB_REF_NAME", "main")
+    repo_info = os.getenv("GITHUB_REPOSITORY", "yang2048/combine")
+    branch_info = os.getenv("GITHUB_REF_NAME", "master")
     
     full_raw_url = f"https://raw.githubusercontent.com/{repo_info}/refs/heads/{branch_info}/datas/{full_out_name}"
     clean_raw_url = f"https://raw.githubusercontent.com/{repo_info}/refs/heads/{branch_info}/datas/{clean_out_name}"

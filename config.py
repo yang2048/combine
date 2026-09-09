@@ -141,9 +141,9 @@ TG_PWD_MSG_TEMPLATE = (
     "🔑 *全新专线密锁*：`{current_token}`\n\n"
     "🚀 *重要提示*：\n密码锁已成功交替！旧接口已全线开启【金蝉脱壳】大轰炸，老链接彻底作废，请及时复制下方对应通道的最新链接！\n\n"
     "🔞 *最新【蝴蝶影视全量版】矩阵订阅*：\n"
-    "`https://hd.lytvs.top/蝴蝶影视全量版{current_token}.json`\n\n"
+    "`https://r2.xdev.cc/tvbox/蝴蝶影视全量版{current_token}.json`\n\n"
     "🏡 *最新【蝴蝶影视纯净版】客厅订阅*：\n"
-    "`https://hd.lytvs.top/蝴蝶影视纯净版{current_token}.json`\n\n"
+    "`https://r2.xdev.cc/tvbox/蝴蝶影视纯净版{current_token}.json`\n\n"
     f"👑 矩阵连接已在后台全自动换锁，请及时前往电视端更新。若电视端遇到断流请尝试重启软件或前往TG频道（{MY_PROMO_CHANNEL}）获取支持！"
 )
 
@@ -154,9 +154,9 @@ TG_UPDATE_MSG_TEMPLATE = (
     "{detail_msg}\n\n"
     "📡 *【 最新多版本订阅矩阵 (点击可自动复制)】*：\n\n"
     "🔞 *最新【蝴蝶影视全量版】矩阵订阅*：\n"
-    "`https://hd.lytvs.top/蝴蝶影视全量版{current_token}.json`\n\n"
+    "`https://r2.xdev.cc/tvbox/蝴蝶影视全量版{current_token}.json`\n\n"
     "🏡 *最新【蝴蝶影视纯净版】客厅订阅*：\n"
-    "`https://hd.lytvs.top/蝴蝶影视纯净版{current_token}.json`\n\n"
+    "`https://r2.xdev.cc/tvbox/蝴蝶影视纯净版{current_token}.json`\n\n"
     f"👑 全量版与纯净版已在后台无缝更新。更新配置即可，若遇到断流请尝试重启软件或及时前往TG频道（{MY_PROMO_CHANNEL}）获取当前最新密码锁！"
 )
 
@@ -563,8 +563,8 @@ DASHBOARD_HTML_TEMPLATE = """<!DOCTYPE html>
     function getStoredAuth() {{
         return {{
             token: localStorage.getItem('gh_pat') || '',
-            repo: localStorage.getItem('gh_repo') || 'Godlike/Ly',
-            branch: localStorage.getItem('gh_branch') || 'main'
+            repo: localStorage.getItem('gh_repo') || 'yang2048/combine',
+            branch: localStorage.getItem('gh_branch') || 'master'
         }};
     }}
 
