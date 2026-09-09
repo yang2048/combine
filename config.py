@@ -11,6 +11,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "datas"
 SETTINGS_FILE_PATH = DATA_DIR / "settings.json"
+SOURCE_DIR = BASE_DIR / "source"
 
 _dynamic_settings = {}
 if SETTINGS_FILE_PATH.exists():
@@ -41,9 +42,10 @@ TG_MAX_DISPLAY = 15
 # ====================================================================
 # 🌐 【二、全局核心路径与网络代理配置区】
 # ====================================================================
-CNB_PATH = DATA_DIR / "cnb.json"
-HAITUN_PATH = DATA_DIR / "haitun.json"
-LZ_PATH = DATA_DIR / "lz.json"
+CNB_PATH = SOURCE_DIR / "cnb.json"
+HAITUN_PATH = SOURCE_DIR / "haitun.json"
+LZ_PATH = SOURCE_DIR / "lz.json"
+MAFLY_PATH = SOURCE_DIR / "mafly.json"
 
 LOCK_FILE_PATH = DATA_DIR / "控制开关.txt"
 TRACKER_PATH = DATA_DIR / "最新接口文件名.txt"

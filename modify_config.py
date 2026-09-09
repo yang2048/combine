@@ -214,9 +214,13 @@ def object_level_wash_and_compile():
     json_cnb = load_json_safe(config.CNB_PATH)
     json_haitun = load_json_safe(config.HAITUN_PATH)
     json_lz = load_json_safe(config.LZ_PATH)
+    json_mafly = load_json_safe(config.MAFLY_PATH)
 
     haitun_sites = json_haitun.get("sites", [])
     haitun_lives = json_haitun.get("lives", [])
+    mafly_sites = json_mafly.get("sites", [])
+    mafly_lives = json_mafly.get("lives", [])
+
     lz_sites = json_lz.get("sites", [])
 
     lz_nsfw_list = []
@@ -249,7 +253,7 @@ def object_level_wash_and_compile():
     cnb_sites = json_cnb.get("sites", [])
     cnb_lives = json_cnb.get("lives", [])
 
-    combined_parses = json_haitun.get("parses", []) + json_lz.get("parses", []) + json_cnb.get("parses", [])
+    combined_parses = json_haitun.get("parses", []) + json_lz.get("parses", []) + json_cnb.get("parses", []) + json_mafly.get("parses", [])
     unique_parses = []
     seen_parse_names = set()
     for p in combined_parses:
@@ -258,7 +262,7 @@ def object_level_wash_and_compile():
             unique_parses.append(p)
             seen_parse_names.add(p_name)
 
-    all_raw_sites = haitun_sites + lz_nsfw_list + cnb_sites
+    all_raw_sites = haitun_sites + lz_nsfw_list + cnb_sites + mafly_sites
     custom_keys = {site.get("key") for site in config.MY_CUSTOM_SITES if site.get("key")}
     clean_upstream_sites = [site for site in all_raw_sites if site.get("key") not in custom_keys]
 
@@ -371,7 +375,7 @@ def object_level_wash_and_compile():
 
         if site.get("category") not in ["少儿", "音乐"] and "searchable" not in site:
             site["searchable"] = 1
-
+    log_info(f"底包清洗 {compiled_sites}") 
     ordered_sites = []
     for cate in ["综合", "短剧", "动漫", "体育/直播", "少儿", "音乐", "网盘/磁力", "福利"]:
         if cate in bucket_map:
@@ -448,7 +452,7 @@ def object_level_wash_and_compile():
 
     custom_live_names = {l.get("name") for l in config.MY_CUSTOM_LIVES if l.get("name")}
     clean_base_lives = [
-        l for l in (haitun_lives + cnb_lives)
+        l for l in (haitun_lives + cnb_lives + mafly_lives)
         if l.get("name") not in custom_live_names and not any(kw in l.get("name", "") for kw in config.BLOCK_MALICIOUS_KEYWORDS)
     ]
     clean_base_lives = [l for l in clean_base_lives if not any(kw.lower() in l.get("name", "").lower() for kw in config.BLOCK_KEYWORDS)]
@@ -579,7 +583,7 @@ def generate_dashboard_html(current_token, site_cnt, live_cnt, parse_cnt):
 
         secret_filename = "admin_888.html"
         
-        admin_path = config.DATA_DIR / secret_filename
+        admin_path = config.BASE_DIR / secret_filename
         admin_path.write_text(html_out, encoding="utf-8")
         
         public_index_path = config.BASE_DIR / "index.html"

@@ -27,10 +27,10 @@ jobs:
     - name: Fetch target files
       run: |
         mkdir -p datas
-        curl -L "https://cnb.cool/fish2035/xs/-/git/raw/main/api.json" -o datas/cnb.json
-        curl -L "https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/heads/main/各TVBOX/Web鱼壳海豚.txt" -o datas/haitun.json
-        curl -L "https://gh-proxy.com/https://raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/py.json" -o datas/lz.json
-        curl -L "https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/heads/main/MAfly1/tvbox.json" -o datas/mafly.json
+        curl -L "https://cnb.cool/fish2035/xs/-/git/raw/main/api.json" -o source/cnb.json
+        curl -L "https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/heads/main/各TVBOX/Web鱼壳海豚.txt" -o source/haitun.json
+        curl -L "https://gh-proxy.com/https://raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/py.json" -o source/lz.json
+        curl -L "https://raw.githubusercontent.com/mhmdxahmd/mafly/refs/heads/main/MAfly1/tvbox.json" -o source/mafly.json
 
     # 2. 运行 Python 编译脚本并下发 TG 通知
     - name: Text Merge JSON and Send TG Notice
