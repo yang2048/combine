@@ -90,6 +90,14 @@ def send_telegram_request(token, chat_id, text):
 # ====================================================================
 # 🛡️ 【智能容灾本地 JSON 安全加载模块】
 # ====================================================================
+def _parse_json_lenient(text):
+    """宽松解析 JSON：先标准解析，失败时容忍尾随逗号等第三方上游常见不规范写法"""
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        cleaned = re.sub(r',\s*([}\]])', r'\1', text)
+        return json.loads(cleaned)
+
 def load_json_safe(file_path: Path) -> dict:
     """底包安全过滤器与自动历史恢复引擎"""
     backup_path = file_path.parent / f"{file_path.stem}_backup{file_path.suffix}"
@@ -98,7 +106,7 @@ def load_json_safe(file_path: Path) -> dict:
 
     if file_path.exists():
         try:
-            current_data = json.loads(file_path.read_text(encoding='utf-8'))
+            current_data = _parse_json_lenient(file_path.read_text(encoding='utf-8'))
             if isinstance(current_data, dict) and ("sites" in current_data or "lives" in current_data or "parses" in current_data):
                 is_current_valid = True
             else:
@@ -117,7 +125,7 @@ def load_json_safe(file_path: Path) -> dict:
         log_critical(f"上游数据源 {file_path.name} 彻底断流！启动自动化容灾降级...")
         if backup_path.exists():
             try:
-                backup_data = json.loads(backup_path.read_text(encoding='utf-8'))
+                backup_data = _parse_json_lenient(backup_path.read_text(encoding='utf-8'))
                 log_success(f"容灾降级成功！已从历史干净数据中提取并重构底包: {backup_path.name}")
                 file_path.write_text(json.dumps(backup_data, ensure_ascii=False, indent=4), encoding='utf-8')
                 return backup_data
@@ -130,45 +138,51 @@ def load_json_safe(file_path: Path) -> dict:
 # ====================================================================
 # ⏰ 【每月 1 号自动大洗牌与密锁控制模块】
 # ====================================================================
+def _read_lock_file():
+    """读取密锁控制开关，返回 (月份, 密锁)。内容格式：月-密锁"""
+    if not config.LOCK_FILE_PATH.exists():
+        return "", ""
+    content = config.LOCK_FILE_PATH.read_text(encoding='utf-8').strip()
+    if "-" in content:
+        month, code = content.split("-", 1)
+        return month, code
+    return "", content
+
+def _generate_lock_token():
+    return ''.join(random.choices(string.ascii_lowercase + string.digits, k=config.TOKEN_LENGTH))
+
+def _write_lock_file(month, token):
+    config.LOCK_FILE_PATH.write_text(f"{month}-{token}", encoding='utf-8')
+
 def manage_monthly_token():
-    """管理密码生存周期控制"""
+    """管理密锁生命周期，返回 (生效密锁后缀, 全量版文件名, 纯净版文件名, 是否新建密锁)"""
     today = datetime.datetime.now()
     current_month = str(today.month)
     is_reset_day = (today.day == 1)
 
-    saved_month, saved_code = "", ""
+    saved_month, saved_code = _read_lock_file()
     is_new_token_generated = False
 
-    if config.LOCK_FILE_PATH.exists():
-        content = config.LOCK_FILE_PATH.read_text(encoding='utf-8').strip()
-        if "-" in content:
-            saved_month, saved_code = content.split("-", 1)
-        else:
-            saved_code = content
-
     if is_reset_day and saved_month != current_month:
-        current_token = ''.join(random.choices(string.ascii_lowercase + string.digits, k=config.TOKEN_LENGTH))
-        config.LOCK_FILE_PATH.write_text(f"{current_month}-{current_token}", encoding='utf-8')
+        current_token = _generate_lock_token()
+        _write_lock_file(current_month, current_token)
         log_success(f"每月1号大清洗！全自动抽签生成的本月蝴蝶新密锁为: {current_token}")
         is_new_token_generated = True
     elif is_reset_day and saved_month == current_month:
         current_token = saved_code
     else:
-        if not saved_code or len(saved_code) != config.TOKEN_LENGTH or "-" not in (config.LOCK_FILE_PATH.read_text(encoding='utf-8') if config.LOCK_FILE_PATH.exists() else ""):
-            current_token = ''.join(random.choices(string.ascii_lowercase + string.digits, k=config.TOKEN_LENGTH))
-            config.LOCK_FILE_PATH.write_text(f"{current_month}-{current_token}", encoding='utf-8')
+        # 非1号：校验既有密锁有效性，缺月份前缀/长度不符时静默补发
+        if not saved_month or not saved_code or len(saved_code) != config.TOKEN_LENGTH:
+            current_token = _generate_lock_token()
+            _write_lock_file(current_month, current_token)
         else:
             current_token = saved_code
 
-    current_token = ""
-    if current_token in ["全量版", "纯净版"]:
-        full_output_filename = f"{config.BASE_OUTPUT_FULL}.json"
-        clean_output_filename = f"{config.BASE_OUTPUT_CLEAN}.json"
-    else:
-        full_output_filename = f"{config.BASE_OUTPUT_FULL}{current_token}.json"
-        clean_output_filename = f"{config.BASE_OUTPUT_CLEAN}{current_token}.json"
-
-    return current_token, full_output_filename, clean_output_filename, is_new_token_generated
+    # 密码后缀开关：关闭时输出文件名不追加密锁（与历史行为一致）
+    suffix = current_token if config.ENABLE_PASSWORD_SUFFIX else ""
+    full_output_filename = f"{config.BASE_OUTPUT_FULL}{suffix}.json"
+    clean_output_filename = f"{config.BASE_OUTPUT_CLEAN}{suffix}.json"
+    return suffix, full_output_filename, clean_output_filename, is_new_token_generated
 
 # ====================================================================
 # 🛡️ 【过期接口金蝉脱壳爆破模块】
@@ -177,7 +191,7 @@ def execute_trap_boom(full_output_filename, clean_output_filename):
     """金蝉脱壳：全自动过期大轰炸覆盖机制"""
     if not config.DATA_DIR.exists():
         config.DATA_DIR.mkdir(parents=True, exist_ok=True)
-        
+
     old_configs = list(config.DATA_DIR.glob(f'{config.BASE_OUTPUT_FULL}*.json')) + \
                   list(config.DATA_DIR.glob(f'{config.BASE_OUTPUT_CLEAN}*.json')) + \
                   list(config.DATA_DIR.glob('老杨TV*.json')) + \
@@ -187,7 +201,7 @@ def execute_trap_boom(full_output_filename, clean_output_filename):
         if old_file.name != full_output_filename and old_file.name != clean_output_filename:
             try:
                 trap_json = {
-                    "spider": "", 
+                    "spider": "",
                     "notice": config.TRAP_NOTICE_TEXT,
                     "warningText": config.TRAP_WARNING_TEXT,
                     "sites": [
@@ -207,69 +221,135 @@ def execute_trap_boom(full_output_filename, clean_output_filename):
         except Exception: pass
 
 # ====================================================================
+# 📦 【上游源数据驱动加载与预处理流水线】
+# ====================================================================
+def _extract_nsfw_sites(sites, prefix_base):
+    """仅提取含 🔞 的成人站点：改名 + 将相对路径重写为绝对仓库地址（lz 福利源专用）"""
+    nsfw_list = []
+    for item in sites:
+        site_name = item.get("name", "")
+        if "🔞" not in site_name:
+            continue
+        item["name"] = f"{site_name.replace('🔞', '').strip()}｜🔞"
+        api_str = item.get("api", "")
+        if isinstance(api_str, str) and api_str.startswith("./"):
+            if api_str.startswith("./py/"):
+                item["api"] = api_str.replace("./py/", f"{prefix_base}/py/")
+            elif api_str.startswith("./js/"):
+                item["api"] = api_str.replace("./js/", f"{prefix_base}/js/")
+            else:
+                item["api"] = api_str.replace("./", f"{prefix_base}/")
+        nsfw_list.append(item)
+    return nsfw_list
+
+def _clean_and_suffix(items):
+    """清洗 items 名称中的上游脏词并追加 TG 后缀（原地修改）"""
+    for item in items:
+        if "name" not in item:
+            continue
+        name = item["name"]
+        for dirty in config.UPSTREAM_DIRTY_WORDS:
+            name = name.replace(dirty, "")
+        item["name"] = f"{name.strip()}{config.MY_TG_SUFFIX}"
+
+def _preprocess_sites(sites, spec):
+    """根据源声明对站点做预处理（成人提取/清洗后缀）"""
+    if spec.get("nsfw_sites_only"):
+        sites = _extract_nsfw_sites(sites, spec.get("api_prefix_base", ""))
+    if spec.get("clean_and_suffix"):
+        _clean_and_suffix(sites)
+    return sites
+
+def _preprocess_lives(lives, spec):
+    """根据源声明对直播做预处理（清洗后缀）"""
+    if spec.get("clean_and_suffix"):
+        _clean_and_suffix(lives)
+    return lives
+
+def _collect_extra(spec, data):
+    """采集顶层直通字段(rules/headers/doh)：json 采集结果与源声明自定义值合并"""
+    collect = set(spec.get("collect", []))
+
+    rules = (data.get("rules") or []) if "rules" in collect else []
+    rules = rules + (spec.get("rules") or [])
+
+    headers = (data.get("headers") or {}) if "headers" in collect else {}
+    headers = {**headers, **(spec.get("headers") or {})}
+
+    doh = (data.get("doh") or []) if "doh" in collect else []
+    doh = doh + (spec.get("doh") or [])
+
+    return rules, headers, doh
+
+def _load_upstream_sources():
+    """遍历 config.UPSTREAM_SOURCES，安全加载并应用各源声明式预处理"""
+    sources = []
+    for spec in config.UPSTREAM_SOURCES:
+        collect = set(spec.get("collect", []))
+        data = load_json_safe(config.SOURCE_DIR / spec["file"])
+
+        rules, headers, doh = _collect_extra(spec, data)
+
+        sources.append({
+            "name": spec["name"],
+            "as_base": bool(spec.get("as_base")),
+            "data": data,
+            "sites": _preprocess_sites(data.get("sites", []), spec) if "sites" in collect else [],
+            "lives": _preprocess_lives(data.get("lives", []), spec) if "lives" in collect else [],
+            "parses": data.get("parses", []) if "parses" in collect else [],
+            "rules": rules,
+            "headers": headers,
+            "doh": doh,
+        })
+    return sources
+
+# ====================================================================
 # ⚙️ 【核心业务：对象级链式清洗与归类编译引擎】
 # ====================================================================
-def object_level_wash_and_compile():
-    """100%纯内存对象流操作，杜绝二次重载"""
-    json_cnb = load_json_safe(config.CNB_PATH)
-    json_haitun = load_json_safe(config.HAITUN_PATH)
-    json_lz = load_json_safe(config.LZ_PATH)
-    json_mafly = load_json_safe(config.MAFLY_PATH)
+def _collect_field(sources, field):
+    """按源顺序拼接采集某个列表字段（sites/rules/doh/parses 等）"""
+    result = []
+    for src in sources:
+        result.extend(src[field])
+    return result
 
-    haitun_sites = json_haitun.get("sites", [])
-    haitun_lives = json_haitun.get("lives", [])
-    mafly_sites = json_mafly.get("sites", [])
-    mafly_lives = json_mafly.get("lives", [])
-
-    lz_sites = json_lz.get("sites", [])
-
-    lz_nsfw_list = []
-    for item in lz_sites:
-        site_name = item.get("name", "")
-        if "🔞" in site_name:
-            item["name"] = f"{site_name.replace('🔞', '').strip()}｜🔞"
-            api_str = item.get("api", "")
-            if isinstance(api_str, str) and api_str.startswith("./"):
-                if api_str.startswith("./py/"):
-                    item["api"] = api_str.replace("./py/", "https://gh-proxy.com/https://raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/py/")
-                elif api_str.startswith("./js/"):
-                    item["api"] = api_str.replace("./js/", "https://gh-proxy.com/https://raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/js/")
-                else:
-                    item["api"] = api_str.replace("./", "https://gh-proxy.com/https://raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz/")
-            lz_nsfw_list.append(item)
-
-    for item in haitun_sites:
-        if "name" in item:
-            for dirty in config.UPSTREAM_DIRTY_WORDS:
-                item["name"] = item["name"].replace(dirty, "")
-            item["name"] = f"{item['name'].strip()}{config.MY_TG_SUFFIX}"
-
-    for item in haitun_lives:
-        if "name" in item:
-            for dirty in config.UPSTREAM_DIRTY_WORDS:
-                item["name"] = item["name"].replace(dirty, "")
-            item["name"] = f"{item['name'].strip()}{config.MY_TG_SUFFIX}"
-
-    cnb_sites = json_cnb.get("sites", [])
-    cnb_lives = json_cnb.get("lives", [])
-
-    combined_parses = json_haitun.get("parses", []) + json_lz.get("parses", []) + json_cnb.get("parses", []) + json_mafly.get("parses", [])
-    unique_parses = []
-    seen_parse_names = set()
-    for p in combined_parses:
+def _merge_parses(sources):
+    """合并各源解析器，按 name 去重（先到先得）"""
+    unique, seen = [], set()
+    for p in _collect_field(sources, "parses"):
         p_name = p.get("name", "")
-        if p_name and p_name not in seen_parse_names:
-            unique_parses.append(p)
-            seen_parse_names.add(p_name)
+        if p_name and p_name not in seen:
+            unique.append(p)
+            seen.add(p_name)
+    return unique
 
-    all_raw_sites = haitun_sites + lz_nsfw_list + cnb_sites + mafly_sites
-    custom_keys = {site.get("key") for site in config.MY_CUSTOM_SITES if site.get("key")}
-    clean_upstream_sites = [site for site in all_raw_sites if site.get("key") not in custom_keys]
+def _rewrite_ext(site, api_field):
+    """重写站点 ext 字段路径；针对 PanWebShare 站点做特殊纠偏"""
+    ext_field = site.get("ext", "")
+    if isinstance(ext_field, str):
+        for pattern, target in config.PATH_REPLACEMENTS.items():
+            ext_field = re.sub(pattern, target, ext_field)
+        site["ext"] = ext_field
+    elif isinstance(ext_field, dict):
+        try:
+            ext_str = json.dumps(ext_field, ensure_ascii=False)
+            for pattern, target in config.PATH_REPLACEMENTS.items():
+                ext_str = re.sub(pattern, target, ext_str)
+            site["ext"] = json.loads(ext_str)
+        except Exception:
+            pass
+        if "PanWebShare" in api_field:
+            site["api"] = "csp_PanWebShare"
+            site["changeable"] = 1
+            if "jar" in site:
+                site.pop("jar")
 
+def _clean_compile_sites(raw_sites):
+    """上游站点统一清洗：过滤黑名单、清洗脏词、重塑名称、重写 api/ext 路径"""
     compiled_sites = []
     tg_tail_count = 0
 
-    for site in clean_upstream_sites:
+    for site in raw_sites:
         name = site.get("name", "")
         if any(kw in name for kw in config.BLOCK_KEYWORDS) or any(mkw in name for mkw in config.BLOCK_MALICIOUS_KEYWORDS):
             continue
@@ -277,11 +357,14 @@ def object_level_wash_and_compile():
         for dirty in config.UPSTREAM_DIRTY_WORDS:
             name = name.replace(dirty, "")
 
-        for char in ['丨', '┃', ' ']: name = name.strip(char)
+        for char in ['丨', '┃', ' ']:
+            name = name.strip(char)
         name = re.sub(r'\s+', ' ', name)
+
         if config.MY_TG_SUFFIX in name:
             tg_tail_count += 1
-            if tg_tail_count > 5: name = name.replace(config.MY_TG_SUFFIX, "").strip()
+            if tg_tail_count > 5:
+                name = name.replace(config.MY_TG_SUFFIX, "").strip()
 
         if not name.startswith(config.LOGO_PREFIX):
             name = f"{config.LOGO_PREFIX} {name}"
@@ -297,27 +380,16 @@ def object_level_wash_and_compile():
                 api_field = re.sub(pattern, target, api_field)
             site["api"] = api_field
 
-        ext_field = site.get("ext", "")
-        if isinstance(ext_field, str):
-            for pattern, target in config.PATH_REPLACEMENTS.items():
-                ext_field = re.sub(pattern, target, ext_field)
-            site["ext"] = ext_field
-        elif isinstance(ext_field, dict):
-            try:
-                ext_str = json.dumps(ext_field, ensure_ascii=False)
-                for pattern, target in config.PATH_REPLACEMENTS.items():
-                    ext_str = re.sub(pattern, target, ext_str)
-                site["ext"] = json.loads(ext_str)
-            except Exception:
-                pass
-            if "PanWebShare" in api_field:
-                site["api"] = "csp_PanWebShare"
-                site["changeable"] = 1
-                if "jar" in site: site.pop("jar")
+        _rewrite_ext(site, api_field)
 
-        if site.get("ext") == {}: site["ext"] = ""
+        if site.get("ext") == {}:
+            site["ext"] = ""
         compiled_sites.append(site)
 
+    return compiled_sites
+
+def _categorize_sites(compiled_sites):
+    """站点分桶：搜索开关、热播置顶、成人判定、分类匹配"""
     bucket_map = {category: [] for category in config.CATEGORY_RULES.keys()}
     bucket_map["综合"] = []
     bucket_map["福利"] = []
@@ -332,7 +404,7 @@ def object_level_wash_and_compile():
 
         if any(kw in s_name for kw in no_search_kw) or (s_key in no_search_keys):
             site["searchable"] = 0
-            
+
         if s_key in no_quick_keys:
             site["quickSearch"] = 0
 
@@ -351,8 +423,11 @@ def object_level_wash_and_compile():
             site["name"] = f"{config.LOGO_PREFIX} 爱奇艺 {config.MY_TG_SUFFIX}"
 
         is_guazi = "瓜子" in s_name or s_key == "GZ"
-        is_nsfw = False if is_guazi else ("🔞" in s_name or "色播" in s_name or "av" in s_key.lower() or "瓜" in s_name or "爆料" in s_name or "chat" in s_key.lower() or "cam" in s_key.lower() or "panda" in s_key.lower() or "video" in s_key.lower() or "md" in s_key.lower())
-        
+        is_nsfw = False if is_guazi else (
+            any(kw in s_name for kw in config.NSFW_NAME_KEYWORDS) or
+            any(kw in s_key.lower() for kw in config.NSFW_KEY_KEYWORDS)
+        )
+
         if is_nsfw:
             site["category"] = "福利"
             bucket_map["福利"].append(site)
@@ -363,35 +438,40 @@ def object_level_wash_and_compile():
             if any(kw in s_name or (kw in s_key.lower() if s_key else False) for kw in keywords):
                 matched_category = category
                 break
-        
+
         if matched_category:
             site["category"] = matched_category
-            if matched_category in ["少儿", "音乐"] or "dj" in s_name.lower():
+            if matched_category in config.NO_SEARCH_CATEGORIES or "dj" in s_name.lower():
                 site["searchable"] = 0
             bucket_map[matched_category].append(site)
         else:
             site["category"] = "综合"
             bucket_map["综合"].append(site)
 
-        if site.get("category") not in ["少儿", "音乐"] and "searchable" not in site:
+        if site.get("category") not in config.NO_SEARCH_CATEGORIES and "searchable" not in site:
             site["searchable"] = 1
-    log_info(f"底包清洗 {compiled_sites}") 
+
+    log_info(f"底包清洗完成，共 {len(compiled_sites)} 个站点进入分类")
+    return bucket_map
+
+def _order_sites(bucket_map):
+    """按固定分类顺序重排站点点位"""
     ordered_sites = []
-    for cate in ["综合", "短剧", "动漫", "体育/直播", "少儿", "音乐", "网盘/磁力", "福利"]:
+    for cate in config.ORDERED_CATEGORIES:
         if cate in bucket_map:
             ordered_sites.extend(bucket_map[cate])
+    return ordered_sites
 
+def _insert_custom_sites(ordered_sites):
+    """特权加线：热播站点置顶，普通手工站点按配置点位插入"""
     target_pos = getattr(config, "SITE_INSERT_POS", 1)
     hot_key = getattr(config, "HOT_VIDEO_KEY", "")
     hot_name = getattr(config, "HOT_VIDEO_SITE_NAME", "")
 
-    hot_sites = []
-    normal_sites = []
-
+    hot_sites, normal_sites = [], []
     for custom_site in config.MY_CUSTOM_SITES:
         site = custom_site.copy()
         s_key = site.get("key", "")
-        
         if s_key and s_key == hot_key:
             site["name"] = hot_name or site.get("name")
             site["category"] = "综合"
@@ -408,54 +488,52 @@ def object_level_wash_and_compile():
     for site in reversed(hot_sites):
         ordered_sites.insert(0, site)
 
-    # 🎯 【最终名称打标】：根据分类在 name 后面追加分类标签
-    CATEGORY_TAG_MAP = {
-        "综合": "[合]",
-        "短剧": "[专]",
-        "动漫": "[专]",
-        "体育/直播": "[专]",
-        "少儿": "[专]",
-        "音乐": "[专]",
-        "网盘/磁力": "[磁]",
-        "福利": "[密]"
-    }
+    return ordered_sites
 
-    TOOL_KEYS = {"js_douban", "配置中心", "push_agent", "Nostr", "Nostr2", "本地", "预告", "版本信息", "工具"}
-    TOOL_NAME_KW = ["配置", "推送", "版本", "预告", "搜索"]
-    OFFICIAL_NAME_KW = ["优酷", "爱奇艺", "腾讯视频", "芒果", "哔哩", "1905", "豆瓣"]
-    ADULT_KW = ["🔞", "成人", "伦理", "福利"]
-    APP_NAME_KW = ["APP", "app"]
-
+def _apply_category_tags(ordered_sites):
+    """根据分类/官方/工具/成人等特征，在站点名末尾追加标记"""
+    tag_rules = config.TAG_RULES
     for site in ordered_sites:
         s_name = site.get("name", "")
         s_category = site.get("category", "综合")
         s_key = site.get("key", "")
         s_api = str(site.get("api", ""))
 
-        if s_category == "福利" or any(kw in s_name for kw in ADULT_KW):
+        if s_category == "福利" or any(kw in s_name for kw in tag_rules["adult_name"]):
             tag = "[密]"
-        elif any(kw in s_name for kw in OFFICIAL_NAME_KW) and s_category == "综合":
+        elif any(kw in s_name for kw in tag_rules["official_name"]) and s_category == "综合":
             tag = "[官]"
-        elif s_key in TOOL_KEYS or any(kw in s_name for kw in TOOL_NAME_KW):
+        elif s_key in tag_rules["tool_keys"] or any(kw in s_name for kw in tag_rules["tool_name"]):
             tag = "[辅]"
-        elif any(kw in s_name for kw in APP_NAME_KW) or "csp_App" in s_api:
+        elif any(kw in s_name for kw in tag_rules["app_name"]) or "csp_App" in s_api:
             tag = "[APP]"
-        elif any(kw in s_name for kw in ["网盘", "云盘", "磁力"]):
+        elif any(kw in s_name for kw in tag_rules["netdisk_name"]):
             tag = "[磁]"
-        elif any(kw in s_name for kw in ["4K", "4k", "高清"]):
+        elif any(kw in s_name for kw in tag_rules["v4k_name"]):
             tag = "[清]"
         else:
-            tag = CATEGORY_TAG_MAP.get(s_category, "[综合]")
+            tag = config.CATEGORY_TAG_MAP.get(s_category, "[综合]")
 
         if not s_name.endswith(tag):
             site["name"] = f"{s_name} {tag}"
 
+    return ordered_sites
+
+def _compile_lives(sources):
+    """直播合并：过滤黑名单与同名冲突，特权加线按点位插入"""
     custom_live_names = {l.get("name") for l in config.MY_CUSTOM_LIVES if l.get("name")}
-    clean_base_lives = [
-        l for l in (haitun_lives + cnb_lives + mafly_lives)
-        if l.get("name") not in custom_live_names and not any(kw in l.get("name", "") for kw in config.BLOCK_MALICIOUS_KEYWORDS)
-    ]
-    clean_base_lives = [l for l in clean_base_lives if not any(kw.lower() in l.get("name", "").lower() for kw in config.BLOCK_KEYWORDS)]
+
+    base_lives = []
+    for src in sources:
+        for live in src["lives"]:
+            name = live.get("name", "")
+            if name in custom_live_names:
+                continue
+            if any(kw in name for kw in config.BLOCK_MALICIOUS_KEYWORDS):
+                continue
+            base_lives.append(live)
+
+    base_lives = [l for l in base_lives if not any(kw.lower() in l.get("name", "").lower() for kw in config.BLOCK_KEYWORDS)]
 
     live_inserted_count = 0
     for custom_live in config.MY_CUSTOM_LIVES:
@@ -467,59 +545,114 @@ def object_level_wash_and_compile():
         custom_live["name"] = l_name
 
         if "🔞" in l_name:
-            clean_base_lives.append(custom_live)
+            base_lives.append(custom_live)
         else:
-            idx = min(config.INSERT_POS + live_inserted_count, len(clean_base_lives))
-            clean_base_lives.insert(idx, custom_live)
+            idx = min(config.INSERT_POS + live_inserted_count, len(base_lives))
+            base_lives.insert(idx, custom_live)
             live_inserted_count += 1
 
-    final_obj = copy.deepcopy(json_cnb)
-    
-    if hasattr(config, "DEFAULT_LOGO_URL") and config.DEFAULT_LOGO_URL:
+    return base_lives
+
+def _merge_rules(rules):
+    """合并去广告规则：汇总各规则 hosts，注入云端去广告 JS 规则置顶"""
+    if not rules:
+        return []
+    ad_hosts = list(config.AD_HOSTS_LIST)
+    for r in rules:
+        if isinstance(r, dict) and "hosts" in r:
+            for h in r["hosts"]:
+                if h not in ad_hosts:
+                    ad_hosts.append(h)
+    js_rule = {"name": "蝴蝶影视·云端高级去广告JS注入", "hosts": ad_hosts, "script": config.CUSTOM_AD_BLOCK_JS}
+    return [js_rule] + [r for r in rules if r.get("name") != "蝴蝶影视·云端高级去广告JS注入"]
+
+def _merge_headers(headers_dict):
+    """合并请求 headers：各源直通结果 + 全局自定义 headers（后者优先）"""
+    return {**headers_dict, **config.CUSTOM_HEADERS}
+
+def _merge_doh(doh_list):
+    """合并 DOH 节点：修复 /dns-quer 截断、去重注入自定义节点与 AliDNS"""
+    merged = []
+    for item in list(doh_list) + list(config.CUSTOM_DOH):
+        if not isinstance(item, dict):
+            continue
+        url = item.get("url", "")
+        if url.endswith("/dns-quer"):
+            item["url"] = f"{url}y"
+        name = item.get("name")
+        if name and any(d.get("name") == name for d in merged):
+            continue
+        merged.append(item)
+    if not any(d.get("name") == config.ALI_DOH_CONFIG["name"] for d in merged):
+        merged.insert(0, config.ALI_DOH_CONFIG)
+    return merged
+
+def _build_final_obj(sources, parses, sites, lives, rules, headers_dict, doh_list):
+    """组装最终输出对象：合并直通字段并注入 DOH/去广告规则/全局 spider 等后处理"""
+    base_data = {}
+    for src in sources:
+        if src.get("as_base"):
+            base_data = src["data"]
+            break
+
+    final_obj = copy.deepcopy(base_data)
+
+    if getattr(config, "DEFAULT_LOGO_URL", ""):
         final_obj["logo"] = config.DEFAULT_LOGO_URL
 
     final_obj.update({
-        "parses": unique_parses,
-        "sites": ordered_sites,
-        "lives": clean_base_lives
+        "parses": parses,
+        "sites": sites,
+        "lives": lives
     })
 
     for s in final_obj.get("sites", []):
         if s.get("key") in ["hajim-腾讯备", "茫茫"]:
             s["spider"] = "./tvbox.jar"
 
-    if "doh" in final_obj and isinstance(final_obj["doh"], list):
-        for doh_item in final_obj["doh"]:
-            if doh_item.get("url", "").endswith("/dns-quer"): doh_item["url"] = f"{doh_item['url']}y"
-        if not any(d.get("name") == config.ALI_DOH_CONFIG["name"] for d in final_obj["doh"]):
-            final_obj["doh"].insert(0, config.ALI_DOH_CONFIG)
+    merged_rules = _merge_rules(rules)
+    if merged_rules:
+        final_obj["rules"] = merged_rules
 
-    if "rules" in final_obj and isinstance(final_obj["rules"], list):
-        current_rules = final_obj["rules"]
-        ad_hosts = list(config.AD_HOSTS_LIST)
-        for r in current_rules:
-            if isinstance(r, dict) and "hosts" in r:
-                for h in r["hosts"]:
-                    if h not in ad_hosts: ad_hosts.append(h)
-        js_rule = {"name": "蝴蝶影视·云端高级去广告JS注入", "hosts": ad_hosts, "script": config.CUSTOM_AD_BLOCK_JS}
-        final_obj["rules"] = [js_rule] + [r for r in current_rules if r.get("name") != "蝴蝶影视·云端高级去广告JS注入"]
+    merged_doh = _merge_doh(doh_list)
+    if merged_doh:
+        final_obj["doh"] = merged_doh
+
+    merged_headers = _merge_headers(headers_dict)
+    if merged_headers:
+        final_obj["headers"] = merged_headers
 
     final_obj["spider"] = config.GLOBAL_SPIDER_JAR
 
-    for site in final_obj.get("sites", []):
-        s_key = site.get("key", "")
-        if s_key in ["hajim-腾讯备", "茫茫"]:
-            site["spider"] = "./tvbox.jar"
-
     if "lives" in final_obj and isinstance(final_obj["lives"], list):
-        clean_lives = []
-        for live in final_obj["lives"]:
-            if not live or not isinstance(live, dict) or len(live) == 0:
-                continue
-            clean_lives.append(live)
-        final_obj["lives"] = clean_lives
+        final_obj["lives"] = [live for live in final_obj["lives"] if live and isinstance(live, dict) and len(live) > 0]
 
     return final_obj
+
+def object_level_wash_and_compile():
+    """100%纯内存对象流操作：加载 -> 分类清洗 -> 特权加线 -> 打标 -> 组装"""
+    sources = _load_upstream_sources()
+
+    parses = _merge_parses(sources)
+    raw_sites = _collect_field(sources, "sites")
+    rules = _collect_field(sources, "rules")
+    doh_list = _collect_field(sources, "doh")
+    headers_dict = {}
+    for src in sources:
+        headers_dict.update(src["headers"])
+
+    custom_keys = {site.get("key") for site in config.MY_CUSTOM_SITES if site.get("key")}
+    clean_upstream_sites = [site for site in raw_sites if site.get("key") not in custom_keys]
+
+    compiled_sites = _clean_compile_sites(clean_upstream_sites)
+    bucket_map = _categorize_sites(compiled_sites)
+    ordered_sites = _order_sites(bucket_map)
+    ordered_sites = _insert_custom_sites(ordered_sites)
+    ordered_sites = _apply_category_tags(ordered_sites)
+
+    lives = _compile_lives(sources)
+
+    return _build_final_obj(sources, parses, ordered_sites, lives, rules, headers_dict, doh_list)
 
 # ====================================================================
 # 🔀 【双版本矩阵构建与差异下发调度中枢】
@@ -528,17 +661,17 @@ def generate_dashboard_html(current_token, site_cnt, live_cnt, parse_cnt):
     """自动读取 datas 目录并根据 config 里的模板编译 Dashboard html 页面"""
     try:
         current_time = (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
-        
+
         file_cards_html = ""
         json_files = sorted(list(config.DATA_DIR.glob("*.json")), key=lambda x: x.stat().st_mtime, reverse=True)
-        
+
         for json_file in json_files:
             size_kb = round(json_file.stat().st_size / 1024, 2)
             fname = json_file.name
-            
+
             is_active = current_token in fname
             badge = '<span class="text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded">最新版本</span>' if is_active else '<span class="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">历史/陷阱</span>'
-            
+
             safe_key = fname.replace('.', '_').replace('-', '_')
 
             file_cards_html += f"""
@@ -551,7 +684,7 @@ def generate_dashboard_html(current_token, site_cnt, live_cnt, parse_cnt):
                     </div>
                     <p class="text-xs text-gray-400 mt-1">https://r2.xdev.cc/tvbox/{fname}</p>
                 </div>
-                
+
                 <div class="flex items-center gap-3">
                     <div class="text-right px-2">
                         <div class="text-[10px] text-gray-400">点击/获取量</div>
@@ -582,16 +715,15 @@ def generate_dashboard_html(current_token, site_cnt, live_cnt, parse_cnt):
         )
 
         secret_filename = "admin_888.html"
-        
+
         admin_path = config.BASE_DIR / secret_filename
         admin_path.write_text(html_out, encoding="utf-8")
-        
+
         public_index_path = config.BASE_DIR / "index.html"
         public_index_path.write_text(html_out, encoding="utf-8")
-        # public_index_path.write_text("<html><head><title>404 Not Found</title></head><body><h1>404 Not Found</h1></body></html>", encoding="utf-8")
 
         log_success(f"可视化 Dashboard 页面已成功加密注入！专属后台路径: datas/{secret_filename}")
-        
+
     except Exception as e:
         log_error(f"生成 Dashboard 页面崩溃: {e}")
 
@@ -601,14 +733,14 @@ def build_and_dispatch_matrix(ordered_obj, current_token, full_out_name, clean_o
     full_version_obj = copy.deepcopy(ordered_obj)
     full_version_obj["notice"] = config.WELCOME_NOTICE_FULL + config.THANKS_WARNING
     full_version_obj["wallpaper"] = config.WALLPAPER_FULL
-    
+
     full_final_out = {"notice": full_version_obj.pop("notice")}
     full_final_out.update(full_version_obj)
 
     clean_version_obj = copy.deepcopy(ordered_obj)
     clean_version_obj["notice"] = config.WELCOME_NOTICE_CLEAN + config.THANKS_WARNING
     clean_version_obj["wallpaper"] = config.WALLPAPER_CLEAN
-    
+
     clean_version_obj["sites"] = [
         s for s in clean_version_obj.get("sites", [])
         if not any(kw in s.get("name", "") or kw in s.get("category", "") or kw in s.get("key", "").lower() for kw in config.NSFW_KEYWORDS)
@@ -617,7 +749,7 @@ def build_and_dispatch_matrix(ordered_obj, current_token, full_out_name, clean_o
         l for l in clean_version_obj.get("lives", [])
         if not any(kw in l.get("name", "") for kw in config.NSFW_KEYWORDS)
     ]
-    
+
     clean_final_out = {"notice": clean_version_obj.pop("notice")}
     clean_final_out.update(clean_version_obj)
 
@@ -628,17 +760,17 @@ def build_and_dispatch_matrix(ordered_obj, current_token, full_out_name, clean_o
     tg_chat_id = os.getenv("TG_CHAT_ID")
     repo_info = os.getenv("GITHUB_REPOSITORY", "yang2048/combine")
     branch_info = os.getenv("GITHUB_REF_NAME", "master")
-    
+
     full_raw_url = f"https://raw.githubusercontent.com/{repo_info}/refs/heads/{branch_info}/datas/{full_out_name}"
     clean_raw_url = f"https://raw.githubusercontent.com/{repo_info}/refs/heads/{branch_info}/datas/{clean_out_name}"
-    
+
     full_sub_url = f"{config.GITHUB_PROXY}{full_raw_url}" if config.GITHUB_PROXY else full_raw_url
     clean_sub_url = f"{config.GITHUB_PROXY}{clean_raw_url}" if config.GITHUB_PROXY else clean_raw_url
-    
+
     current_time = (datetime.datetime.utcnow() + datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M")
     is_password_changed = False
     old_file_name = ""
-    
+
     if config.TRACKER_PATH.exists():
         old_file_name = config.TRACKER_PATH.read_text(encoding='utf-8').strip()
     if old_file_name != full_out_name and old_file_name != "":
@@ -694,10 +826,10 @@ def build_and_dispatch_matrix(ordered_obj, current_token, full_out_name, clean_o
                     msg_lines.append("📊 *━━━━━━━━━━━━━━*")
 
                 full_msg = config.TG_UPDATE_MSG_TEMPLATE.format(
-                    current_time=current_time, 
+                    current_time=current_time,
                     current_token=current_token,
                     detail_msg="\n".join(msg_lines),
-                    full_sub_url=full_sub_url, 
+                    full_sub_url=full_sub_url,
                     clean_sub_url=clean_sub_url
                 )
                 send_telegram_request(tg_token, tg_chat_id, full_msg)
@@ -709,7 +841,7 @@ def build_and_dispatch_matrix(ordered_obj, current_token, full_out_name, clean_o
     full_output_path.write_text(json.dumps(full_final_out, ensure_ascii=False, indent=4), encoding='utf-8')
     clean_output_path.write_text(json.dumps(clean_final_out, ensure_ascii=False, indent=4), encoding='utf-8')
     config.TRACKER_PATH.write_text(full_out_name, encoding='utf-8')
-    
+
     site_cnt = len(full_final_out.get("sites", []))
     live_cnt = len(full_final_out.get("lives", []))
     parse_cnt = len(full_final_out.get("parses", []))
@@ -727,19 +859,19 @@ def main():
         log_info(f"蝴蝶影视 自动编译核心架构工程架设流 V{config.VERSION}")
         log_info(f"编译流构建序列日期: {config.BUILD_DATE}")
         log_info(f"====================================================")
-        
+
         current_token, full_out_name, clean_out_name, is_new_token_gen = manage_monthly_token()
         execute_trap_boom(full_out_name, clean_out_name)
         ordered_obj = object_level_wash_and_compile()
-        
+
         site_cnt, live_cnt, parse_cnt, file_size = build_and_dispatch_matrix(
             ordered_obj, current_token, full_out_name, clean_out_name, is_new_token_gen
         )
-        
+
         today = datetime.datetime.now()
         if not config.LOCK_FILE_PATH.exists() or "-" not in config.LOCK_FILE_PATH.read_text(encoding='utf-8'):
             config.LOCK_FILE_PATH.write_text(f"{today.month}-{current_token}", encoding='utf-8')
-            
+
         elapsed_time = time.time() - start_time
         log_success(f"蝴蝶影视 编译总流水线平稳运行结束！【编译快报总览】:")
         print(f"\033[94m"
@@ -749,7 +881,7 @@ def main():
               f"  🥇 Total Parses  : {parse_cnt} objects\n"
               f"  💾 Output Weight : {file_size / 1024 / 1024:.2f} MB"
               f"\033[0m")
-              
+
     except Exception as e:
         log_critical(f"核心编译主总线遭到未知突发崩溃: {e}", exc_info=True)
 

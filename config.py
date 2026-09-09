@@ -34,23 +34,68 @@ INSERT_POS = get_setting("INSERT_POS", 0)
 SITE_INSERT_POS = get_setting("SITE_INSERT_POS", 0) 
 DEFAULT_LOGO_URL = get_setting("DEFAULT_LOGO_URL", "https://img.naixiai.cn/2026/06/18/IMG_6638.jpeg")
 
-DEFAULT_TIMEOUT = 10     
+
 TG_TIMEOUT = 15          
 TOKEN_LENGTH = 3         
 TG_MAX_DISPLAY = 15      
 
+# 是否启用"每月密码后缀"。False 时输出文件名为固定 BASE_OUTPUT_FULL/CLEAN(与历史行为一致)；
+# True 时输出文件名追加当月随机密锁(如 蝴蝶影视全量版2la.json)。
+ENABLE_PASSWORD_SUFFIX = get_setting("ENABLE_PASSWORD_SUFFIX", False)      
+
 # ====================================================================
 # 🌐 【二、全局核心路径与网络代理配置区】
 # ====================================================================
-CNB_PATH = SOURCE_DIR / "cnb.json"
-HAITUN_PATH = SOURCE_DIR / "haitun.json"
-LZ_PATH = SOURCE_DIR / "lz.json"
-MAFLY_PATH = SOURCE_DIR / "mafly.json"
 
 LOCK_FILE_PATH = DATA_DIR / "控制开关.txt"
 TRACKER_PATH = DATA_DIR / "最新接口文件名.txt"
 
 GITHUB_PROXY = ""
+
+# lz 福利源相对路径 ./ / ./py/ / ./js/ 的重写目标绝对地址
+LZ_RAW_BASE = "https://gh-proxy.com/https://raw.githubusercontent.com/ediart/tvbox/refs/heads/main/lz"
+
+# ====================================================================
+# 📦 【二点五、上游源声明式配置中心】
+#    ➕ 扩展 source 目录：只需在 source 下新增 json，并在此追加一条声明即可自动并入编译
+# ====================================================================
+# 每个源支持的声明字段说明：
+#   as_base           -> 作为最终输出对象骨架(继承 spider/wallpaper/flags 等顶层字段)，全局仅允许一个
+#   collect           -> 需要采集的字段，可选值：sites / lives / parses / rules / headers / doh
+#   clean_and_suffix  -> 对 sites/lives 名称清洗上游脏词(UPSTREAM_DIRTY_WORDS)并追加 TG 后缀(MY_TG_SUFFIX)
+#   nsfw_sites_only   -> 仅提取含 🔞 的成人站点，并配合 api_prefix_base 重写相对 api 路径
+#   api_prefix_base   -> nsfw_sites_only 模式下相对路径的替换目标绝对地址
+#   rules/headers/doh -> 源级自定义直通值，与 json 采集结果合并(可覆盖 json 中的 headers)
+#   注意：列表顺序即 sites/lives/parses 的合并优先级顺序（影响同分类内的相对点位）。
+UPSTREAM_SOURCES = [
+    {
+        "name": "haitun",
+        "file": "haitun.json",
+        "collect": ["sites", "lives", "parses"],
+        "clean_and_suffix": True,
+    },
+    {
+        "name": "lz",
+        "file": "lz.json",
+        "collect": ["sites", "parses"],
+        "nsfw_sites_only": True,
+        "api_prefix_base": LZ_RAW_BASE,
+    },
+    {
+        "name": "cnb",
+        "file": "cnb.json",
+        "as_base": True,
+        "collect": ["sites", "lives", "parses", "rules", "doh"],
+    },
+    {
+        "name": "mafly",
+        "file": "mafly.json",
+        "collect": ["sites", "lives", "parses"],
+        # 如需采集 mafly 自带 headers，将 "headers" 加入 collect；或直接在此自定义：
+        # "headers": {"User-Agent": "okhttp/5.3.2"},
+        # "doh": [{"name": "AliDNS", "url": "https://dns.alidns.com/dns-query"}],
+    },
+]
 
 # ====================================================================
 # 🚫 【三、双版本过滤依据、广告拦截与恶意杂质直接清洗区】
@@ -77,6 +122,41 @@ CATEGORY_RULES = get_setting("CATEGORY_RULES", {
     "少儿": ["少儿", "课堂", "教学", "教育"],
     "音乐": ["音乐", "网易云", "听书", "唱会", "fm", "相声", "小品", "戏曲", "dj"]
 })
+
+# 成人(福利)站点判定：name 命中 OR key(小写) 命中
+NSFW_NAME_KEYWORDS = tuple(get_setting("NSFW_NAME_KEYWORDS", ["🔞", "色播", "瓜", "爆料"]))
+NSFW_KEY_KEYWORDS = tuple(get_setting("NSFW_KEY_KEYWORDS", ["av", "chat", "cam", "panda", "video", "md"]))
+
+# 站点最终输出的固定分类顺序（决定大屏端分类点位重排顺序）
+ORDERED_CATEGORIES = ["综合", "短剧", "动漫", "体育/直播", "少儿", "音乐", "网盘/磁力", "福利"]
+
+# 命中后自动关闭搜索的分类
+NO_SEARCH_CATEGORIES = ["少儿", "音乐"]
+
+# ====================================================================
+# 🏷️ 【四点五、站点名称末尾分类打标规则面板】
+# ====================================================================
+CATEGORY_TAG_MAP = {
+    "综合": "[合]",
+    "短剧": "[专]",
+    "动漫": "[专]",
+    "体育/直播": "[专]",
+    "少儿": "[专]",
+    "音乐": "[专]",
+    "网盘/磁力": "[磁]",
+    "福利": "[密]",
+}
+
+# 打标判定词表（按优先级顺序命中）：adult_name 福利 / official_name 官方 / tool 辅助 / app / netdisk 磁力 / v4k 高清
+TAG_RULES = {
+    "adult_name": ["🔞", "成人", "伦理", "福利"],
+    "official_name": ["优酷", "爱奇艺", "腾讯视频", "芒果", "哔哩", "1905", "豆瓣"],
+    "tool_keys": {"js_douban", "配置中心", "push_agent", "Nostr", "Nostr2", "本地", "预告", "版本信息", "工具"},
+    "tool_name": ["配置", "推送", "版本", "预告", "搜索"],
+    "app_name": ["APP", "app"],
+    "netdisk_name": ["网盘", "云盘", "磁力"],
+    "v4k_name": ["4K", "4k", "高清"],
+}
 
 # ====================================================================
 # 👑 【五、专属品牌与视觉定制区】
@@ -126,6 +206,12 @@ WELCOME_NOTICE_FULL = "👑 欢迎使用【蝴蝶影视粉丝专属全量专线�
 WELCOME_NOTICE_CLEAN = "🏡 欢迎使用【蝴蝶影视专属绿色客厅专线】！本接口已全面过滤敏感、擦边和福利内容，全家老少看电视更安全、更绿色！"
 
 ALI_DOH_CONFIG = {"name": "AliDNS", "url": "https://dns.alidns.com/dns-query", "ips": ["223.5.5.5", "223.6.6.6"]}
+
+# 自定义全局请求 headers（合并进最终输出顶层 headers，优先级最高）
+CUSTOM_HEADERS = get_setting("CUSTOM_HEADERS", {})
+
+# 自定义附加 DOH 节点（合并进最终输出 doh 列表）
+CUSTOM_DOH = get_setting("CUSTOM_DOH", [])
 
 CUSTOM_AD_BLOCK_JS = [
     "console.log('蝴蝶影视 WebView 去广告模块启动');",
