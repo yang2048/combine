@@ -1,11 +1,8 @@
-# Ly
 # 🦋 蝴蝶影视粉丝专属缝合专线 (Butterfly Video Project)
 
-[![GitHub Stars](https://img.shields.io/github/stars/GodLike631/test?style=flat-square&label=Stars&color=FF69B4)](https://github.com/GodLike631/test)
-[![Python Version](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python)](https://www.python.org/)
-[![Platform Support](https://img.shields.io/badge/Platform-Android%20%7C%20TVBox%20%7C%20FongMi-green?style=flat-square)](https://github.com/FongMi/Release)
-[![Telegram Channel](https://img.shields.io/badge/Telegram-频道%EF%BC%9A%40huliys9-0088cc?style=flat-square&logo=telegram)](https://t.me/huliys9)
+[🖥️ 打开 Dashboard 控制台](https://yang2048.github.io/combine/datas/index.html)
 
+---
 > 👑 **欢迎使用【蝴蝶影视粉丝专属缝合专线】！** 
 > 本项目基于自动化 Python 核心技术，全自动下钻抓取上游多仓接口资源，融入核心手工特权加线区，并通过“九大方阵智能清洗洗牌算法”进行大屏端排版美化，为您打造纯净、无广告、极速低延迟的顶级大屏视听体验。
 

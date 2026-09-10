@@ -716,13 +716,14 @@ def generate_dashboard_html(current_token, site_cnt, live_cnt, parse_cnt):
 
         secret_filename = "admin_888.html"
 
-        admin_path = config.BASE_DIR / secret_filename
+        admin_path = config.DATA_DIR / secret_filename
         admin_path.write_text(html_out, encoding="utf-8")
 
-        public_index_path = config.BASE_DIR / "index.html"
+        public_index_path = config.DATA_DIR / "index.html"
         public_index_path.write_text(html_out, encoding="utf-8")
+        # public_index_path.write_text("<html><head><title>404 Not Found</title></head><body><h1><a href='admin_888.html'>Dashboard</a></h1></body></html>", encoding="utf-8")
 
-        log_success(f"可视化 Dashboard 页面已成功加密注入！专属后台路径: datas/{secret_filename}")
+        log_success(f"可视化 Dashboard 页面已成功加密注入！专属后台路径: {admin_path}")
 
     except Exception as e:
         log_error(f"生成 Dashboard 页面崩溃: {e}")
