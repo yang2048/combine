@@ -75,3 +75,5 @@ jobs:
         # 使用 GitHub CLI 触发 jekyll-gh-pages 工作流
         # 请确保 jekyll-gh-pages 的工作流文件名确实是 jekyll-gh-pages.yml
         gh workflow run jekyll-gh-pages.yml --ref ${{ github.ref_name }}
+      env:
+        GH_TOKEN: ${{ github.token }}
