@@ -961,7 +961,7 @@ DASHBOARD_HTML_TEMPLATE = """<!DOCTYPE html>
 
         let sites = [], lives = [];
         try {{
-            const res = await fetch('/蝴蝶影视全量版{current_token}.json');
+            const res = await fetch('蝴蝶影视全量版{current_token}.json');
             if (res.ok) {{
                 const fullData = await res.json();
                 sites = fullData.sites || [];
