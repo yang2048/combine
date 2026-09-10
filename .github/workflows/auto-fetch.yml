@@ -1,4 +1,4 @@
-name: 自动双源无损强行合并-第二个仓库
+name: 自动多源强行合并
 
 on:
   # schedule:
@@ -68,3 +68,12 @@ jobs:
         else
           echo "文件内容没有发生实际变化，无需更新，优雅退出。"
         fi
+
+    # 5. 触发 jekyll-gh-pages 工作流
+    - name: Trigger jekyll-gh-pages workflow
+      run: |
+        # 使用 GitHub CLI 触发 jekyll-gh-pages 工作流
+        # 请确保 jekyll-gh-pages 的工作流文件名确实是 jekyll-gh-pages.yml
+        gh workflow run jekyll-gh-pages.yml --ref ${{ github.ref_name }}
+      env:
+        GH_TOKEN:${{ secrets.GITHUB_TOKEN }}
