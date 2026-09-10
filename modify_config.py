@@ -691,7 +691,7 @@ def generate_dashboard_html(current_token, site_cnt, live_cnt, parse_cnt):
                         <div class="text-xs font-bold text-emerald-600" id="cnt_{safe_key}">-- 次</div>
                     </div>
                     <div class="flex gap-2">
-                        <a href="/{fname}" target="_blank" onclick="hitCount('{safe_key}')" class="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg text-xs font-medium hover:bg-blue-100">
+                        <a href="{fname}" target="_blank" onclick="hitCount('{safe_key}')" class="px-3 py-1.5 bg-blue-50 text-blue-600 rounded-lg text-xs font-medium hover:bg-blue-100">
                             预览 JSON
                         </a>
                         <button onclick="navigator.clipboard.writeText('https://r2.xdev.cc/tvbox/{fname}'); hitCount('{safe_key}'); alert('已复制该接口链接！')" class="px-3 py-1.5 bg-slate-800 text-white rounded-lg text-xs font-medium hover:bg-slate-700">
