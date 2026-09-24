@@ -1642,6 +1642,15 @@
             "category": "综合"
         },
         {
+            "key": "测试",
+            "name": "🦋 测试 [合]",
+            "type": 3,
+            "api": "https://cnb.cool/fish2035/xs/-/git/raw/main/py/DJYDXS.py",
+            "ext": "",
+            "category": "综合",
+            "searchable": 1
+        },
+        {
             "key": "一起影视",
             "name": "🦋 一起 • APP [APP]",
             "type": 3,
